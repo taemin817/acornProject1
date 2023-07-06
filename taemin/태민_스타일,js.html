@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+        *{  
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header, .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
+            width: 1200px;
+        }
+        .header{
+            height: 110px;
+        }
+        .section1{
+            width: 2560px;
+            height: 850px;
+        }
+        .tm_section2{
+            margin: 0 auto;
+            height: 1366px;
+        }
+            .tm_sec2_top{
+                height: 386px;
+                display: flex;
+            } 
+                .tm_best{
+                    width: 800px;
+                    height: 386px;
+                }
+                .tm_search{
+                    width: 400px;
+                    height: 336px;
+                    background-color: #f5f4f2;
+                    padding: 50px 40px 0px 40px;
+                }
+                    .tm_srh_store{
+                        width: 320px;
+                        height: 24px;
+                        margin-bottom: 49px;
+                        font-weight: 700;
+                        line-height: 1;
+                        font-size: 24px;
+                        color: #222;
+                    }
+                    .tm_srh_txt{
+                        width: 320px;
+                        height: 64px;
+                        color: #666;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 32px;
+                        margin-bottom: 49px;
+                    }
+                    .tm_address{
+                        width: 243px;
+                        height: 40px;
+                        margin-bottom: 10px;
+                        padding-left: 20px;
+                        padding-right: 57px;
+                        border: none;
+                        background-image: url(./srh_icon.gif);
+                        background-position-x: 100%;
+                        background-repeat: no-repeat;
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    .tm_srh_btn{
+                        width: 320px;
+                        height: 50px;
+                        background: #3b3230;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+            .tm_sec2_mid, .tm_order, .tm_slide_baemin{
+                height: 500px;
+            }
+            .tm_sec2_mid{
+                display: flex;
+            }
+                .tm_order{
+                    width: 320px;
+                    height: 440px;
+                    padding: 60px 40px 0px 40px;
+                    background-image: url(./howtoorder.jpg);
+                }
+                .tm_order_txt{
+                    margin-bottom: 28px;
+                    width: 320px;
+                    height: 24px;
+                }
+                .tm_custom{
+                    margin-bottom: 26px;
+                    width: 320px;
+                    height: 50px;
+                }
+                .tm_howtoorder{
+                    width: 400px;
+                    height: 500px;
+                }
+                .tm_specific{
+                    border-bottom: 1px solid #222;
+                    color: #222;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+                .tm_specific:hover{
+                    color: #c30f30;
+                    font-weight: 700;
+                    border-bottom: 1px solid #c30f30;
+                }
+            .tm_slide_baemin{
+                width: 800px;
+                position: relative;
+            }
+            .tm_slide{
+                width: 800px;
+                height: 500px;
+                background-image: url(./baemin1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .tm_slide_btn1{
+                position: absolute;
+                right: 0px;
+                bottom: 51px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./prebtn.gif);
+            }
+            .tm_slide_btn2{
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./nxtbtn.gif);
+            }
+            .tm_sec2_bottom{
+                height: 450px;
+                display: flex;
+            }
+                .tm_membership, .tm_open{
+                    width: 400px;
+                    height: 450px;
+                }
+                .tm_franchise{
+                    width: 320px;
+                    height: 390px;
+                    padding: 60px 40px 0px 40px;
+                    background-color: rgb(237, 230, 214);;
+                }
+                .tm_fran_faq{
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 50px;
+                }
+                .tm_fran_li{
+                    margin-bottom: 50px;
+                }
+                .tm_sec2_span1{
+                    display: table-cell;
+                    width: 100px;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: #222;
+                    vertical-align: top;
+                }
+                .tm_sec2_span2{
+                    display: table-cell;
+                    width: auto;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #666;
+                    vertical-align: top;
+                }
+                .tm_content{
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    font-weight: 700;
+                    font-size: 15px; 
+                    line-height: 50px;
+                    color: #fff;
+                    background-color: #6d5547;
+                    text-align: center;
+                }
+                .tm_mbsnopen{
+                    position: relative;
+                }
+                .tm_maininfo{
+                    width: 340px;
+                    height: 37px;
+                    padding: 30px;
+                    position: absolute;
+                    left: 0px;
+                    bottom: 0px;
+                }
+                .tm_info{
+                    color:#c30f30;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 1;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                .tm_spec{
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    color: #777;
+                    border-bottom: 1px solid #777;
+                    font-size: 13px;
+                    line-height: 17px;
+                    font-weight: 700;
+                }
+        .section3{
+            height: 471px;
+        }
+        .footer{
+            width: 1370px;
+            height: 166px;
+        }
+    </style>
+        <script>
+            let baemin=["./baemin1.jpg", "./baemin2.png"]
+            
+            let i=0;
+            function nxt(){
+                i++;
+                if(i>=baemin.length){
+                     i=0;
+                }
+            
+                let slide=document.querySelector(".tm_slide");
+    
+                slide.style.backgroundImage="url('"+baemin[i]+"')";
+                slide.style.backgroundSize="cover";
+                slide.style.backgroundPosition="center";
+                }
+                setInterval(nxt, 4000);
+        </script>
+</head>
+<body>
+</body>
+</html>
