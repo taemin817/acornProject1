@@ -104,62 +104,76 @@
             }
     </style>
     <script>
-
-        let  liimgs = ["https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg","https://www.gong-cha.co.kr/uploads/board/20230627/326NpvCeAJF9dT7y_20230627.jpg","https://www.gong-cha.co.kr/uploads/board/20230502/0nGiMx8vBpUXFkJh_20230502.jpg","https://www.gong-cha.co.kr/uploads/board/20230112/pqL7s1dwA0QYTRgM_20230112.jpg"];
-
-      
-        let  as = ["https://www.gong-cha.co.kr/brand/menu/new.php","https://www.gong-cha.co.kr/brand/board/view.php?b=event&n=45995&status=end&page=1","http://www.gong-cha.co.kr/brand/menu/product.php?c=001002","#"];
-
-
-        let i=0;
+        let liimgs = ["https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg","https://www.gong-cha.co.kr/uploads/board/20230707/Aj4wYuB0gPZvEaGQ_20230707.jpg","https://www.gong-cha.co.kr/uploads/board/20230502/0nGiMx8vBpUXFkJh_20230502.jpg","https://www.gong-cha.co.kr/uploads/board/20230112/pqL7s1dwA0QYTRgM_20230112.jpg"];
+        let as = ["https://www.gong-cha.co.kr/brand/menu/new.php","https://www.gong-cha.co.kr/brand/board/view.php?b=event&n=45995&status=end&page=1","http://www.gong-cha.co.kr/brand/menu/product.php?c=001002","#"];
+        let i = 0;
         
-        function yj_btn_next(){
+        function yj_btn_next(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
             i++;
             if(i>=liimgs.length){
                 i=0;
-                let detailSpan  =  document.querySelector('.btn_brandstory');
+            let detailSpan  =  document.querySelector('.btn_brandstory');
                 detailSpan.classList.remove("hide");
             }
             
-         let slide = document.querySelector('.yj_slide-item');
-         let img = slide.querySelector("img");
-         let link = document.querySelector(".btn_brandstory");
-         let nextImg = liimgs[i] ; 
-         let nextlink = as[i];
-         
-         img.src = nextImg;
-         link.href = nextlink;
+            let slide = document.querySelector('.yj_slide-item');
+            let img = slide.querySelector("img");
+            let link = document.querySelector(".btn_brandstory");
 
-         if( i==3 ){
-           let detailSpan  =  document.querySelector('.btn_brandstory');
-           detailSpan.classList.add("hide");
+            let nextImg = liimgs[i] ; 
+            let nextlink = as[i];
+         
+            img.src = nextImg;
+            link.href = nextlink;
+
+         if( i == 3 ){
+            let detailSpan = document.querySelector('.btn_brandstory');
+                detailSpan.classList.add("hide");
          }
         }
 
-        function yj_btn_prev(){
+        function yj_btn_prev(){ // 버튼을 누르면 이전 사진으로 넘어가는 기능
             i--;
-            if(i<0){
-                i = liimgs.length-1;
-            }
             let slide = document.querySelector('.yj_slide-item');
             let img = slide.querySelector("img");
-            let prevImg = liimgs[i] ; 
+            let prevImg = liimgs[i] ;
+            
+            if(i<0){
+                i=liimgs.length-1;
+            }
+
             img.src = prevImg;
         }
     </script>
     
 </head>
 <body>
+
+    <!--<div class="header"></div>-->
+
         <div class="section1">
+
             <div class="yj_slide-wrap">
                 <ul class="yj_slide">
                     <li class="yj_slide-item"><img src="https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg">
                         <a href="https://www.gong-cha.co.kr/brand/menu/new.php" class="btn_brandstory"><span class="brandstory2">자세히 보기<span class="btn2_brandstory"></span></span></a>
                     </li>                    
                 </ul>
+    
             </div>
+
             <a href="javascript:yj_btn_prev()" class="yj_btn_prev" ></a>
             <a href="javascript:yj_btn_next()" class="yj_btn_next" ></a>
+
+          
+
         </div>
+       
+      
+        <!--
+        <div class="section2"></div>
+        <div class="section3"></div>
+        <div class="footer"></div>
+        -->
 </body>
 </html>
