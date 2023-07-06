@@ -5,49 +5,443 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{  
+            padding: 0px;
+            margin: 0px auto;
+            list-style: none;
+        }
+        .section1{
+            width: 2560px;
+            height: 850px;
+            float: left;
+            position: relative;
+            text-align: center;
+        }
+        .yj_slide{
+            display: flex;
+            overflow: hidden;
+        }
+        .yj_slide-item{
+            list-style: none;
+            float: left;
+            transition: 5s;
+        }
+        .yj_slide-item img{
+            width: 2560px;
+        }
+        .yj_btn_prev{
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/prev.png");
+            width: 27px;
+            height: 53px;
+            position: absolute;
+            left: 680px;
+            top: 398px;
+        }
+        .yj_btn_next{
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/next.png");
+            position: absolute;
+            width: 27px;
+            height: 53px;
+            top: 398px;
+            right: 680px;
+        }
+        .btn_brandstory{
+            width: 230px;
+            height: 50px;
+            position: absolute;
+            right: 50%;
+            bottom: 110px;
+            text-align: center;
+            border: 1px solid #cf3e58;
+            background-color: #cf3e58;
+            margin: 0 -600px 0 0;;
+        }
+        .btn_brandstory span{
+            color: #fff;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 48px;
+        }
+        .btn2_brandstory{
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_arr_w.png");
+            width: 5px;
+            height: 10px;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 21px;
+            right: 55px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header, .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
+            width: 1200px;
+        }
+        .header{
+            height: 110px;
+        }
+        .section1{
+            width: 2560px;
+            height: 850px;
+        }
+        .hide{
+            display: none;
+            }
+        .tm_section2{
+            margin: 0 auto;
+            height: 1366px;
+        }
+            .tm_sec2_top{
+                height: 386px;
+                display: flex;
+            } 
+                .tm_best{
+                    width: 800px;
+                    height: 386px;
+                }
+                .tm_search{
+                    width: 400px;
+                    height: 336px;
+                    background-color: #f5f4f2;
+                    padding: 50px 40px 0px 40px;
+                }
+                    .tm_srh_store{
+                        width: 320px;
+                        height: 24px;
+                        margin-bottom: 49px;
+                        font-weight: 700;
+                        line-height: 1;
+                        font-size: 24px;
+                        color: #222;
+                    }
+                    .tm_srh_txt{
+                        width: 320px;
+                        height: 64px;
+                        color: #666;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 32px;
+                        margin-bottom: 49px;
+                    }
+                    .tm_address{
+                        width: 243px;
+                        height: 40px;
+                        margin-bottom: 10px;
+                        padding-left: 20px;
+                        padding-right: 57px;
+                        border: none;
+                        background-image: url(./srh_icon.gif);
+                        background-position-x: 100%;
+                        background-repeat: no-repeat;
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    .tm_srh_btn{
+                        width: 320px;
+                        height: 50px;
+                        background: #3b3230;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+            .tm_sec2_mid, .tm_order, .tm_slide_baemin{
+                height: 500px;
+            }
+            .tm_sec2_mid{
+                display: flex;
+            }
+                .tm_order{
+                    width: 320px;
+                    height: 440px;
+                    padding: 60px 40px 0px 40px;
+                    background-image: url(./howtoorder.jpg);
+                }
+                .tm_order_txt{
+                    margin-bottom: 28px;
+                    width: 320px;
+                    height: 24px;
+                }
+                .tm_custom{
+                    margin-bottom: 26px;
+                    width: 320px;
+                    height: 50px;
+                }
+                .tm_howtoorder{
+                    width: 400px;
+                    height: 500px;
+                }
+                .tm_specific{
+                    border-bottom: 1px solid #222;
+                    color: #222;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+                .tm_specific:hover{
+                    color: #c30f30;
+                    font-weight: 700;
+                    border-bottom: 1px solid #c30f30;
+                }
+            .tm_slide_baemin{
+                width: 800px;
+                position: relative;
+            }
+            .tm_slide{
+                width: 800px;
+                height: 500px;
+                background-image: url(./baemin1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .tm_slide_btn1{
+                position: absolute;
+                right: 0px;
+                bottom: 51px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./prebtn.gif);
+            }
+            .tm_slide_btn2{
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./nxtbtn.gif);
+            }
+            .tm_sec2_bottom{
+                height: 450px;
+                display: flex;
+            }
+                .tm_membership, .tm_open{
+                    width: 400px;
+                    height: 450px;
+                }
+                .tm_franchise{
+                    width: 320px;
+                    height: 390px;
+                    padding: 60px 40px 0px 40px;
+                    background-color: rgb(237, 230, 214);;
+                }
+                .tm_fran_faq{
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 50px;
+                }
+                .tm_fran_li{
+                    margin-bottom: 50px;
+                }
+                .tm_sec2_span1{
+                    display: table-cell;
+                    width: 100px;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: #222;
+                    vertical-align: top;
+                }
+                .tm_sec2_span2{
+                    display: table-cell;
+                    width: auto;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #666;
+                    vertical-align: top;
+                }
+                .tm_content{
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    font-weight: 700;
+                    font-size: 15px; 
+                    line-height: 50px;
+                    color: #fff;
+                    background-color: #6d5547;
+                    text-align: center;
+                }
+                .tm_mbsnopen{
+                    position: relative;
+                }
+                .tm_maininfo{
+                    width: 340px;
+                    height: 37px;
+                    padding: 30px;
+                    position: absolute;
+                    left: 0px;
+                    bottom: 0px;
+                }
+                .tm_info{
+                    color:#c30f30;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 1;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                .tm_spec{
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    color: #777;
+                    border-bottom: 1px solid #777;
+                    font-size: 13px;
+                    line-height: 17px;
+                    font-weight: 700;
+                }
+        .section3{
+            height: 471px;
+        }
+        .footer{
+            width: 1370px;
+            height: 166px;
+        }
+    </style>
+        <script>
+            let liimgs = ["https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg","https://www.gong-cha.co.kr/uploads/board/20230707/Aj4wYuB0gPZvEaGQ_20230707.jpg","https://www.gong-cha.co.kr/uploads/board/20230502/0nGiMx8vBpUXFkJh_20230502.jpg","https://www.gong-cha.co.kr/uploads/board/20230112/pqL7s1dwA0QYTRgM_20230112.jpg"];
+            let as = ["https://www.gong-cha.co.kr/brand/menu/new.php","https://gong-cha-event.co.kr/?fromurl=owned_hompage&utm_source=gongcha&utm_medium=DA&utm_campaign=owned_hompage","http://www.gong-cha.co.kr/brand/menu/product.php?c=001002","#"];
+            let i = 0;
+            
+            function yj_btn_next(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
+                i++;
+                if(i>=liimgs.length){
+                    i=0;
+                let detailSpan  =  document.querySelector('.btn_brandstory');
+                    detailSpan.classList.remove("hide");
+                }
+                
+                let slide = document.querySelector('.yj_slide-item');
+                let img = slide.querySelector("img");
+                let link = document.querySelector(".btn_brandstory");
+    
+                let nextImg = liimgs[i] ; 
+                let nextlink = as[i];
+             
+                img.src = nextImg;
+                link.href = nextlink;
+    
+             if( i == 3 ){
+                let detailSpan = document.querySelector('.btn_brandstory');
+                    detailSpan.classList.add("hide");
+             }
+            }
+    
+            function yj_btn_prev(){ // 버튼을 누르면 이전 사진으로 넘어가는 기능
+                i--;
+                let slide = document.querySelector('.yj_slide-item');
+                let img = slide.querySelector("img");
+                let prevImg = liimgs[i] ;
+                
+                if(i<0){
+                    i=liimgs.length-1;
+                }
+
+                img.src = prevImg;
+            }
+
+            let j = 0;
+            function nxt(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
+                j++;
+                let baemin = ["./baemin1.jpg", "./baemin2.png"]; // 넘어가는 사진의 배열
+                let slide = document.querySelector(".tm_slide"); // 넘어가는 영역
+                
+                if(j>=baemin.length){ // 배열의 길이보다 커지면 처음으로 돌아가도록 순환하는 구조
+                        j = 0;
+                }
+
+                slide.style.backgroundImage="url('"+baemin[j]+"')";
+                slide.style.backgroundSize="cover";
+                slide.style.backgroundPosition="center";
+                }
+                
+            setInterval(nxt, 6000); // 정해진 시간에 버튼이 기능하는 도구
+        </script>
 </head>
 <body>
-        <div class="footer">
-        <div class="footer_left">
-            <div class="footer_logo">
-                <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/ft_logo.png">
+    
+        <div class="header">정석</div>
+
+
+        <div class="section1">
+            <div class="yj_slide-wrap">
+                <ul class="yj_slide">
+                    <li class="yj_slide-item"><img src="https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg">
+                        <a href="https://www.gong-cha.co.kr/brand/menu/new.php" class="btn_brandstory"><span class="brandstory2">자세히 보기<span class="btn2_brandstory"></span></span></a>
+                    </li>                    
+                </ul>
             </div>
-                <p class="copyright">(C)GONGCHA KOREA CO.,LTD <br>ALL RIGHTS RESERVED.</p>                                                    
+            <a href="javascript:yj_btn_prev()" class="yj_btn_prev" ></a>
+            <a href="javascript:yj_btn_next()" class="yj_btn_next" ></a>
         </div>
-        <div class="footer_right">
-             <div>
-                <ul class="menu">
-                    <li class="menu1"><a href="https://www.gong-cha.co.kr/franchise/company/history.php">회사소개⠀ </a></li> 
-                    <li class="menu1"><a href="https://www.gong-cha.co.kr/brand/benefit/contact.php">제휴/제안⠀</a></li> 
-                    <li class="menu1"><a href="https://www.gong-cha.co.kr/brand/board/customer.php">고객센터⠀</a></li> 
-                    <li class="menu1"><strong>개인정보처리방침⠀</strong></li> 
-                    <li class="menu1" button onclick="showPopup(false)">이메일무단수집거부⠀</li> 
-                    
-                    <button onclick="showPopup(true)"></button>
-                    <li class="menu1">윤리규범 실천지침⠀</li>
-                    <li>HOT-LINE</li> 
-                </ul>            
-                <div class="menu2">                 
-                        <div class="number">
-                            <span>고객센터</span>
-                            <img src="data:image/png;base64,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">
-                            <span class="number2">02-779-7758</span>                       
-                        </div>
-                        <div class="day">
-                            운영시간 : 월요일~목요일 ( 오전 9시 ~ 오후 6시), 금요일 (오전 9시 ~ 오후 1시) <br>
-                            점심시간 : 낮 12시~오후 1시 / 주말 및 공휴일 휴무
-                        </div>   
-                </div> 
-                <div class="menu3">                      
-                        <div class="seoul">
-                            <span class="seoul1">서울 종로구 종로 47(공평동, 7층)⠀</span>
-                            <span class="seoul1">㈜공차코리아 대표이사 박재홍⠀</span>
-                            <span class="seoul1">사업자등록번호 214-88-84534⠀</span>
-                            <span>통신판매번호: 2020-서울종로-0966</span>
-                        </div>   
+
+        <div class="section2">
+            <div class="tm_sec2_top">
+                <div class="tm_best">
+                    <a href="http://www.gong-cha.co.kr/brand/menu/product.php?c=001002"><img src="./베스트콤비.jpg" alt="망고 요구르트+화이트펄"></a>
+                </div>
+                <div class="tm_search">
+                    <h2 class="tm_srh_store">매장검색</h2>
+                    <p class="tm_srh_txt">공차 매장을 쉽고 빠르게<br>찾아보세요</p>
+                    <input class="tm_address" type="text" placeholder="매장명 또는 주소를 입력하세요">
+                    <div class="tm_srh_btn">매장검색하기</div>
                 </div>
             </div>
-    </div>
+            <div class="tm_sec2_mid">
+                <div class="tm_order">
+                    <h2 class="tm_order_txt">HOW TO ORDER 주문하기</h2>
+                    <p class="tm_custom">공차는 취향에 맞게 토핑, 당도, 얼음량까지<br>
+                    맞춤주문 가능합니다.</p>
+                    <a class="tm_specific" href="https://www.gong-cha.co.kr/brand/menu/order.php">자세히 보기 ></a>
+                </div>
+                <div class="tm_slide_baemin">
+                    <div class="tm_slide"></div>
+                        <div onclick="nxt()" class="tm_slide_btn1"></div>
+                        <div onclick="nxt()" class="tm_slide_btn2"></div>
+                </div>
+            </div>
+            <div class="tm_sec2_bottom">
+                <div class="tm_franchise">
+                    <h2 class="tm_fran_faq">공차 가맹점 개설문의</h2>
+                    <ul class="tm_fran_li">
+                        <li>
+                            <a href="https://www.gong-cha.co.kr/franchise/open/guide.php">
+                            <span class="tm_sec2_span1">개설안내</span>
+                            <span class="tm_sec2_span2">공차만의 프랜차이즈 운영<br>노하우로 안정된 창업을 이루세요.</span>
+                        </a>
+                            </li>
+                        <li>
+                            <a href="https://www.gong-cha.co.kr/franchise/open/guide.php">
+                                <span class="tm_sec2_span1">FAQ</span>
+                                <span class="tm_sec2_span2">가맹점 개설과 관련한<br>자주 묻는 질문입니다.</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="tm_content" href="https://www.gong-cha.co.kr/franchise/open/guide.php">내용보기</a>
+                </div>
+                <div class="tm_mbsnopen">
+                    <a href="http://www.gong-cha.co.kr/brand/member/membership.php"><img src="./멤버십.jpg" alt="공차 멤버십 앱 안내"></a>
+                    <div class="tm_maininfo">
+                        <div class="tm_info">NEW 공차 멤버십 안내</div>
+                        <a class="tm_spec" href="http://www.gong-cha.co.kr/brand/member/membership.php">자세히 보기 ></a>
+                    </div>
+                </div>
+                <div class="tm_mbsnopen">
+                    <a href="http://www.gong-cha.co.kr/brand/store/search.php"><img src="./newopen.jpg" alt="오픈 매장 안내"></a>
+                    <div class="tm_maininfo">
+                        <div class="tm_info">오픈 매장 안내</div>
+                        <a class="tm_spec" href="http://www.gong-cha.co.kr/brand/store/search.php">자세히 보기 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+        <div class="section3">원규</div>
+
+        
+        <div class="footer">윤</div>
 </body>
 </html>

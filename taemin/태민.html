@@ -235,22 +235,22 @@
         }
     </style>
         <script>
-            let baemin=["./baemin1.jpg", "./baemin2.png"]
-            
-            let i=0;
-            function nxt(){
-                i++;
-                if(i>=baemin.length){
-                     i=0;
+            let j = 0;
+            function nxt(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
+                j++;
+                let baemin = ["./baemin1.jpg", "./baemin2.png"]; // 넘어가는 사진의 배열
+                let slide = document.querySelector(".tm_slide"); // 넘어가는 영역
+                
+                if(j>=baemin.length){ // 배열의 길이보다 커지면 처음으로 돌아가도록 순환하는 구조
+                        j = 0;
                 }
-            
-                let slide=document.querySelector(".tm_slide");
-    
-                slide.style.backgroundImage="url('"+baemin[i]+"')";
+
+                slide.style.backgroundImage="url('"+baemin[j]+"')";
                 slide.style.backgroundSize="cover";
                 slide.style.backgroundPosition="center";
                 }
-                setInterval(nxt, 6000);
+
+            setInterval(nxt, 6000); // 정해진 시간에 버튼이 기능하는 도구
         </script>
 </head>
 <body>
