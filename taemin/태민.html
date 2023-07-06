@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{  
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header, .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
+            width: 1200px;
+        }
+        .header{
+            height: 110px;
+        }
+        .section1{
+            width: 2560px;
+            height: 850px;
+        }
+        .tm_section2{
+            margin: 0 auto;
+            height: 1366px;
+        }
+            .tm_sec2_top{
+                height: 386px;
+                display: flex;
+            } 
+                .tm_best{
+                    width: 800px;
+                    height: 386px;
+                }
+                .tm_search{
+                    width: 400px;
+                    height: 336px;
+                    background-color: #f5f4f2;
+                    padding: 50px 40px 0px 40px;
+                }
+                    .tm_srh_store{
+                        width: 320px;
+                        height: 24px;
+                        margin-bottom: 49px;
+                        font-weight: 700;
+                        line-height: 1;
+                        font-size: 24px;
+                        color: #222;
+                    }
+                    .tm_srh_txt{
+                        width: 320px;
+                        height: 64px;
+                        color: #666;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 32px;
+                        margin-bottom: 49px;
+                    }
+                    .tm_address{
+                        width: 243px;
+                        height: 40px;
+                        margin-bottom: 10px;
+                        padding-left: 20px;
+                        padding-right: 57px;
+                        border: none;
+                        background-image: url(./srh_icon.gif);
+                        background-position-x: 100%;
+                        background-repeat: no-repeat;
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    .tm_srh_btn{
+                        width: 320px;
+                        height: 50px;
+                        background: #3b3230;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+            .tm_sec2_mid, .tm_order, .tm_slide_baemin{
+                height: 500px;
+            }
+            .tm_sec2_mid{
+                display: flex;
+            }
+                .tm_order{
+                    width: 320px;
+                    height: 440px;
+                    padding: 60px 40px 0px 40px;
+                    background-image: url(./howtoorder.jpg);
+                }
+                .tm_order_txt{
+                    margin-bottom: 28px;
+                    width: 320px;
+                    height: 24px;
+                }
+                .tm_custom{
+                    margin-bottom: 26px;
+                    width: 320px;
+                    height: 50px;
+                }
+                .tm_howtoorder{
+                    width: 400px;
+                    height: 500px;
+                }
+                .tm_specific{
+                    border-bottom: 1px solid #222;
+                    color: #222;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+                .tm_specific:hover{
+                    color: #c30f30;
+                    font-weight: 700;
+                    border-bottom: 1px solid #c30f30;
+                }
+            .tm_slide_baemin{
+                width: 800px;
+                position: relative;
+            }
+            .tm_slide{
+                width: 800px;
+                height: 500px;
+                background-image: url(./baemin1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .tm_slide_btn1{
+                position: absolute;
+                right: 0px;
+                bottom: 51px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./prebtn.gif);
+            }
+            .tm_slide_btn2{
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./nxtbtn.gif);
+            }
+            .tm_sec2_bottom{
+                height: 450px;
+                display: flex;
+            }
+                .tm_membership, .tm_open{
+                    width: 400px;
+                    height: 450px;
+                }
+                .tm_franchise{
+                    width: 320px;
+                    height: 390px;
+                    padding: 60px 40px 0px 40px;
+                    background-color: rgb(237, 230, 214);;
+                }
+                .tm_fran_faq{
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 50px;
+                }
+                .tm_fran_li{
+                    margin-bottom: 50px;
+                }
+                .tm_sec2_span1{
+                    display: table-cell;
+                    width: 100px;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: #222;
+                    vertical-align: top;
+                }
+                .tm_sec2_span2{
+                    display: table-cell;
+                    width: auto;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #666;
+                    vertical-align: top;
+                }
+                .tm_content{
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    font-weight: 700;
+                    font-size: 15px; 
+                    line-height: 50px;
+                    color: #fff;
+                    background-color: #6d5547;
+                    text-align: center;
+                }
+                .tm_mbsnopen{
+                    position: relative;
+                }
+                .tm_maininfo{
+                    width: 340px;
+                    height: 37px;
+                    padding: 30px;
+                    position: absolute;
+                    left: 0px;
+                    bottom: 0px;
+                }
+                .tm_info{
+                    color:#c30f30;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 1;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                .tm_spec{
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    color: #777;
+                    border-bottom: 1px solid #777;
+                    font-size: 13px;
+                    line-height: 17px;
+                    font-weight: 700;
+                }
+        .section3{
+            height: 471px;
+        }
+        .footer{
+            width: 1370px;
+            height: 166px;
+        }
+    </style>
+        <script>
+            let baemin=["./baemin1.jpg", "./baemin2.png"]
+            
+            let i=0;
+            function nxt(){
+                i++;
+                if(i>=baemin.length){
+                     i=0;
+                }
+            
+                let slide=document.querySelector(".tm_slide");
+    
+                slide.style.backgroundImage="url('"+baemin[i]+"')";
+                slide.style.backgroundSize="cover";
+                slide.style.backgroundPosition="center";
+                }
+                setInterval(nxt, 6000);
+        </script>
+</head>
+<body>
+    
+        <div class="header">정석</div>
+
+
+        <div class="section1">예진</div>
+
+
+        <div class="section2">
+            <div class="tm_sec2_top">
+                <div class="tm_best">
+                    <a href="http://www.gong-cha.co.kr/brand/menu/product.php?c=001002"><img src="./베스트콤비.jpg" alt="망고 요구르트+화이트펄"></a>
+                </div>
+                <div class="tm_search">
+                    <h2 class="tm_srh_store">매장검색</h2>
+                    <p class="tm_srh_txt">공차 매장을 쉽고 빠르게<br>찾아보세요</p>
+                    <input class="tm_address" type="text" placeholder="매장명 또는 주소를 입력하세요">
+                    <div class="tm_srh_btn">매장검색하기</div>
+                </div>
+            </div>
+            <div class="tm_sec2_mid">
+                <div class="tm_order">
+                    <h2 class="tm_order_txt">HOW TO ORDER 주문하기</h2>
+                    <p class="tm_custom">공차는 취향에 맞게 토핑, 당도, 얼음량까지<br>
+                    맞춤주문 가능합니다.</p>
+                    <a class="tm_specific" href="https://www.gong-cha.co.kr/brand/menu/order.php">자세히 보기 ></a>
+                </div>
+                <div class="tm_slide_baemin">
+                    <div class="tm_slide"></div>
+                        <div onclick="nxt()" class="tm_slide_btn1"></div>
+                        <div onclick="nxt()" class="tm_slide_btn2"></div>
+                </div>
+            </div>
+            <div class="tm_sec2_bottom">
+                <div class="tm_franchise">
+                    <h2 class="tm_fran_faq">공차 가맹점 개설문의</h2>
+                    <ul class="tm_fran_li">
+                        <li>
+                            <a href="https://www.gong-cha.co.kr/franchise/open/guide.php">
+                            <span class="tm_sec2_span1">개설안내</span>
+                            <span class="tm_sec2_span2">공차만의 프랜차이즈 운영<br>노하우로 안정된 창업을 이루세요.</span>
+                        </a>
+                            </li>
+                        <li>
+                            <a href="https://www.gong-cha.co.kr/franchise/open/guide.php">
+                                <span class="tm_sec2_span1">FAQ</span>
+                                <span class="tm_sec2_span2">가맹점 개설과 관련한<br>자주 묻는 질문입니다.</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="tm_content" href="https://www.gong-cha.co.kr/franchise/open/guide.php">내용보기</a>
+                </div>
+                <div class="tm_mbsnopen">
+                    <a href="http://www.gong-cha.co.kr/brand/member/membership.php"><img src="./멤버십.jpg" alt="공차 멤버십 앱 안내"></a>
+                    <div class="tm_maininfo">
+                        <div class="tm_info">NEW 공차 멤버십 안내</div>
+                        <a class="tm_spec" href="http://www.gong-cha.co.kr/brand/member/membership.php">자세히 보기 ></a>
+                    </div>
+                </div>
+                <div class="tm_mbsnopen">
+                    <a href="http://www.gong-cha.co.kr/brand/store/search.php"><img src="./newopen.jpg" alt="오픈 매장 안내"></a>
+                    <div class="tm_maininfo">
+                        <div class="tm_info">오픈 매장 안내</div>
+                        <a class="tm_spec" href="http://www.gong-cha.co.kr/brand/store/search.php">자세히 보기 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section3">원규</div>
+
+        
+        <div class="footer">윤</div>
+</body>
+</html>
