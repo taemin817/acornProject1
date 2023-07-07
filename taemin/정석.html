@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: 0px solid black;
+        }
+
+        .ball {
+            position: relative;
+        }
+
+        .ball2 {
+            position: absolute;
+            left: 200px;
+        }
+
+        .header {
+            width: 1400px;
+            height: 110px;
+            border: 0px solid black;
+            position: relative;
+        }
+
+        .logo {
+            width: 65px;
+            height: 85px;
+            position: absolute;
+            top: 12.5px;
+            left: 100px;
+            background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            position: absolute;
+            left: 200px;
+            top: 20px;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        
+        .om{
+            border: 0px solid black;
+            width: 700px;
+            height: 400px;
+            background-color: rgb(94, 86, 86);
+            opacity: 70%;
+            position: absolute;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        .ddi {
+            margin: 25px;
+        }
+
+        .hover {
+            display: none;
+            position: absolute;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        /* .menu:hover ul {
+            display: block;
+            list-style: none;
+            background-color: rgb(94, 86, 86);
+            opacity: 70%;
+            background-image: url(./ya.png);
+            background-position: center;
+            background-size: cover;
+        } */
+
+        .notice {
+            font-size: 13px;
+            position: absolute;
+            right: 400px;
+            top: 55px;
+            text-decoration: none;
+        }
+
+        .snsAll {
+            list-style: none;
+        }
+
+        .sns1 {
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 350px;
+            top: 50px;
+
+            background-image: url(./face.png );
+            background-position: center;
+            background-size: cover;
+        }
+
+        .sns2 {
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            right: 300px;
+            top: 49px;
+
+            background-image: url(./ins.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .sns3 {
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            right: 250px;
+            top: 47px;
+
+            background-image: url(./ka.png );
+            background-position: center;
+            background-size: cover;
+        }
+
+        .btn {
+            width: 150px;
+            height: 100px;
+            background-color: rgb(37, 35, 35);
+            position: absolute;
+            right: 50px;
+            top: 0px;
+            border-radius: 0px 0px 20px 20px;
+            display: flex;
+        }
+
+        .hi {
+            width: 40px;
+            height: 60px;
+            background-image: url(./ga.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 20px;
+            right: 95px
+        }
+
+        .ga {
+            color: white;
+            font-size: 19px;
+            position: absolute;
+            top: 25px;
+            right: 10px
+        }
+
+        .on{
+            border-bottom: 3px solid rgb(223, 52, 52);
+        }
+
+
+
+        /* .section1{
+            width: 2560px;
+            height: 850px;
+        }
+        .section2{
+            width: 1900px;
+            height: 500px;
+        }
+        .section3{
+            width: 1200px;
+            height: 471px;
+            패딩 좌우 680씩
+            배경 2560*471
+        }
+        .footer{
+            width: 1370px;
+            height: 166px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="ball">
+        <div class="ball2">
+            <nav>
+                <div class="header">
+                    <div class="logo"></div>
+
+
+                    <!-- 메뉴 호버시 상세 메뉴를 띄우기 위한 부분 (시작)-->
+
+                    <div>
+                        <nav>
+                            <div class="om">
+                                    <ul class="menu">
+                                        <li class="ddi" onmouseover="a(this)"  onmouseout="b(this)"><span class="spho">Brand
+                                            </span>                                                                        
+                                                <ul class="hover">
+                                                    <li>브랜드 소개</li>
+                                                    <li>공차의 약속</li>
+                                                    <li>브랜드 아이덴티티</li>
+                                                    <li>세계속의 공차</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                        </li>
+                                        <li class="ddi" onmouseover="c(this)"  onmouseout="d(this)"><span class="spho">Menu
+                                            </span>
+                                                <ul class="hover">
+                                                    <li>주문방법</li>
+                                                    <li>신메뉴</li>
+                                                    <li>음료</li>
+                                                    <li>빙수</li>
+                                                    <li>디저트</li>
+                                                    <li>MD상품</li>
+                                                    <li>티스토리</li>
+                                                    <li>티레시피</li>
+                                                </ul>
+                                        </li>
+                                        <li class="ddi"  onmouseover="e(this)"  onmouseout="f(this)"><span class="spho">Store
+                                            </span>
+                                                <ul class="hover">
+                                                    <li>매장 찾기</li>
+                                                    <li>가맹점 개설문의</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                        </li>
+                                        <li class="ddi" onmouseover=g(this)" onmouseout="h(this)"><span class="spho">Membership
+                                            </span>
+                                                <ul class="hover">
+                                                    <li>New 공차 맴버십</li>
+                                                    <li>공차 카드 & e-Gift</li>
+                                                    <li>FAQ</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                        </li>
+                                        <li class="ddi" onmouseover="i(this)"  onmouseout="j(this)"><span class="spho">Benefit
+                                            </span>
+                                                <ul class="hover">
+                                                    <li>통신사제휴</li>
+                                                    <li>결제 서비스</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                        </li>
+                                        <li class="ddi" onmouseover="k(this)"  onmouseout="l(this)"><span class="spho">Event&News
+                                            </span>
+                                            <ul class="hover">
+                                                    <li>이벤트</li>
+                                                    <li>뉴스</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                        </div>
+                    </div>
+
+                    <!-- 메뉴 호버시 상세 메뉴를 띄우기 위한 부분 -->
+
+                    <div class="notice"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공지사항</a></div>
+                    <div>                        
+                        <a class="sns1" href="https://www.facebook.com/GongCha.Korea"></a> 
+                        <a class="sns2" href="https://www.instagram.com/gongcha.official/?hl=ko"></a>
+                        <a class="sns3" href="https://pf.kakao.com/_Cywfxb"></a>
+                    </div>
+                    </div>
+                    <div class="btn">
+                        <div class="hi"></div>
+                        <a href="https://www.gong-cha.co.kr/franchise/">
+                            <span class="ga">가맹점<br>개설문의</span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- <div class="section1"></div>
+        <div class="section2"></div>
+        <div class="section3"></div>
+        <div class="footer"></div> -->
+
+        <script>
+            function  a(obj){    
+                let  title = obj.firstElementChild;                
+                title.innerHTML="브랜드";
+                obj.classList.add("on");
+            }
+            function b(obj){
+                let  title = obj.firstElementChild;                
+                title.innerHTML="Brand";
+                obj.classList.remove("on");
+            }
+            function  c(obj){    
+                let  title = obj.firstElementChild;                
+                title.innerHTML="메뉴";
+                obj.classList.add("on");
+            }
+            function d(obj){
+                let  title = obj.firstElementChild;                
+                title.innerHTML="Menu";
+                obj.classList.remove("on");
+            }
+            function e(obj){    
+                let  title = obj.firstElementChild;                
+                title.innerHTML="매장";
+                obj.classList.add("on");
+            }
+            function f(obj){
+                let  title = obj.firstElementChild;                
+                title.innerHTML="Store";
+                obj.classList.remove("on");
+            }
+            function g(obj){    
+                let  title = obj.firstElementChild;                
+                title.innerHTML="멤버십";
+                obj.classList.add("on");
+            }
+            function h(obj){
+                let  title = obj.firstElementChild;                
+                title.innerHTML="Membership";
+                obj.classList.remove("on");
+            }
+            function i(obj){    
+                let  title = obj.firstElementChild;                
+                title.innerHTML="제휴서비스";
+                obj.classList.add("on");
+            }
+            function j(obj){
+                let  title = obj.firstElementChild;                
+                title.innerHTML="Benefit";
+                obj.classList.remove("on");
+            }
+            function k(obj){    
+                let  title = obj.firstElementChild;                
+                title.innerHTML="이벤트&뉴스";
+                obj.classList.add("on");
+            }
+            function l(obj){
+                let  title = obj.firstElementChild;                
+                title.innerHTML="Event&News";
+                obj.classList.remove("on");
+            }
+
+        </script>
+
+</body>
+
+</html>
