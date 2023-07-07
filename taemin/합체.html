@@ -330,15 +330,24 @@
             }
     
             function yj_btn_prev(){ // 버튼을 누르면 이전 사진으로 넘어가는 기능
-                i--;
-                let slide = document.querySelector('.yj_slide-item');
-                let img = slide.querySelector("img");
-                let prevImg = liimgs[i] ;
+                i--;   
                 
                 if(i<0){
                     i=liimgs.length-1;
                 }
+                if( i == 3 ){
+                    let detailSpan = document.querySelector('.btn_brandstory');
+                        detailSpan.classList.add("hide");
+                }else{
+                let detailSpan  =  document.querySelector('.btn_brandstory');
+                    detailSpan.classList.remove("hide");
+                }
 
+                let slide = document.querySelector('.yj_slide-item');
+                let img = slide.querySelector("img");
+                let prevImg = liimgs[i] ;
+                
+            
                 img.src = prevImg;
             }
 

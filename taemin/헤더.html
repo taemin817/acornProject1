@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+        a{text-decoration: none;
+            color: #444;
+        }
+        header{
+            width: 1200px;
+            height: 110px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .js_head_icon{
+            position: absolute;
+            top: 15px;
+            left: 0px;
+        }
+        .js_menu{
+            display: flex;
+            position: absolute;
+            left: 79px;
+        }
+        .js_main_menu{
+            height: 110px;
+            padding: 0 20px;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 110px;
+            padding: 0px 30px;
+            text-align: center;
+        }
+        .js_main_menu2{
+            display: hidden;
+            background-color: rgb(102, 102, 102);
+        }
+        .js_main_menu:hover .js_main_menu2{
+            height: 400px;
+
+        }
+        .js_sub_menu{
+            font-size: 14px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .js_notice1{
+            position: absolute;
+            top: 45px;
+            right: -100px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .js_notice2{
+            position: absolute;
+            top: 45px;
+            right: -250px;
+        }
+        .sns{
+            display: flex;
+        }
+        .sns_icon{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="js_head_icon">
+            <a href="https://www.gong-cha.co.kr/brand/">
+            <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png" alt="공차 아이콘">
+            </a>
+        </div>
+        <ul class="js_menu">
+            <li class="js_main_menu">
+                <a href="https://www.gong-cha.co.kr/brand/brand/story.php">Brand</a>
+                <ul class="js_main_menu2">
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/brand/story.php">브랜드소개</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/brand/promise.php">공차의 약속</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/brand/identity.php">브랜드 아이덴티티</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/brand/global.php">세계속의 공차</a></li>
+                </ul>
+            </li>
+            <li class="js_main_menu">
+                <a href="https://www.gong-cha.co.kr/brand/menu/order.php">Menu</a>
+                <ul class="js_main_menu2">
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/order.php">주문방법</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/new.php">신메뉴</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=001">음료</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=004">빙수</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=002">디저트</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=003">MD상품</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/teaStory.php">티스토리</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/menu/teaRecipe.php">티레시피</a></li>
+                </ul>
+            </li>
+            <li class="js_main_menu">
+                <a href="https://www.gong-cha.co.kr/brand/store/search.php">Store</a>
+                <ul class="js_main_menu2">
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/store/search.php">매장 찾기</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/franchise/">가맹점 개설문의</a></li>
+                </ul>
+            </li>
+            <li class="js_main_menu">
+                <a href="https://www.gong-cha.co.kr/brand/member/membership.php">Membership</a>
+                <ul class="js_main_menu2">
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/member/membership.php">NEW 공차 멤버십</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/member/membership3.php">공차 카드 & e-Gift</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/member/faq.php">FAQ</a></li>
+                </ul>
+            </li>
+            <li class="js_main_menu">
+                <a href="https://www.gong-cha.co.kr/brand/benefit/benefit.php">Benefit</a>
+                <ul class="js_main_menu2">
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/benefit/benefit.php">통신사 제휴</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/benefit/payment.php">결제 서비스</a></li>
+                </ul>
+            </li>
+            <li class="js_main_menu">
+                <a href="https://www.gong-cha.co.kr/brand/board/event.php">Event&News
+                <ul class="js_main_menu2">
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/board/event.php">이벤트</a></li>
+                    <li class="js_sub_menu"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공차소식</a></li>
+                </ul>
+            </li>
+            <li class="js_notice1"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공지사항</a></li>
+            <li class="js_notice2">
+                <ul class="sns">
+                    <li class="sns_icon"><a href="https://www.facebook.com/GongCha.Korea">
+                        <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/btn_f.png" alt="공차페이스북">
+                    </a></li>
+                    <li class="sns_icon"><a href="https://www.instagram.com/gongcha.official/?hl=ko">
+                        <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/btn_i.png" alt="공차인스타그램">
+                    </a></li>
+                    <li class="sns_icon"><a href="https://pf.kakao.com/_Cywfxb">
+                        <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/btn_k.png" alt="공차카카오톡">
+                    </a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>
