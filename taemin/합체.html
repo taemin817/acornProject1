@@ -758,6 +758,16 @@
             content: "|";
             color: #a4a4a4;
         }
+        /* 퀵메뉴 */
+        .yj_quickmenu{
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            width: 79px;
+            margin: -230px 0 0;
+            z-index: 1;
+        }
+    </style>
     </style>
             
         <script>
@@ -963,7 +973,17 @@
                 }   
                 });
         </script>
-     
+
+        <script>
+            // 퀵메뉴 함수
+            function changebrown(color){
+                color.setAttribute('src','https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_off.png');
+            }
+
+            function changered(color){
+                color.setAttribute('src','https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_on.png');
+            }
+        </script>
 </head>
 <body>
     <!-- 유정석 -->
@@ -1200,5 +1220,14 @@
                 </div>
             </div>
     </div>
+    <div id="yj_quickmenu" class="yj_quickmenu">
+        <a href="http://www.gong-cha.co.kr/franchise/">
+            <img 
+            onmouseover="changebrown(this)"
+            onmouseout="changered(this)"
+            src="https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_on.png"
+            alt="색변화"/>
+        </a>
+</div>
 </body>
 </html>
