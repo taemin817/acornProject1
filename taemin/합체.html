@@ -17,6 +17,7 @@
         .header, .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
             width: 1200px;
         }
+        /* 유정석 */
         .js_ball {
             position: relative;
             width: 1200px;
@@ -234,25 +235,6 @@
             text-align: center;
             font-weight: 500;            
         }
-        /* .section1{
-            width: 2560px;
-            height: 850px;
-        }
-        .section2{
-            width: 1900px;
-            height: 500px;
-        }
-        .section3{
-            width: 1200px;
-            height: 471px;
-            패딩 좌우 680씩
-            배경 2560*471
-        }
-        .footer{
-            width: 1370px;
-            height: 166px;
-        } */
-
         span{
           display: inline-block;
           width: 100px;
@@ -260,6 +242,7 @@
           padding-bottom: 35px;
 
         }
+        /* 서예진 */
         .hide{
             display: none;
             }
@@ -324,9 +307,10 @@
             bottom: 21px;
             right: 55px;
         }
+        /* 박태민 */
         .tm_section2{
             margin: 0 auto;
-            height: 1366px;
+            height: 1300px;
         }
             .tm_sec2_top{
                 height: 386px;
@@ -527,9 +511,7 @@
                     line-height: 17px;
                     font-weight: 700;
                 }
-        .section3{
-            height: 471px;
-        }
+        /* 이원규 */
         .kmenu1{
         height: 40px;
         width: 80px;
@@ -678,9 +660,103 @@
             width: 50px;
             display: none;
         }
-        .footer{
-            width: 1370px;
+        /* 이윤 */
+        .y_footer{
+            width: 1200px;
             height: 166px;
+            display: flex;      
+        }
+        .y_footer_left{
+            width: 300px;
+            height: 166px;
+            display: flex;
+            background-color: #575757;                 
+        }
+        .y_footer_logo{
+            width: 69px;
+            height: 90px;
+            display: flex;
+            margin-left:20px;
+            margin-top:30px;  
+        }
+        .y_copyright{
+            width: 180px;   
+            margin-left:110px;
+            margin-top:100px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #b5b4b4;
+            position: absolute;           
+        }
+        .y_footer_right{          
+            width: 900px;
+            height: 166px;
+            position: relative;
+            background: #f1f2f2;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;    
+        }
+        .y_menu1{           
+            display: flex;       
+            font-weight: 700;
+            font-size: 15px;       
+            line-height: 21px;
+            margin-bottom:20px;          
+        }
+        .y_policy a{
+            text-decoration: none;
+            color: #444444;
+        }
+        .y_copyright{
+            width: 300px;
+            margin-top:80px;
+            display: block;
+        }
+        ul li{
+            list-style: none;
+            font-weight: 700;
+            line-height: 21px;
+            font-size: 15px;
+            color: #444444;   
+        }
+        li{
+            display: flex;
+            float: right;
+            margin-right: 10px;
+        }
+        .y_policy::after{
+            content:"|";
+            color: #a4a4a4;
+        }
+        .y_menu2{
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #666666;
+            display: flex;
+            margin-bottom:10px;
+        }
+        .y_cscenter{
+            font-weight: bold;
+        }
+        .y_cscenter img{
+            width: 17px;
+            height: 17px;
+        }
+        .y_time{
+            margin-left:10px;
+            font-size: 13px;
+        }
+        .y_address{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #666666;
+        }
+        .y_rep::after{
+            content: "|";
+            color: #a4a4a4;
         }
     </style>
             
@@ -851,8 +927,9 @@
             setInterval(nxt, 6000); // 정해진 시간에 버튼이 기능하는 도구
         </script>
 
-            // 원규 함수
+            
         <script>
+            // 원규 함수
             window.addEventListener("load", function(){  
                 let msg = [];
                 let index = -1;              
@@ -889,6 +966,7 @@
      
 </head>
 <body>
+    <!-- 유정석 -->
     <div class="js_ball">
                 <div class="js_header">
                     <div class="js_logo"></div>
@@ -978,6 +1056,7 @@
                 </ul>
             </div>
     </div>
+    <!-- 서예진 -->
     <div class="yj_section1">
         <div class="yj_slide-wrap">
             <ul class="yj_slide">
@@ -989,7 +1068,7 @@
         <a href="javascript:yj_btn_prev()" class="yj_btn_prev" ></a>
         <a href="javascript:yj_btn_next()" class="yj_btn_next" ></a>
     </div>
-
+    <!-- 박태민 -->
     <div class="tm_section2">
         <div class="tm_sec2_top">
             <div class="tm_best">
@@ -1050,6 +1129,7 @@
             </div>
         </div>
     </div>
+    <!-- 이원규 -->
     <div class="kbody">
         <div class="khead">
             <div class="ktop">
@@ -1080,6 +1160,45 @@
             </div>
         </div>
     </div>
-    <div class="footer">윤</div>
+    <!-- 이윤 -->
+    <div class="y_footer">
+        <div class="y_footer_left">
+            <div class="y_footer_logo">
+                <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/ft_logo.png">
+            </div>
+                <p class="y_copyright">(C)GONGCHA KOREA CO.,LTD <br>ALL RIGHTS RESERVED.</p>                                                    
+        </div>
+        <div class="y_footer_right">           
+             <div>
+                <ul class="y_menu1">
+                    <li class="y_ploicy"><a href="https://www.gong-cha.co.kr/franchise/company/history.php">회사소개⠀ </a></li> 
+                    <li class="y_ploicy"><a href="https://www.gong-cha.co.kr/brand/benefit/contact.php">제휴/제안⠀</a></li> 
+                    <li class="y_ploicy"><a href="https://www.gong-cha.co.kr/brand/board/customer.php">고객센터⠀</a></li> 
+                    <li class="y_ploicy">개인정보처리방침⠀</li>
+                    <li class="y_ploicy">이메일무단수집거부⠀</li>
+                    <li class="y_ploicy">윤리규범 실천지침⠀</li>
+                    <li id="hotline">HOT-LINE</li> 
+                </ul>            
+                <div class="y_menu2">                 
+                        <div class="y_cscenter">
+                            <span>고객센터</span>
+                            <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/ico_tell.png">
+                            <span class="y_number">02-779-7758</span>                       
+                        </div>
+                        <div class="y_time">
+                            운영시간 : 월요일~목요일 ( 오전 9시 ~ 오후 6시), 금요일 (오전 9시 ~ 오후 1시) <br>
+                            점심시간 : 낮 12시~오후 1시 / 주말 및 공휴일 휴무
+                        </div>   
+                </div> 
+                <div class="y_menu3">                      
+                        <div class="y_address">
+                            <span class="y_rep">서울 종로구 종로 47(공평동, 7층)⠀</span>
+                            <span class="y_rep">㈜공차코리아 대표이사 박재홍⠀</span>
+                            <span class="y_rep">사업자등록번호 214-88-84534⠀</span>
+                            <span>통신판매번호: 2020-서울종로-0966</span>
+                        </div>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
