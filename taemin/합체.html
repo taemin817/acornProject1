@@ -347,10 +347,9 @@
                 let img = slide.querySelector("img");
                 let prevImg = liimgs[i] ;
                 
-            
                 img.src = prevImg;
             }
-
+            setInterval(yj_btn_prev, 6000); // 정해진 시간에 버튼이 기능하는 도구
             let j = 0;
             function nxt(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
                 j++;
