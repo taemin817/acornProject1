@@ -11,29 +11,21 @@
             padding: 0px;
             margin: 0px;
             border: 0px solid black;
-        }
-
-        ul {
             list-style: none;
         }
-
-        .ball {
+        .js_ball {
             position: relative;
         }
-
-        .ball2 {
+        .js_ball2 {
             position: absolute;
             left: 200px;
         }
-
-        .header {
+        .js_header {
             width: 1400px;
             height: 110px;
-            border: 0px solid black;
             position: relative;
         }
-
-        .logo {
+        .js_logo {
             width: 65px;
             height: 85px;
             position: absolute;
@@ -43,11 +35,9 @@
             background-position: center;
             background-size: cover;
         }
-
         a {
             text-decoration: none;
         }
-
         .ddi {
             margin: 25px;
         }
@@ -62,19 +52,17 @@
             background-size: cover;
         } */
 
-        .notice {
+        .js_notice {
             font-size: 13px;
             position: absolute;
             right: 370px;
             top: 55px;
             text-decoration: none;
         }
-
-        .snsAll {
+        .js_snsAll {
             list-style: none;
         }
-
-        .sns1 {
+        .js_sns1 {
             display: block;
             width: 30px;
             height: 30px;
@@ -86,8 +74,7 @@
             background-position: center;
             background-size: cover;
         }
-
-        .sns2 {
+        .js_sns2 {
             display: block;
             width: 35px;
             height: 35px;
@@ -99,8 +86,7 @@
             background-position: center;
             background-size: cover;
         }
-
-        .sns3 {
+        .js_sns3 {
             display: block;
             width: 35px;
             height: 35px;
@@ -112,8 +98,7 @@
             background-position: center;
             background-size: cover;
         }
-
-        .btn {
+        .js_btn {
             width: 150px;
             height: 100px;
             background-color: rgb(37, 35, 35);
@@ -123,8 +108,7 @@
             border-radius: 0px 0px 20px 20px;
             display: flex;
         }
-
-        .hi {
+        .js_hi {
             width: 40px;
             height: 60px;
             background-image: url(./ga.png);
@@ -134,33 +118,28 @@
             top: 20px;
             right: 95px
         }
-
-        .ga {
+        .js_ga {
             color: white;
             font-size: 19px;
             position: absolute;
             top: 25px;
             right: 5px
         }
-
-        .on {
+        .js_on {
             border-bottom: 3px solid rgb(223, 52, 52);
         }
-
-        .sub-item {
+        .js_sub-item {
             height: 0px;
             transition: .5s;
             overflow: hidden;
             display: flex;
         }
-
-        .sub-item-hover {
+        .js_sub-item-hover {
             height: 300px;
             background-color: rgb(44, 44, 51);
             opacity: 80%;
         }
-
-        .menu {
+        .js_menu {
             display: flex;
             list-style: none;
             position: absolute;
@@ -170,44 +149,37 @@
             font-size: 17px;
             text-decoration: none;
         }
-
-        .one {
+        .js_one {
             position: absolute;
             left: 25px;
             top: 28px;
         }
-
-        .two {
+        .js_two {
             position: absolute;
             left: 130px;
             top: 28px;
         }
-
-        .three {
+        .js_three {
             position: absolute;
             left: 240px;
             top: 28px;
         }
-
-        .four {
+        .js_four {
             position: absolute;
             left: 385px;
             top: 28px;
         }
-
-        .five {
+        .js_five {
             position: absolute;
             left: 505px;
             top: 28px;
         }
-
-        .six {
+        .js_six {
             position: absolute;
             left: 610px;
             top: 28px;
         }
-
-        .b1 {
+        .js_b1 {
             margin-left: 206px;
             margin-top: 20px;
             font-size: 15px;
@@ -216,7 +188,7 @@
             text-align: center;
             font-weight: 500;
         }
-        .b2 {
+        .js_b2 {
             margin-left: 18px;
             margin-top: 20px;
             font-size: 15px;
@@ -225,7 +197,7 @@
             text-align: center;
             font-weight: 500;            
         }
-        .b3 {
+        .js_b3 {
             margin-left: 25px;
             margin-top: 20px;
             font-size: 15px;
@@ -234,7 +206,7 @@
             text-align: center;
             font-weight: 500;
         }
-        .b4 {
+        .js_b4 {
             margin-left: 25px;
             margin-top: 20px;
             font-size: 15px;
@@ -243,7 +215,7 @@
             text-align: center;
             font-weight: 500;            
         }
-        .b5 {
+        .js_b5 {
             margin-left: 22px;
             margin-top: 20px;
             font-size: 15px;
@@ -252,7 +224,7 @@
             text-align: center;
             font-weight: 500;            
         }
-        .b6 {
+        .js_b6 {
             margin-left: 38px;
             margin-top: 20px;
             font-size: 15px;
@@ -261,12 +233,6 @@
             text-align: center;
             font-weight: 500;            
         }
-
-
-        
-
-
-
         /* .section1{
             width: 2560px;
             height: 850px;
@@ -285,51 +251,46 @@
             width: 1370px;
             height: 166px;
         } */
-
         span{
           display: inline-block;
           width: 100px;
           text-align: center;
           padding-bottom: 35px;
-
         }
     </style>
 </head>
 
 <body>
-    <div class="ball">
-        <div class="ball2">
-
-            <nav>
-                <div class="header">
-                    <div class="logo"></div>
-                    <ul class="menu">
-                        <span class="one"  onmouseover="show1(this)" onmouseout="hide2(this)">Brand</span>
-                        <span class="two" onmouseover="show3(this)" onmouseout="hide4(this)">Menu</span>
-                        <span class="three" onmouseover="show5(this)" onmouseout="hide6(this)">Store</span>
-                        <span class="four" onmouseover="show7(this)" onmouseout="hide8(this)">Membership</span>
-                        <span class="five" onmouseover="show9(this)" onmouseout="hide10(this)">Benefit</span>
-                        <span class="six" onmouseover="show11(this)" onmouseout="hide12(this)">Event&News</span>
+    <div class="js_ball">
+        <div class="js_ball2">
+                <div class="js_header">
+                    <div class="js_logo"></div>
+                    <ul class="js_menu">
+                        <span class="js_one"  onmouseover="show1(this)" onmouseout="hide2(this)">Brand</span>
+                        <span class="js_two" onmouseover="show3(this)" onmouseout="hide4(this)">Menu</span>
+                        <span class="js_three" onmouseover="show5(this)" onmouseout="hide6(this)">Store</span>
+                        <span class="js_four" onmouseover="show7(this)" onmouseout="hide8(this)">Membership</span>
+                        <span class="js_five" onmouseover="show9(this)" onmouseout="hide10(this)">Benefit</span>
+                        <span class="js_six" onmouseover="show11(this)" onmouseout="hide12(this)">Event&News</span>
                     </ul>
 
                     <!-- 메뉴 호버시 상세 메뉴를 띄우기 위한 부분 -->
 
-                    <div class="notice"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공지사항</a></div>
+                    <div class="js_notice"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공지사항</a></div>
                     <div>
-                        <a class="sns1" href="https://www.facebook.com/GongCha.Korea"></a>
-                        <a class="sns2" href="https://www.instagram.com/gongcha.official/?hl=ko"></a>
-                        <a class="sns3" href="https://pf.kakao.com/_Cywfxb"></a>
+                        <a class="js_sns1" href="https://www.facebook.com/GongCha.Korea"></a>
+                        <a class="js_sns2" href="https://www.instagram.com/gongcha.official/?hl=ko"></a>
+                        <a class="js_sns3" href="https://pf.kakao.com/_Cywfxb"></a>
                     </div>
                 </div>
-                <div class="btn">
-                    <div class="hi"></div>
+                <div class="js_btn">
+                    <div class="js_hi"></div>
                     <a href="https://www.gong-cha.co.kr/franchise/">
-                        <span class="ga">가맹점<br>개설문의</span></a>
+                        <span class="js_ga">가맹점<br>개설문의</span></a>
                 </div>
-            </nav>
 
-            <div class="sub-item">
-                <ul class="b1">
+            <div class="js_sub-item">
+                <ul class="js_b1">
                     <li>브랜드 소개</li>
                     <li>공차의 약속</li>
                     <li>브랜드 아이덴티티</li>
@@ -339,7 +300,7 @@
                     <li></li>
                     <li></li>
                 </ul>
-                <ul class="b2">
+                <ul class="js_b2">
                     <li>주문방법</li>
                     <li>신메뉴</li>
                     <li>음료</li>
@@ -349,7 +310,7 @@
                     <li>티스토리</li>
                     <li>티레시피</li>
                 </ul>
-                <ul class="b3">
+                <ul class="js_b3">
                     <li>매장 찾기</li>
                     <li>가맹점 개설문의</li>
                     <li></li>
@@ -359,7 +320,7 @@
                     <li></li>
                     <li></li>
                 </ul>
-                <ul class="b4">
+                <ul class="js_b4">
                     <li>New 공차 맴버십</li>
                     <li>공차 카드 & e-Gift</li>
                     <li>FAQ</li>
@@ -369,7 +330,7 @@
                     <li></li>
                     <li></li>
                     </ul>
-                <ul class="b5">
+                <ul class="js_b5">
                     <li>통신사제휴</li>
                     <li>결제 서비스</li>
                     <li></li>
@@ -379,7 +340,7 @@
                     <li></li>
                     <li></li>
                 </ul>
-                <ul class="b6">
+                <ul class="js_b6">
                     <li>이벤트</li>
                     <li>뉴스</li>
                     <li></li>
@@ -404,89 +365,89 @@
           //  alert(obj);
 
            obj.innerHTML="브랜드";
-           obj.classList.add("on");
+           obj.classList.add("js_on");
 
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide2(obj) {
            obj.innerHTML="Brand";
-           obj.classList.remove("on");
+           obj.classList.remove("js_on");
 
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
         function show3(obj) {
             obj.innerHTML="메뉴";
-            obj.classList.add("on");
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            obj.classList.add("js_on");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide4(obj) {
             obj.innerHTML="Menu";
-            obj.classList.remove("on");            
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            obj.classList.remove("js_on");            
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
         function show5(obj) {
             obj.innerHTML="매장";
-            obj.classList.add("on");
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            obj.classList.add("js_on");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide6(obj) {
             obj.innerHTML="Store";
-            obj.classList.remove("on");            
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            obj.classList.remove("js_on");            
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
         function show7(obj) {
             obj.innerHTML="멤버십";
-            obj.classList.add("on");
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            obj.classList.add("js_on");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide8(obj) {
             obj.innerHTML="Membership";
-            obj.classList.remove("on");            
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            obj.classList.remove("js_on");            
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
         function show9(obj) {
             obj.innerHTML="브랜드";
-            obj.classList.add("on");
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            obj.classList.add("js_on");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide10(obj) {
             obj.innerHTML="Brand";
-            obj.classList.remove("on");            
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            obj.classList.remove("js_on");            
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
         function show1(obj) {
             obj.innerHTML="제휴서비스";
-            obj.classList.add("on");
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            obj.classList.add("js_on");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide2(obj) {
             obj.innerHTML="Benefit";
-            obj.classList.remove("on");            
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            obj.classList.remove("js_on");            
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
         function show11(obj) {
             obj.innerHTML="이벤트&뉴스";
-            obj.classList.add("on");
-            let sub = document.querySelector(".sub-item");
-            sub.classList.add("sub-item-hover");
+            obj.classList.add("js_on");
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.add("js_sub-item-hover");
         }
         function hide12(obj) {
             obj.innerHTML="Event&News";
-            obj.classList.remove("on");            
-            let sub = document.querySelector(".sub-item");
-            sub.classList.remove("sub-item-hover");
+            obj.classList.remove("js_on");            
+            let sub = document.querySelector(".js_sub-item");
+            sub.classList.remove("js_sub-item-hover");
         }
 
     </script>
