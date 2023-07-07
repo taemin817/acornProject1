@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        *{
+            font-family: 'NanumGothic', 'dotum', 'Arial', 'sans-serif';    
+            margin: 0px;      
+            padding: 0px;
+        }
+
+        .footer{
+            width:100%;
+            height: 100%;
+             
+            display: flex;      
+        }
+
+        .footer_left{
+            width: 300px;
+            height: 166px;
+            display: flex;
+            background-color: #575757;                 
+        }
+
+        .footer_logo{
+            display: flex;
+            width: 500px;
+            height: 100px;
+            position: absolute;
+            margin-left:20px;
+            margin-top:30px;  
+        }
+
+        .copyright{
+            width: 180px;           
+            margin-left:110px;
+            margin-top:100px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #b5b4b4;
+            position: absolute;           
+        }
+
+        .footer_right{          
+            width: 900px;
+            height: 166px;
+            position: relative;
+            background: #f1f2f2;            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;    
+        }
+
+        .menu{           
+            display: flex;       
+            font-weight: 700;
+            font-size: 15px;       
+            line-height: 21px;
+            margin-bottom:20px;          
+        }
+
+        .menu a{
+            text-decoration: none;
+            color: #444;
+        }
+
+        .menu p{
+            width: 300px;
+            margin-top:80px;
+            display: block;
+        }
+
+        ul li{
+            list-style: none;
+            font-weight: 700;
+            line-height: 21px;
+            font-size: 15px;
+            color: #444;  
+            
+        }
+
+        ul.menu li {
+            margin-right: 20px; /* Increase the margin to create a larger gap */
+        }
+
+       
+        
+        li{
+            display: flex;
+            float: right;
+            margin-right: 10px;
+        }
+
+        .menu1::after{
+            content:"|";
+            color: #a4a4a4;
+        }
+        
+
+       
+
+        .menu2{
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #666;
+            display: flex; 
+            margin-bottom:10px;
+        }
+
+        .number{
+            font-weight: bold;
+        }
+
+        .number img{
+            width: 17px;
+            height: 17px;
+        }
+
+        .day{
+            margin-left:10px;
+            font-size: 13px;
+        }
+
+        .seoul{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #666666;
+        }
+
+        .seoul1::after{
+            content: "|";
+            color: #a4a4a4;
+        }
+
+        strong{
+            font-size: 18px;
+        }
+
+    </style>
+
+    <script>
+            function load( url){
+            window.open( url, "myWin", "left=0,top=300,width=400,height=300");}
+    </script>
+</head>
+<body>
+    <div class="footer">
+        <div class="footer_left">
+            <div class="footer_logo">
+                <img src="https://www.gong-cha.co.kr/view/gongcha/images/common/ft_logo.png">
+            </div>
+                <p class="copyright">(C)GONGCHA KOREA CO.,LTD <br>ALL RIGHTS RESERVED.</p>                                                    
+        </div>
+        <div class="footer_right">           
+             <div>
+                <ul class="menu">
+                    <li class="menu1"><a href="https://www.gong-cha.co.kr/franchise/company/history.php">회사소개</a></li> 
+                    <li class="menu1"><a href="https://www.gong-cha.co.kr/brand/benefit/contact.php">제휴/제안</a></li> 
+                    <li class="menu1"><a href="https://www.gong-cha.co.kr/brand/board/customer.php">고객센터</a></li> 
+                    <li class="menu1"><strong>개인정보처리방침</strong></li> 
+                    <li class="menu1"><a href="javascript:load('http://www.naver.com')">이메일무단수집거부</a></li>      
+                    <li class="menu1"><a href="javascript:load('http://www.naver.com')">윤리규범 실천지침</a></li>
+                    <li><a href="javascript:load('http://www.naver.com')">HOT-LINE</a></li> 
+                </ul>            
+                <div class="menu2">                 
+                        <div class="number">
+                            <span>고객센터</span>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAAC5CAMAAADXsJC1AAAAkFBMVEX///8AAADl5eXm5ubk5OTj4+Pz8/Py8vLu7u77+/v39/fq6ur8/Pzv7+/r6+u9vb1FRUXW1tZjY2OXl5c5OTnd3d3Ozs6np6fFxcU0NDS3t7cJCQltbW2EhIShoaGNjY12dnZRUVE+Pj4bGxsmJiatra0XFxdWVlZmZmaIiIgTExN6enpERESamposLCxMTEx+ZBD7AAAQ/klEQVR4nO1deZ/bKA8mxgcG49nMTObqHD2m7Xbbbr//t3s5jG1sYwtwEuf3rv6JOimKJIMR8EggJKhIMGaSIQlOaskwjBMuGfFNkksmFQwVn6Vg0lIwVHyVym9y+X8kw42YWoghRkzRb121YmTrqi9GKoEbJbQY2VqJwZNiWiVGYmJsQf855D+HABySJonWJU1SLSRJUiVEfJMqIZlglBDBZEqI+CpTQuT/UQ4RjHaIEKMtEd8U/daKKY2Yqi/GUkI7xCmmMkqUpvW0mABbUCEop5Tmkwyn5i+SKSaZvM/MiJluXSy37pgFMXwFW1AyenbSkc5np7uAdLrj2aU9Ma5nJ37TfnbJ6NkZMVY/TOx+KP6w1A8DbMFHGt1qfK46uk/0puo7JG11cQoxXnU6JGFMGFvvM1qPxSQDhyQTDklth6QTDkkGDkkmHBJsC2MM56iqSiwYWlUVlUxZVUgx4g+oEAwT/wVxJq0VTC0YLhnZuhBMpVtLNfdPL592kt4SIlvn8ivUF0PEJ2nE4FZM3oox2lhK5K0SuFGiFWOUQHgFWxQVWZoqt9Vp2ryZBaPfzGma6dEtGP2CF4xyumTUsxOMfog0u3p533X0lbA0K/qtFaNnmaEYqYTqAkSIY0YJ9eySdCCmssSgoZgYW5DpR/Gjm78+7gb07arAFxmHRDuEVE/fh95Q9Kw7xqU5RMQwg2AmnQhmMjuYycyEiAl5/WfSHZKumtbthJjZgVnWTYipKzBLu3k1swOzbGJyj7ElRYSQOi9pSWvB0D6TS6aktCwEQxQjPrlkuGAKyRD5Df7p9Iak73VRm9bEtOamtRHjUMLShiyIqWNtqYuyC8zSfkxkgpm0cXoXUZlgxsRENX+ddYegD3dEd+bETLtdYJbYgVk6FZjpztwGZskwMJNi7MAs0JY1ArP8yj1YOvq9xug+UWAG6SGJ06vsGeAOQc/VKXpIGmUL1mJqQXlZiuEmiPaZXDLiU4y7huHik0iGCIaXJdp/gflDvEjKqjCtuW6txRSSMUqUIyWo+W1LmwUxIbbo1oV8CL03cz1+M6fuN3NxD3WHoA8JYJZpArPhLJMAZpnRZOVnSzfLhI/u4s3DH7vdlyx2dG88MEPA10dH5HIckgbE/9e+/tjt6lOsZUJs6a9lxBqP5WIdWEpGrRAlUxpGfFaFYdQKUTI1y2/8/bH7zFVrtUzVYsRCUzJGicooUY6UyEdKWGKKvhhPW3pKFNXcfkg60Zmbqar+GuCP3e62tDvz6fZDZmxJ3BtE4NFN9kH+2O1eIkb3OQKzpX1IE8wUfwU6ZPeETrGn6mPLMHTngtS+uWFyydBJphCfcoO68glABnToxHTMtBLT2ky3nhEzb8tQCWS7bXbJ3J5lsA/hDrktBoFZ3LnM1PLfy5bRuYwZWB5zN/eLyAb0Si4gDvETwmL8sdvty+07ZGpjNnMFMyxsym3pO0LzgVnWBWbZOpvMTlsmArPJkzv36JZvZu+YfUB3bHjqGjbLAE6QF22BnNzNHu7I7ngb6ZDP/GRxyKIt8yd3wGDmU6RDdlfsEgIzeDcLWcZYdF2cCnQRMGRySQoJ0HyOmdxm6EOsQ3Z7OiXYR4llJlAMst0GCqoLyL7yLP0IenZ2YHYk0AUyA8tj7iYv0V1k63HIWMjUwrwNzO6iHXKo4kAX1u7AkkPmbHE4BBshgjFexbzRBUshlWSUEPmH0am2L70pwUoX3PihVYIbJWqjhNSmMNoYJbrW0iH5SAzQlqEYFb55AxV+xDrkj3pSfjFkA7rgJpBtQ1E8DGSjNiqDNojix0zSPLvtxSFBDokfM1ebdUg/MAPvVPDo2Oyr7q0+QIUuMEsHgVk6EZgF77qoTSMJDbAYhRGQjIQa5COGHmId8lHKUVtYpGGKPjNWYqwN7TP5qDXYln7rXLnGPgGGHUO/L9s8S38T/91OBxpW9ZtOjL8t1pE6MgPLM5hZBIUs0C3deGDmRJAm0ycmPNIhn4UOoxOTxBWY9Q5eUkdg1hfjaYt1+oNGGAEHUIHVNVMIA82gj3EOuc778kBAhbESvdYS7zAWA7PFEiMHVhYAVGBXcQ550mI6oEJmzTLVSIk8S9LxLNMEZgO0RBToIhRSxSOOItpIdYtxSKhDSNRZBGst2ZxDgtYyTPbxCH8ccDiAnKcTa5l0vbWMeJMojEBdCYYrhIFgNMJAMBphIF9ECmFQamCBZFDw+e7uDhmgQiOvapRglhJEARUaJVpt5G/b2kgxeV+Mty1aTCnFoKYf+SduhB/wPhkxa067CWDahYAujEMCghn2LcwfP1Dg6D5HEqI73B3vQ9ZhK7xnEgpUgIXuQbb09lQNIsDGCLgRBrQDFgS9Vv+lQzFTQAUOVsLZ2s+Wlglb/jfBzKcAh9TBQAX38n/qXCZ4+R+DdQ84oHkKH90bD8yUkM++/rgAjJlXYDYEKvjOvI9U9/UgoMLKm8xu0IXnVJX0Zjzs6ZAEwZ6dVqLtAkebdvu2rJJzx/3OI75CgQrwg6qTndzBhGDi449fF4R1750z+wEVfBDvJYoDKngednvbglRgJiEAGggwy+QNU9gM9YA0v5bD1h0TpUTLzLdeFKO+DAHM9J9d8TfUH7d54vHsJjFmA8CMswOtjDHzGt1wJMCBRo7uMwRmIRUVcmBw9v3EWZnB1SFwo0uV9CdnIySxhfSBCo0QBozf2QJQQTvEUqLsK5EbJbgR0yrRoiWSSFsav8aCXUEozZ/8nNUhfIC7xm3hnRkEbH5gF1UMIUpICegit/z/qDoEfVp2yN9FGr9TAU0PiasOwTlvoAF9RkMDekyDMOj2skjRMmg5v/sZ9VpLphiJ8VaisJQYtQ6ypV+2KyIta7mLPA7FrJn7v26KWWRgpkf3ciyyjx/dpwvMUkcwAz8xWY5FXuJPTDAkTTXeFnWcVZrjLAUN0KdYLTNxGNaeqTU5xIBTvBSBz9TMb/e1mTiaGyhhxETagvTAiizbBVjRPJOlwCydC8xScGAWm+puBlbc6C4+LXrkcElxSLRD2PK+yEd0QQ6JHTJpipYzJPZGzLaHjMRmLQCvCmZgW6xDfzGD/mIav7Wcu/oX7cSwVkyLHVtCf/W10a3ZQIkKIGbRlnWmXeF9AKLonkThA3Fykml3lcBM6kL/XfTI4RICszVCdzksE0B+8zVnRsx2Q3cgfByAQi+Xo7N76haziEJ3KjEtJtAW1LgtasncPETAwabced/48t8MrBVGd7mMbr7OLyMOWWkdWi+/V3/zi3BI5MasASpgAN57zza+ydymKia9VMXEpCrqrXtAvmTTevm9+qGcyZdEfSWwpUSbdjl/DBFvS+xBld2Z6+Uuch2aUeveD1n9oGrFdSgAAf+DXkZgtg5QAQHyNa/Ilg+7Vy64AEpP3NOIqg/T2sS17olBQ7dFV/YAVEr4Up4GMBN0nYoZWOstuwBwgHc1EWw4DlnVIRBQ0fcFFOLZQXerlo+G5Fp9pNi7wHinRDVSwqpCHWNLHHB3OoakEIDEG9oocHflOESKAew4C3rdaBxyBIckMMjIzTYdEpMe4t6pAMFXvxaBk/tR00PWSLoZ5e4UBFTI6h75VDqdYo6QQGS7ba1auLDXiHyzniTF7MhluyCjm/8GeeT3ZgOz1YEK9A/IIz9Qz5JNpKmaYue1KXY+XXG9LZVuV1wvnRXXCw67SOMnqScqrhMjpldxvVf2vSKc2IXbWyVibQlOdV/c3IOCvmW9Wb/AjNGH+6c9yhk+Rqr7MeIQ3Qs5sDLvP7Xfm6podm6vX/dFYbTZdmDWWJLP313VeeTAPRxS9pZKv17x6g4JLKgCuvmFQGvzXhXYPkKaKKiS6oIq9Jfd9PYJcbxmQRXgpT5BdwNVBdAhuxdaQUru1PnduODAt7cMVT4XFM3agnQ/OtLtUTU4m+ZWyXMHZnpMcAciVvgzWWv5bwbWcYAKBAD7buihWH5Tuc9KXzBZeYPoSBjj5VvwWnrjeD50T2dfSfc1XsOWtvSffbmgwQiUboSBDTUoDcJgeEdhBa/vdZtR932L+WItucc7VMbbMrf8H10MFnSLpU8m6z3BLqBCBqjw85MxyCwzb8sR45BGDPOom3h94NOjGxbkPe5JHmvL8R2CfTyyu+Hl2CEU3MteUawtR1vLdEAFfPApAvf4gOy1DOP3Hu2fY21pLrLG+jZtwejbtHFzm3ZzDTYyt2kjfZs2Mtdgo96l3Fw0qi0xQqy8TRv5Fef5yEndKYEOsI0EQ7eYxdiCTD86TuKGGVGeRZxvjBKYJv736R3qCFtcDll5Pxya3WvogyxRXLN8H1RTP4uwRTtk9T3V0WYo8a1X9P6E8ofpe8BhHgndU3VDA7yhBrNi/K/YWEbwuYnR4MsyxoCZlRCkI6BC/KUjcPpySEJtOX4cYsSscA0LnG75dgOzVkx9So9co0BbIIHZWqk9J/XIU7AtfbBrtlaFsWwaqOAVs0bSAztTdQifc3l0iK2QD6fHAm8DUjULVGBpzGzqRy98jbJdx75fDGO/pUkMHYi/LY7rZUdQAxufYDG+98JWAbd9h9Fr6W/LNJLZlZYFQJD2gQoOBGkJQwbE0x8UYMsJ45D2TeU6TVibfqHIwCw+GwIIVPBe6oXRNQqwpcUIqF0TCQ1QuyYNRgC3QAW1AyShBmrPRSIM1A6QASpggzAYiZFABbl/1IkhjBEcewMphG6Qvy16lpnKQlqpJr8DQVrVJ3i1PhF/W5A9uk+YyZJH3IQOpD3xt+V8DsH8AYYxCqeYwGyNvF3P+8VSxn4tGxVBn/OQvF2DEaAjjMAYYVAYhAE3CIMR1AAipgUqFGXsVVezdI8CbLFz/9uNRjtPIVkGKsznKbT3iw2BCnwC77Ea4SBbzhGY9d5UjB9ttnlcoTrEsXrIDJSlQJG3XTnpOcyWc75DzKgNPW2Yp6sqxBak3GZmmXq9WcbjfjFMgQBOL3onZ68OEZHJkoFrXYPpjW8lCTEstWf1BfCenbdsF4q9X4zGX43ep1saWLarv9pt8fTTK8TKXiFWrtWuLWa02lWgfjISk6M779tZZuipDLPlPPshLqDCei/XR1IG2nLmwGwwunH0Vc8N3bMIrDt8T9Uz+cuVle8GKqRk/7yKQ0iwLcBdd2h6oFfrKTFFma3gkisaaguy3Xb8c5ll0AXnd7Gh62O4LQg6uk+ZYsyKB0Bdlhnah9uySYfI1g8RB3xvEbZoh5zs9N+nTMHdp1CH8Ahbjo91BxXlSyeWXQyxsNfr3cax7j5xyLAzkxtQzrxFN1vHusc4RPzCvadL/qxetmsWuQcpl+RAIQZO7ozeAbM7Fb3H2nIqnGqEGFpmr9D7sL9keZwSyHbb0ZDMcaALXBd7WGZWTSNtQcGj+8S1XyiiDz+XXifv5Ghlu1bOhrB2B8I3Geqn2UOLf+p4W7RDVL6MFKJyTJQlzBT2ZLoip84xQSbHBJkcE1nYk5nCnlNilCU6VcUpxlJCp91I840SnZg6pw8fXf3ksVrBllNkVM2VfvXfqMx5/XAzFde/KG2ibdl4HDL5pmIc1ffDFfHV9qtDHM0hzdC6+9FhXp+LoRJrBGbnW8sEHYfhmu9f1Vv201XZtI63pZ/ZrYq+W9Xf/TO7aU9MSZbF2CXoR2KKvpiJSvbiX4eDsNxSIsYWpPvR8e4XS+zALJ0KzNLm2fkXhxRi9ECyQBdRuf9mYG09MNtM2a6kqf0yE8yk8ItO0DgwSztLAst2oaGYGFuOWmEGIsZqvVhhZhJ0Ea9Ev8LMMWsQNYHZ8AU/AboY7pi5axAFgy6gtlxuHHJB9VQv2SH/A5Rz2HqYJdjgAAAAAElFTkSuQmCC">
+                            <span class="number2">02-779-7758</span>                       
+                        </div>
+                        <div class="day">
+                            운영시간 : 월요일~목요일 ( 오전 9시 ~ 오후 6시), 금요일 (오전 9시 ~ 오후 1시) <br>
+                            점심시간 : 낮 12시~오후 1시 / 주말 및 공휴일 휴무
+                        </div>   
+                </div> 
+                <div class="menu3">                      
+                        <div class="seoul">
+                            <span class="seoul1">서울 종로구 종로 47(공평동, 7층)⠀</span>
+                            <span class="seoul1">㈜공차코리아 대표이사 박재홍⠀</span>
+                            <span class="seoul1">사업자등록번호 214-88-84534⠀</span>
+                            <span>통신판매번호: 2020-서울종로-0966</span>
+                        </div>   
+                </div>
+            </div>
+    </div>
+</body>
+</html>
