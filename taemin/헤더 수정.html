@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #444;
+      }
+      .nav {
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        z-index: 500;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      } /*1200px너비로 가운데 정렬하기 위한 클래스*/
+
+      .main_menu:hover .sub_menu {
+        display: block;
+      }
+      .main_menu > li {
+        display: block;
+        float: left;
+        box-sizing: border-box;
+      }
+      .main_menu > li > a {
+        position: relative;
+        display: block;
+        width: 180px;
+      }
+      .sub_menu {
+        display: none;
+        width: 180px;
+        height: 300px;
+        z-index: 9999;
+        text-align: center;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <ul class="main_menu">
+          <li>
+            <a herf="">Brand</a>
+            <ul class="sub_menu">
+              <li><a href="">브랜드소개</a></li>
+              <li><a href="">공차의 약속</a></li>
+              <li><a href="">브랜드 아이덴티티</a></li>
+              <li><a href="">세계 속의 공차</a></li>
+            </ul>
+          </li>
+          <li>
+            <a herf="">Menu</a>
+            <ul class="sub_menu">
+              <li><a href="">주문방법</a></li>
+              <li><a href="">신메뉴</a></li>
+              <li><a href="">음료</a></li>
+              <li><a href="">빙수</a></li>
+              <li><a href="">디저트</a></li>
+              <li><a href="">MD상품</a></li>
+              <li><a href="">티스토리</a></li>
+              <li><a href="">티레시피</a></li>
+            </ul>
+          </li>
+          <li>
+            <a herf="">Store</a>
+            <ul class="sub_menu">
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">가맹점 문의</a></li>
+            </ul>
+          </li>
+          <li>
+            <a herf="">Membership</a>
+            <ul class="sub_menu">
+              <li><a href="">NEW 공차 멤버십</a></li>
+              <li><a href="">공차 카드 & e-Gift</a></li>
+              <li><a href="">FAQ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a herf="">Benefit</a>
+            <ul class="sub_menu">
+              <li><a href="">통신사 제휴</a></li>
+              <li><a href="">결제 서비스</a></li>
+            </ul>
+          </li>
+          <li>
+            <a herf="">Event&News</a>
+            <ul class="sub_menu">
+              <li><a href="">이벤트</a></li>
+              <li><a href="">공차소식</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

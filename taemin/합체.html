@@ -10,12 +10,13 @@
             padding: 0px;
             margin: 0px auto;
             list-style: none;
+            box-sizing: border-box;
         }
         a{
             text-decoration: none;
             color: #444;
         }
-        .header, .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
+        .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
             width: 1200px;
         }
         /* 유정석 */
@@ -30,11 +31,10 @@
             position: relative;
         }
         .js_logo {
-            width: 65px;
-            height: 85px;
+            width: 62px;
+            height: 81px;
             position: absolute;
-            top: 12.5px;
-            left: 100px;
+            top: 15px;
             background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png);
             background-position: center;
             background-size: cover;
@@ -53,33 +53,30 @@
         } */
         .js_notice {
             font-size: 13px;
+            font-weight: 700;
             position: absolute;
-            right: 370px;
-            top: 55px;
+            right: 500px;
+            top: 46px;
             text-decoration: none;
-        }
-        .js_snsAll {
-            list-style: none;
         }
         .js_sns1 {
             display: block;
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            right: 320px;
-            top: 50px;
-
+            right: 460px;
+            top: 46px;
             background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_f.png");
             background-position: center;
             background-size: cover;
         }
         .js_sns2 {
             display: block;
-            width: 35px;
-            height: 35px;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            right: 270px;
-            top: 49px;
+            right: 420px;
+            top: 46px;
 
             background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_i.png");
             background-position: center;
@@ -87,42 +84,42 @@
         }
         .js_sns3 {
             display: block;
-            width: 35px;
-            height: 35px;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            right: 220px;
-            top: 47px;
-
+            right: 380px;
+            top: 46px;
             background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_k.png");
             background-position: center;
             background-size: cover;
         }
         .js_btn {
-            width: 150px;
-            height: 100px;
-            background-color: rgb(37, 35, 35);
+            width: 145px;
+            height: 95px;
+            background-color: rgb(62, 53, 42);
             position: absolute;
-            right: -150px;
+            right: 0px;
             top: 0px;
-            border-radius: 0px 0px 20px 20px;
+            border-radius: 0px 0px 17px 17px;
             display: flex;
         }
         .js_hi {
-            width: 40px;
-            height: 60px;
+            width: 38px;
+            height: 43px;
             background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/go_main_franchise_ico.png");
             background-position: center;
             background-size: cover;
             position: absolute;
-            top: 20px;
-            right: 95px
+            top: 23px;
+            right: 92px;
         }
         .js_ga {
             color: white;
-            font-size: 19px;
+            font-size: 18px;
+            font-weight: 570;
             position: absolute;
-            top: 25px;
-            right: 5px
+            top: 21px;
+            right: 15px;
         }
         .js_on {
             border-bottom: 3px solid rgb(223, 52, 52);
@@ -133,7 +130,7 @@
             overflow: hidden;
             display: flex;
             position: absolute;
-             z-index: 9999999;
+            z-index: 9999999;
         }
         .js_sub-item-hover {
             height: 300px;
@@ -146,17 +143,14 @@
             display: flex;
             list-style: none;
             position: absolute;
-            left: 200px;
+            left: 50px;
             top: 20px;
             font-weight: 600;
             font-size: 17px;
             text-decoration: none;
         }
-        .js_{
-            position: absolute;
-            top: 28px;
-        }
         .one {
+            position: absolute;
             left: 25px;
         }
         .two {
@@ -239,11 +233,12 @@
             font-weight: 500;            
         }
         .js_{
-          display: inline-block;
-          width: 100px;
-          text-align: center;
-          padding-bottom: 35px;
-
+            position: absolute;
+            top: 23px;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            padding-bottom: 35px;
         }
         /* 서예진 */
         .hide{
@@ -325,7 +320,7 @@
                 }
                 .tm_search{
                     width: 400px;
-                    height: 336px;
+                    height: 386px;
                     background-color: #f5f4f2;
                     padding: 50px 40px 0px 40px;
                 }
@@ -348,11 +343,12 @@
                         margin-bottom: 49px;
                     }
                     .tm_address{
-                        width: 243px;
+                        width: 320px;
                         height: 40px;
                         margin-bottom: 10px;
                         padding-left: 20px;
                         padding-right: 57px;
+                        font-size: 16px;
                         border: none;
                         background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/brandmain/btn_main_store_search.gif");
                         background-position-x: 100%;
@@ -378,8 +374,8 @@
                 display: flex;
             }
                 .tm_order{
-                    width: 320px;
-                    height: 440px;
+                    width: 400px;
+                    height: 500px;
                     padding: 60px 40px 0px 40px;
                     background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_section3_img.jpg");
                 }
@@ -444,8 +440,8 @@
                     height: 450px;
                 }
                 .tm_franchise{
-                    width: 320px;
-                    height: 390px;
+                    width: 400px;
+                    height: 450px;
                     padding: 60px 40px 0px 40px;
                     background-color: rgb(237, 230, 214);;
                 }
@@ -489,12 +485,13 @@
                     position: relative;
                 }
                 .tm_maininfo{
-                    width: 340px;
-                    height: 37px;
+                    width: 400px;
+                    height: 97px;
                     padding: 30px;
                     position: absolute;
                     left: 0px;
                     bottom: 0px;
+                    background-color: white;
                 }
                 .tm_info{
                     color:#c30f30;
@@ -555,11 +552,13 @@
         .kbody{
             background-color: #F5EEE8;
             /* border: 1px solid black; */
+            height: 471px;
+            margin-top: 36px;
+        }
+        .kmain{
             width: 1200px;
             height: 471px;
-            padding: 0px 680px 0px 680px;
-            padding: 60px;
-            box-sizing: border-box;
+            padding: 60px 0px;
         }
         .ktop{
             position: relative;
@@ -567,15 +566,19 @@
         }
         .title{
             font-size: 24px;
-            font-family: 'Nanum Gothic';
             color: #333333;
             font-weight: 700;
         }
         .kcenter{
             margin-top: 50px;
-            font-family: 'Nanum Gothic';
         }
-        .kcenter1, .kcenter2, .kcenter3{
+        .kcenter1{
+            display: flex;
+        }
+        .kcenter2{
+            display: flex;
+        }
+        .kcenter3{
             display: flex;
         }
         .kno{
@@ -623,7 +626,15 @@
             font-weight: bold;
             background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img5.jpg);
         }
-        .item1, .item2, .item3{
+        .item1{
+            /* border: 1px solid black; */
+            width: 700px;
+        }
+        .item2{
+            /* border: 1px solid black; */
+            width: 700px;
+        }
+        .item3{
             /* border: 1px solid black; */
             width: 700px;
         }
@@ -653,12 +664,11 @@
             font-size: 13px;
             font-weight: bold;
             text-decoration: none;
-            font-family: 'Nanum Gothic';
         }
         .tabs{
             display: flex;
         }
-        .kslide{
+        .slide{
             height: 50px;
             width: 50px;
             display: none;
@@ -772,104 +782,86 @@
             z-index: 1;
         }
     </style>
-    </style>
-            
+<!-- 정석함수 -->
         <script>
-            // 정석 함수
             function show1(obj) {
-            // alert("adfgsdfg");
-            // alert(obj);
-
             obj.innerHTML="브랜드";
-            obj.classList.add("on");
+            obj.classList.add("js_on");
 
                 let sub = document.querySelector(".js_sub-item");
                 sub.classList.add("js_sub-item-hover");
             }
-            function hide2(obj) {
+            function hide1(obj) {
             obj.innerHTML="Brand";
-            obj.classList.remove("on");
+            obj.classList.remove("js_on");
 
+                let sub = document.querySelector(".js_sub-item");
+                sub.classList.remove("js_sub-item-hover");
+            }
+            function show2(obj) {
+                obj.innerHTML="메뉴";
+                obj.classList.add("js_on");
+                let sub = document.querySelector(".js_sub-item");
+                sub.classList.add("js_sub-item-hover");
+            }
+            function hide2(obj) {
+                obj.innerHTML="Menu";
+                obj.classList.remove("js_on");            
                 let sub = document.querySelector(".js_sub-item");
                 sub.classList.remove("js_sub-item-hover");
             }
             function show3(obj) {
-                obj.innerHTML="메뉴";
-                obj.classList.add("on");
+                obj.innerHTML="매장";
+                obj.classList.add("js_on");
+                let sub = document.querySelector(".js_sub-item");
+                sub.classList.add("js_sub-item-hover");
+            }
+            function hide3(obj) {
+                obj.innerHTML="Store";
+                obj.classList.remove("js_on");            
+                let sub = document.querySelector(".js_sub-item");
+                sub.classList.remove("js_sub-item-hover");
+            }
+            function show4(obj) {
+                obj.innerHTML="멤버십";
+                obj.classList.add("js_on");
                 let sub = document.querySelector(".js_sub-item");
                 sub.classList.add("js_sub-item-hover");
             }
             function hide4(obj) {
-                obj.innerHTML="Menu";
-                obj.classList.remove("on");            
+                obj.innerHTML="Membership";
+                obj.classList.remove("js_on");            
                 let sub = document.querySelector(".js_sub-item");
                 sub.classList.remove("js_sub-item-hover");
             }
             function show5(obj) {
-                obj.innerHTML="매장";
-                obj.classList.add("on");
+                obj.innerHTML="제휴서비스";
+                obj.classList.add("js_on");
+                let sub = document.querySelector(".js_sub-item");
+                sub.classList.add("js_sub-item-hover");
+            }
+            function hide5(obj) {
+                obj.innerHTML="Benefit";
+                obj.classList.remove("js_on");            
+                let sub = document.querySelector(".js_sub-item");
+                sub.classList.remove("js_sub-item-hover");
+            }
+            function show6(obj) {
+                obj.innerHTML="이벤트&뉴스";
+                obj.classList.add("js_on");
                 let sub = document.querySelector(".js_sub-item");
                 sub.classList.add("js_sub-item-hover");
             }
             function hide6(obj) {
-                obj.innerHTML="Store";
-                obj.classList.remove("on");            
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.remove("js_sub-item-hover");
-            }
-            function show7(obj) {
-                obj.innerHTML="멤버십";
-                obj.classList.add("on");
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.add("js_sub-item-hover");
-            }
-            function hide8(obj) {
-                obj.innerHTML="Membership";
-                obj.classList.remove("on");            
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.remove("js_sub-item-hover");
-            }
-            function show9(obj) {
-                obj.innerHTML="브랜드";
-                obj.classList.add("on");
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.add("js_sub-item-hover");
-            }
-            function hide10(obj) {
-                obj.innerHTML="Brand";
-                obj.classList.remove("on");            
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.remove("js_sub-item-hover");
-            }
-            function show1(obj) {
-                obj.innerHTML="제휴서비스";
-                obj.classList.add("on");
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.add("js_sub-item-hover");
-                 
-            }
-            function hide2(obj) {
-                obj.innerHTML="Benefit";
-                obj.classList.remove("on");            
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.remove("js_sub-item-hover");
-            }
-            function show11(obj) {
-                obj.innerHTML="이벤트&뉴스";
-                obj.classList.add("on");
-                let sub = document.querySelector(".js_sub-item");
-                sub.classList.add("js_sub-item-hover");
-            }
-            function hide12(obj) {
                 obj.innerHTML="Event&News";
-                obj.classList.remove("on");            
+                obj.classList.remove("js_on");            
                 let sub = document.querySelector(".js_sub-item");
                 sub.classList.remove("js_sub-item-hover");
             }
         </script>
 
+<!-- 예진 함수 -->
         <script>
-            // 예진 함수
             let liimgs = ["https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg","https://www.gong-cha.co.kr/uploads/board/20230707/Aj4wYuB0gPZvEaGQ_20230707.jpg","https://www.gong-cha.co.kr/uploads/board/20230502/0nGiMx8vBpUXFkJh_20230502.jpg","https://www.gong-cha.co.kr/uploads/board/20230112/pqL7s1dwA0QYTRgM_20230112.jpg"];
             let as = ["https://www.gong-cha.co.kr/brand/menu/new.php","https://gong-cha-event.co.kr/?fromurl=owned_hompage&utm_source=gongcha&utm_medium=DA&utm_campaign=owned_hompage","http://www.gong-cha.co.kr/brand/menu/product.php?c=001002","#"];
             let i = 0;
@@ -942,45 +934,10 @@
             setInterval(nxt, 6000); // 정해진 시간에 버튼이 기능하는 도구
         </script> -->
 
-            
-        <script>
-            // 원규 함수
-            window.addEventListener("load", function(){  
-                let msg = [];
-                let index = -1;              
         
-                let slide_items =  document.querySelectorAll(".kcenter");  // 해당 요소(element)들을 배열로 반환함      
-                for( let i=0 ; i< slide_items.length ; i++ ){
-                    let message = slide_items[i].innerHTML;                
-                    msg[i] = message;
-                }
-                // setInterval(콜백함수, 밀리세컨드); 브라우저에게 일정간격으로 매서드를 호출할 수있게 하는 기능
-                setInterval(changeMsg , 5000); // 초 *1000   ,3초간격으로  changeMsg 함수 호출됨 
-        
-                function changeMsg(){
-                    // alert("djfkfkfk");
-                    index++; // 0시작을 위해서  
-                    if(index >= msg.length)   {
-                        index = 0;
-                    }        
-                    let slide = document.querySelector(".kcenter");
-                    slide.innerHTML = msg[index];
-                    
-                    slide.animate( {
-                            transform: [          /* transform   translate 위치 이동 */
-                            'translateX(10%)',    // 시작
-                            'translateX(0px)'     // 도착
-                            ]
-                        },
-                        {
-                            duration:1000         // 위의효과가 1초간 지속되도록
-                        }); 
-                }   
-                });
-        </script>
-
+<!-- 원규 함수 -->
+<!-- 퀵메뉴 함수 -->
         <script>
-            // 퀵메뉴 함수
             function changebrown(color){
                 color.setAttribute('src','https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_off.png');
             }
@@ -996,12 +953,12 @@
                 <div class="js_header">
                     <div class="js_logo"></div>
                     <ul class="js_menu">
-                        <span class="js_ one"  onmouseover="show1(this)" onmouseout="hide2(this)">Brand</span>
-                        <span class="js_ two" onmouseover="show3(this)" onmouseout="hide4(this)">Menu</span>
-                        <span class="js_ three" onmouseover="show5(this)" onmouseout="hide6(this)">Store</span>
-                        <span class="js_ four" onmouseover="show7(this)" onmouseout="hide8(this)">Membership</span>
-                        <span class="js_ five" onmouseover="show9(this)" onmouseout="hide10(this)">Benefit</span>
-                        <span class="js_ six" onmouseover="show11(this)" onmouseout="hide12(this)">Event&News</span>
+                        <span class="js_ one"  onmouseover="show1(this)" onmouseout="hide1(this)">Brand</span>
+                        <span class="js_ two" onmouseover="show2(this)" onmouseout="hide2(this)">Menu</span>
+                        <span class="js_ three" onmouseover="show3(this)" onmouseout="hide3(this)">Store</span>
+                        <span class="js_ four" onmouseover="show4(this)" onmouseout="hide4(this)">Membership</span>
+                        <span class="js_ five" onmouseover="show5(this)" onmouseout="hide5(this)">Benefit</span>
+                        <span class="js_ six" onmouseover="show6(this)" onmouseout="hide6(this)">Event&News</span>
                     </ul>
 
                     <!-- 메뉴 호버시 상세 메뉴를 띄우기 위한 부분 -->
@@ -1157,7 +1114,7 @@
     </div>
     <!-- 이원규 -->
     <div class="kbody">
-        <div class="khead">
+        <div class="kmain">
             <div class="ktop">
                 <div class="title">공차 티 레시피</div>
                 <div class="kno"></div>
@@ -1171,21 +1128,20 @@
                     </div>
                 </div>
             </div>
-        <div class="kcenter">
-            <div class="kcenter1" data-tab-content id="tab1" >
-                <div class="kimg1"></div>
-                <div class="item1">
-                    <div class="ktea">TEA RECIPE - 티 레시피 </div>
-                    <div class="korigin"> 오리지널티 - Original Tea </div><br>
-                    <div> 티백이나 가루가 아닌 황실에 바치던 잎차만 골라 1도 1초도 어기지 않고 차마다</div>
-                    <div> 다른 황금률로 우려 한 잔 한 잔 부드러움을 더해 만듭니다.</div> <br><br>
-                    <a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=001003" class="kmenuview"> 메뉴 보러가기 ></a>
-                    <div></div>
+            <div class="kcenter">
+                <div class="kcenter1" data-tab-content id="tab1" >
+                    <div class="kimg1"></div>
+                    <div class="item1">
+                        <div class="ktea">TEA RECIPE - 티 레시피 </div>
+                        <div class="korigin"> 오리지널티 - Original Tea </div><br>
+                        <div> 티백이나 가루가 아닌 황실에 바치던 잎차만 골라 1도 1초도 어기지 않고 차마다</div>
+                        <div> 다른 황금률로 우려 한 잔 한 잔 부드러움을 더해 만듭니다.</div> <br><br>
+                        <a href="https://www.gong-cha.co.kr/brand/menu/product.php?c=001003" class="kmenuview"> 메뉴 보러가기 ></a>
+                        <div></div>
+                    </div>
                 </div>
             </div>
-            </div>
         </div>
-    </div>
     </div>
     <!-- 이윤 -->
     <div class="footer">
@@ -1217,12 +1173,13 @@
             </div>
         </div>
     </div>
+    <!-- 퀵메뉴 -->
     <div id="yj_quickmenu" class="yj_quickmenu">
         <a href="http://www.gong-cha.co.kr/franchise/">
             <img 
-            onmouseover="changebrown(this)"
-            onmouseout="changered(this)"
-            src="https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_on.png"
+            onmouseover="changered(this)"
+            onmouseout="changebrown(this)"
+            src="https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_off.png"
             alt="색변화"/>
         </a>
 </div>
