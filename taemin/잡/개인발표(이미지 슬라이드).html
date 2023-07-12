@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+      
+      padding: 0;
+      margin: 0;
+    }
+    .jt_전체{
+      
+      width: 100%;
+      height: 1000px;
+      background-color:  #1b1b1b;
+    }
+    .jt_header{
+      background-color:  white;
+      width: 100%;
+      height: 150px;
+    }
+    .jt_화면 {
+      width: 100%;
+      height: 700px;
+      /* border: 0.5px solid black; */
+      
+      background-color: #1b1b1b;
+      overflow: hidden;
+      position: relative;
+      margin-top: 50px;
+      position: relative;
+      /* min-width: 1240px; */
+      max-width: 3840px;
+      margin: 50px auto;
+    }
+  
+    .jt_박스 {
+      width: 11320px;
+      height: 510px;
+      /* border: 0.5px solid black; */
+      display: flex;
+      transition: transform 0.5s ease;
+      margin: 0 auto;
+    }
+    .jt_점{
+      width: 90px;
+      height: 30px;
+      background-color: white;
+      margin: 20px auto 0px;
+      display: flex;
+    }
+    
+    .jt_img:not(:last-child) {
+      width: 1240px;
+      height: 505px;
+      border: 0.5px solid black;
+      margin-right: 20px ;
+      border-radius: 10px;
+      
+    }
+    .jt_img img {
+      border-radius: 10px;
+      
+    }
+    .jt_prev-btn,
+    .jt_next-btn {
+      position: absolute;
+      top: 35%;
+      transform: translateY(-50%);
+      /* background-color: lightgray; */
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      opacity: 0.7;
+    }
+  
+    
+    .jt_prev-btn {
+      left: 150px;
+    }
+    .jt_prev-btn:hover {
+      opacity: 1;
+    }
+  
+    .jt_prev-btn::after {
+        position: absolute;
+        left: 0; 
+        top: 0; 
+        content: '';
+        width: 45px; /* 사이즈 */
+        height: 45px; /* 사이즈 */
+        border-top: 7px solid white; /* 선 두께 */
+        border-right: 7px solid white; /* 선 두께 */  
+        transform: rotate(225deg); /* 각도 */
+        border-radius: 5px;
+        
+       
+    }
+    
+    .jt_next-btn {
+      right: 150px;
+    }
+  
+    .jt_next-btn::after {
+        position: absolute;
+        left: 0; 
+        top: 0; 
+        content: '';
+        width: 45px; /* 사이즈 */
+        height: 45px; /* 사이즈 */
+        border-top: 7px solid white; /* 선 두께 */
+        border-right: 7px solid white; /* 선 두께 */
+        transform: rotate(45deg); /* 각도 */
+        
+        border-radius: 5px;
+        
+    }
+    .jt_next-btn:hover {
+      opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="jt_전체">
+        <div class="jt_header"></div>
+        <div class="jt_화면">
+          <div class="jt_박스">
+            <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
+            <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
+            <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
+            <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
+            <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
+            <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
+            <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
+            <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
+            <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
+            <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
+            <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
+            <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
+            <div class="jt_img"><img src="../img/빌딩숲의 감시자들.png"></div>
+            <div class="jt_img"><img src="../img/오리지널 특별관.png"></div>
+            <div class="jt_img"><img src="../img/장교와 스파이.png"></div>
+          </div>
+          <div class="jt_prev-btn"></div>
+          <div class="jt_next-btn"></div>
+          
+          <div class="jt_점">
+            <img class="jt_stop" onclick="jt_toggle()" src="../img/정지.png" alt="">
+            <img class="jt_i" src="../img/점1.png" alt="">
+          </div>
+        </div>
+      </div>
+    <script>
+        let jt_box = document.querySelector('.jt_박스');
+let jt_prevBtn = document.querySelector('.jt_prev-btn');
+let jt_nextBtn = document.querySelector('.jt_next-btn');
+let jt_stop = document.querySelector('.jt_stop');
+let jt_i = document.querySelector('.jt_i');
+let jt_re = document.querySelectorAll('.jt_박스')
+let currentTranslate = 0;
+
+//처음 이미지 위치 지정
+function jt_str(){
+  currentTranslate -= 8500;
+  jt_box.style.transform = `translateX(${currentTranslate}px)`;
+}
+jt_str()
+//점 바뀌는 func
+let jt_flag2= 2;
+function jt_next(){
+  if(jt_flag2==1){
+    jt_i.src="../img/점1.png";
+    jt_flag2++
+  }else if(jt_flag2==2){
+    jt_i.src="../img/점2.png";
+    jt_flag2++
+  }else if(jt_flag2==3){
+    jt_i.src="../img/점3.png";
+    jt_flag2=1
+  };
+};
+function jt_prev(){
+  if(jt_flag2==1){
+    jt_i.src="../img/점2.png";
+    jt_flag2=3
+  }else if(jt_flag2==2){
+    jt_i.src="../img/점3.png";
+    jt_flag2--
+  }else if(jt_flag2==3){
+    jt_i.src="../img/점1.png";
+    jt_flag2--
+  };
+}
+
+
+//버튼 클릭시 앞 뒤
+jt_nextBtn.addEventListener('click', () => {
+  jt_next();
+  currentTranslate -= 1260;
+  jt_box.style.transform = `translateX(${currentTranslate}px)`;
+});
+
+jt_prevBtn.addEventListener('click', () => {
+  jt_prev();
+  currentTranslate += 1260;
+  jt_box.style.transform = `translateX(${currentTranslate}px)`;
+});
+
+//타이머 
+
+let loopInterval = setInterval(() => {
+  jt_next();
+  currentTranslate -= 1260;
+  jt_box.style.transform = `translateX(${currentTranslate}px)`; // 다음 슬라이드를 보여주는 함수
+}, 4000,);
+//정지 재생 이미지
+let jt_flag1= true;
+    function jt_toggle(){
+        let jt_stop = document.querySelector('.jt_stop');
+  
+        if(jt_flag1==true){
+            jt_stop.src="../img/재생.png";
+    clearInterval(loopInterval);
+ 
+            jt_flag1=false
+        }else if(jt_flag1==false){
+            jt_stop.src="../img/정지.png";
+    loopInterval = setInterval(() => {
+    jt_next();
+    currentTranslate -= 1260;
+    jt_box.style.transform = `translateX(${currentTranslate}px)`; // 다음 슬라이드를 보여주는 함수
+    }, 4000,);
+            jt_flag1=true
+        }
+        
+    }
+
+    </script>
+</body>
+</html>

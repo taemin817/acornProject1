@@ -1,0 +1,733 @@
+*{  
+    padding: 0px;
+    margin: 0px auto;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #444;
+}
+.js_ball, .tm_section2, .tm_sec2_top, .tm_sec2_mid, .tm_sec2_bottom, .section3{
+    width: 1200px;
+}
+.btn_brandstory span, .js_notice, .tm_srh_store, .tm_srh_btn, .tm_srh_txt, .tm_specific, .tm_fran_faq, .tm_sec2_span1, .tm_content, .tm_info, .tm_spec, .title, .korigin, .y_menu, .y_cs{
+    font-weight: 700;
+}
+
+/* 유정석 */
+.js_b1, .js_b2, .js_b3, .js_b4, .js_b5, .js_b6, .js_ga{
+    font-weight: 500;
+}
+.js_b1, .js_b2, .js_b3, .js_b4, .js_b5, .js_b6{
+    font-size: 15px;
+    color: rgb(223, 212, 212);
+    opacity: 90%;
+    text-align: center;
+}
+.js_ball, .js_header{
+    height: 110px;
+    position: relative;
+}
+.js_header {
+    width: 1400px;
+}
+.js_logo {              /*공차 로고*/
+    width: 62px;
+    height: 81px;
+    position: absolute;
+    top: 15px;
+    background-image: url('https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png');
+    background-position: center;
+    background-size: cover;
+}
+/* .menu:hover ul {
+    display: block;
+    list-style: none;
+    background-color: rgb(94, 86, 86);
+    opacity: 70%;
+    background-image: url(./ya.png);
+    background-position: center;
+    background-size: cover;
+} */
+.js_notice {              /*공지사항*/
+    font-size: 13px;
+    position: absolute;
+    right: 500px;
+    top: 44px;
+    text-decoration: none;
+}
+.notice:hover{
+    color: rgb(207, 62, 88);
+}
+.js_sns1, .js_sns2, .js_sns3{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 44px;
+    background-position: center;
+    background-size: cover;
+
+}
+.js_sns1 {              /*페북 아이콘*/
+    right: 460px;
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_f.png");
+}
+.js_sns2 {              /*인스타 아이콘*/
+    right: 420px;
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_i.png");
+}
+.js_sns3 {              /*카톡 아이콘*/
+    right: 380px;
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_k.png");
+}
+.js_btn {              /*가맹점 버튼*/
+    width: 145px;
+    height: 95px;
+    background-color: #3b3230;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 0px 0px 17px 17px;
+    display: flex;
+}
+.js_btn:hover{
+    background: #993B42;
+}
+.js_hi {              /*가맹점 아이콘*/
+    width: 38px;
+    height: 43px;
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/go_main_franchise_ico.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 23px;
+    right: 92px;
+}
+.js_ga {              /*가맹점 문의*/
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 21px;
+    right: 15px;
+}
+.js_on{              /*메뉴명에 마우스 올렸을 때 하단에 빨간 띠*/
+    border-bottom: 3px solid rgb(223, 52, 52);
+}
+.js_menu {              /*메뉴제목*/
+    display: flex;
+    list-style: none;
+    position: absolute;
+    color: #444;
+    left: 50px;
+    top: 20px;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+}
+.two, .three, .four, .five, .six{   /*메뉴명*/
+    position: absolute;
+    top:28px;
+}
+.one {
+    position: absolute;
+    left: 25px;
+}
+.two {
+    left: 130px;
+}
+.three {
+    left: 240px;
+}
+.four {
+    left: 385px;
+}
+.five {
+    left: 515px;
+}
+.six {
+    left: 630px;
+}
+.js_sub-menu{
+    width: 1200px;
+    display: flex;
+}
+.js_sub-item {              /*하위 메뉴(숨김)*/
+    height: 0px;
+    overflow: hidden;
+    transition: 1s;
+    display: flex;
+}
+.js_sub-item-hover {              /*하위 메뉴(보임)*/
+    width:  100%;
+    height: 300px;
+    background-color: rgb(44, 44, 51);
+    position: fixed;
+    opacity: 90%;
+    left: 0px;
+    z-index: 9999999;
+   /* position: absolute;
+    z-index: 9999; */
+}
+.js_b1, .js_b2, .js_b3, .js_b4, .js_b5{
+    margin-top: 20px;
+    margin-right: 0px;
+}
+.js_b1 {        /*브랜드*/
+    margin-left: 55px;
+}
+.js_b2 {        /*메뉴*/
+    margin-left: 18px;
+}
+.js_b3 {        /*매장*/
+    margin-left: 22px;
+}
+.js_b4 {        /*멤버십*/
+    margin-left: 20px;
+}
+.js_b5 {        /*제휴*/
+    margin-left: 17px;
+}
+.js_b6 {        /*이벤트*/
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.js_{
+    position: absolute;
+    top: 23px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding-bottom: 42px;
+}
+/* 서예진 */
+.hide{                  /*자세히 보기 숨기는 기능에 쓰임*/
+    display: none;
+    }
+.yj_section1{           /*section1 크기*/
+    width: 2560px;
+    height: 850px;
+    position: relative;
+    text-align: center;
+}
+.yj_slide-wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+.yj_slide{              /*이미지 슬라이드를 만들기 위한 기반*/
+    width: 2560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.yj_slide-item{         /*이미지와 자세히보기가 순환할 공간*/
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+.yj_slide-item img{
+    height: 850px;
+}
+.yj_btn_prev, .yj_btn_next{
+    width: 27px;
+    height: 53px;
+    position: absolute;
+    top: 398px;
+}
+.yj_btn_prev{               /*이전 버튼*/
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/prev.png");
+    left: 680px;
+}
+.yj_btn_next{               /*다음 버튼*/
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/next.png");
+    right: 680px;
+}
+.btn_brandstory{            /*자세히보기 버튼*/
+    width: 230px;
+    height: 50px;
+    position: absolute;
+    right: 50%;
+    bottom: 110px;
+    text-align: center;
+    border: 1px solid #cf3e58;
+    background-color: #cf3e58;
+    margin: 0 -600px 0 0;;
+}
+.btn_brandstory span{
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 48px;
+}
+.btn2_brandstory{
+    background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/btn_arr_w.png");
+    width: 5px;
+    height: 10px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 17px;
+    right: 55px;
+}
+/* 박태민 */
+.tm_section2{
+    margin: 0 auto;
+    height: 1300px;
+}
+.tm_sec2_top, .tm_best, .tm_search{
+    height: 386px;
+}
+    .tm_sec2_top{                   /*section2의 top 부분*/
+        display: flex;
+    } 
+        .tm_best{                   /*베스트 콤비네이션*/
+            width: 800px;
+        }
+        .tm_search{                 /*매장 검색*/
+            width: 400px;
+            background-color: #f5f4f2;
+            padding: 50px 40px 0px 40px;
+        }
+        .tm_srh_store, .tm_srh_txt, .tm_address{
+                width: 320px;
+        }
+            .tm_srh_store{
+                height: 24px;
+                margin-bottom: 49px;
+                line-height: 1;
+                font-size: 24px;
+                color: #222;
+            }
+            .tm_srh_txt{
+                height: 64px;
+                color: #666;
+                font-size: 22px;
+                line-height: 32px;
+                margin-bottom: 49px;
+            }
+            .tm_address{                /*input 창*/
+                height: 40px;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 57px;
+                font-size: 16px;
+                border: none;
+                background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/brandmain/btn_main_store_search.gif");
+                background-position-x: 100%;
+                background-repeat: no-repeat;
+            }
+            input:focus{
+                outline: none;
+            }
+            .tm_srh_btn{
+                width: 320px;
+                height: 50px;
+                background: #3b3230;
+                color: white;
+                text-align: center;
+                line-height: 50px;
+                font-size: 15px;
+            }
+    .tm_sec2_mid, .tm_order, .tm_slide_baemin{
+        height: 500px;
+    }
+    .tm_sec2_mid{               /*section2의 middle 부분*/
+        display: flex;
+    }
+        .tm_order{          /*하우투오더 배경이미지 영역*/
+            width: 400px;
+            height: 500px;
+            padding: 60px 40px 0px 40px;
+            background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_section3_img.jpg");
+        }
+        .tm_order_txt{
+            margin-bottom: 28px;
+            width: 320px;
+            height: 24px;
+        }
+        .tm_custom{
+            margin-bottom: 26px;
+            width: 320px;
+            height: 50px;
+        }
+        .tm_specific{           /*자세히보기 버튼*/
+            border-bottom: 1px solid #222;
+            color: #222;
+            font-size: 13px;
+        }
+        .tm_specific:hover{
+            color: #c30f30;
+            border-bottom: 1px solid #c30f30;
+        }
+    .tm_slide{              /*배달서비스 배경이미지 영역*/
+        width: 800px;
+        height: 500px;
+        background-image: url(https://www.gong-cha.co.kr/uploads/banner/20210728/MIG4fQtNx7kLVPja_20210728.png);
+        background-size: cover;
+    }
+    /* .tm_slide_btn1{
+        position: absolute;
+        right: 0px;
+        bottom: 51px;
+        width: 50px;
+        height: 50px;
+        background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/prev.png");
+    }
+    .tm_slide_btn2{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 50px;
+        height: 50px;
+        background-image: url("https://www.gong-cha.co.kr/view/gongcha/images/common/next.png");
+    } */
+    .tm_sec2_bottom{               /*section2의 bottom 부분*/
+        height: 450px;
+        display: flex;
+    }
+        .tm_membership, .tm_open, .tm_franchise{
+            width: 400px;
+            height: 450px;
+        }
+        .tm_franchise{          /*가맹점 개설문의*/
+            padding: 60px 40px 0px 40px;
+            background-color: rgb(237, 230, 214);;
+        }
+        .tm_fran_faq{
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+        .tm_fran_li>li{
+            padding-bottom: 40px;
+        }
+        .tm_sec2_span1{
+            display: table-cell;
+            width: 100px;
+            font-size: 20px;
+            line-height: 25px;
+            color: #222;
+            vertical-align: top;
+        }
+        .tm_sec2_span2{
+            display: table-cell;
+            font-size: 14px;
+            line-height: 25px;
+            color: #666;
+            vertical-align: top;
+        }
+        .tm_content{
+            display: block;
+            width: 100%;
+            height: 50px;
+            font-size: 15px; 
+            line-height: 50px;
+            color: #fff;
+            background-color: #6d5547;
+            text-align: center;
+        }
+        .tm_mbsnopen{               /*멤버십 앱, 오픈매장 안내*/
+            position: relative;
+        }
+        .tm_maininfo{
+            width: 400px;
+            height: 97px;
+            padding: 30px;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background-color: white;
+        }
+        .tm_info{
+            color:#c30f30;
+            font-size: 17px;
+            line-height: 1;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .tm_spec{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: #777;
+            border-bottom: 1px solid #777;
+            font-size: 13px;
+            line-height: 17px;
+        }
+/* 이원규 */
+.kmenu1{
+    height: 40px;
+    width: 80px;
+    padding-top: 10px;
+    margin-right: 14px;
+    color: #993B42;
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 4px solid #993B42;
+}
+.kmenu2, .kmenu3{
+    height: 40px;
+    width: 80px;
+    padding-top: 10px;
+    color: #9B8777;
+    text-decoration: none;
+    font-size: 15px;
+}
+.kbody{
+    background-color: #F5EEE8;
+    /* border: 1px solid black; */
+    height: 471px;
+    margin-top: 36px;
+}
+.kmain{
+    width: 1200px;
+    height: 471px;
+    padding: 60px 0px;
+}
+.ktop{
+    position: relative;
+    display: flex;
+}
+.title{
+    font-size: 24px;
+    color: #333333;
+}
+.kcenter1{
+    margin-top: 50px;
+    display: flex;
+}
+.kno{
+    width: 1000px;
+}
+.knono{
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+}
+.kmenu{
+    display: flex;
+    display: absolute;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+}
+.kimg1{
+    height: 255px;
+    width: 550px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    line-height: 0%;
+    font-weight: bold;
+    background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img1.jpg);
+}
+@keyframes slidee{
+    from{
+        left: -10px;
+    }
+    to{
+        left: 50px
+    }
+}
+/* .kimg2{
+    height: 255px;
+    width: 550px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    line-height: 0%;
+    font-weight: bold;
+    background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img2.jpg);
+}
+.kimg3{
+    height: 255px;
+    width: 550px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    line-height: 0%;
+    font-weight: bold;
+    background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img5.jpg);
+} */
+.item1{
+    /* border: 1px solid black; */
+    width: 700px;
+    padding-left: 50px;
+}
+@keyframes slide{
+    from{
+        right: 600px;
+    }
+    to{
+        right: 650px
+    }
+}
+.ktea{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+.korigin{
+    /* border: 1px solid black; */
+    font-size: 24px;
+    margin-top: 5px;
+    color: #993B42;
+}
+.kcontent{
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+.kmenuview{
+    border: 2px solid #993B42;
+    height: 36px;
+    width: 152px;
+    text-align: center;
+    color: #993B42;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+.slide{
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+/* 이윤 */
+.footer{                
+    width: 100%;
+    height: 166px;
+    position: relative;
+}
+.footer_inner::before{
+    display: block;
+    content: " ";
+    width: 50%;
+    height: 100%;
+    background-color: #575757;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.footer_inner{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+}
+.footer_inner::after{
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: -600px;
+    bottom: 0;
+    background: #f1f2f2;
+}
+.footer_left{                   /*로고 영역*/
+    width: 300px;
+    height: 166px;
+    background-color: #575757;
+    position: relative;
+}
+.y_logo{
+    position: absolute;
+    top: 39px;
+    left: 1px;
+}
+.copyright{                   /*저작권 어쩌구*/
+    font-size: 12px;
+    line-height: 16px;
+    color: #b5b4b4;
+    position: absolute;
+    top: 100px;
+    left: 90px;
+}
+.footer_right{                   /*회사에 대한 정보*/
+    width: 900px;
+    height: 166px;
+    background-color: #f1f2f2;
+    position: relative;
+    color: #444;
+    font-size: 14px;
+}
+.y_menu{                   /*회사소개 고객센터 핫라인 등등*/
+    display: flex;
+    position: absolute;
+    top: 36px;
+    left: 40px;
+    font-size: 14px;
+}
+.menuli{
+    margin-left: 36px;
+}
+.menuli:nth-child(4){
+    font-size: 18px;
+}
+.y_cscenter{                   /*고객센터 운영시간 등*/
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    color: #666;
+}
+.y_cs{
+    font-size: 15px;
+    line-height: 22px;
+}
+.y_number{
+    padding-left: 18px;
+    margin-left: 10px;
+    background: url(https://www.gong-cha.co.kr/view/gongcha/images/common/ico_tell.png)0 center no-repeat;
+}
+.y_time{
+    font-size: 13px;
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 21px;
+}
+.y_address{                   /*본사주소 대표자 사업자등록번호 등*/
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #444;
+}
+.addressli{
+    margin-left: 31px;
+    font-size: 12px;
+}
+.y_{                        /*구분선을 위한 기준*/
+    position: relative;
+}
+.menuli::before{  /* 구분선 */
+    content: '';
+    display: block;
+    width: 1.2px;
+    height: 14px;
+    background-color: #a4a4a4;
+    position: absolute;
+    top: 3px;
+    left: -20px;
+}
+.addressli::before{  /* 구분선 */
+    content: '';
+    display: block;
+    width: 1.2px;
+    height: 14px;
+    background-color: #a4a4a4;
+    position: absolute;
+    top: 2px;
+    left: -15px;
+}
+/* 퀵메뉴 */
+.yj_quickmenu{
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    width: 79px;
+    margin: -230px 0 0;
+    z-index: 1;
+}
