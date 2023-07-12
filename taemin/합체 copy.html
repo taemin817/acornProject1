@@ -35,7 +35,7 @@
             height: 81px;
             position: absolute;
             top: 15px;
-            background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png);
+            background-image: url('https://www.gong-cha.co.kr/view/gongcha/images/common/logo.png');
             background-position: center;
             background-size: cover;
         }
@@ -98,12 +98,15 @@
         .js_btn {
             width: 145px;
             height: 95px;
-            background-color: rgb(62, 53, 42);
+            background-color: #3b3230;
             position: absolute;
             right: 0px;
             top: 0px;
             border-radius: 0px 0px 17px 17px;
             display: flex;
+        }
+        .js_btn:hover{
+            background: #993B42;
         }
         .js_hi {
             width: 38px;
@@ -123,23 +126,25 @@
             top: 21px;
             right: 15px;
         }
-        .js_on {
+        .js_on{
             border-bottom: 3px solid rgb(223, 52, 52);
+        }
+        .js_sub-menu{
+            width: 1200px;
+            display: flex;
         }
         .js_sub-item {
             height: 0px;
-            transition: .5s;
             overflow: hidden;
+            transition: 1s;
             display: flex;
-          
-          
         }
         .js_sub-item-hover {
             width:  100%;
             height: 300px;
             background-color: rgb(44, 44, 51);
             position: fixed;
-            opacity: 80%;
+            opacity: 90%;
             left: 0px;
             z-index: 9999999;
            /* position: absolute;
@@ -187,6 +192,7 @@
         .js_b1 {
             margin-left: 55px;
             margin-top: 20px;
+            margin-right: 0px;
             font-size: 15px;
             color: rgb(223, 212, 212);
             opacity: 90%;
@@ -196,6 +202,7 @@
         .js_b2 {
             margin-left: 18px;
             margin-top: 20px;
+            margin-right: 0px;
             font-size: 15px;
             color: rgb(223, 212, 212);
             opacity: 90%;
@@ -205,6 +212,7 @@
         .js_b3 {
             margin-left: 25px;
             margin-top: 20px;
+            margin-right: 0px;
             font-size: 15px;
             color: rgb(223, 212, 212);
             opacity: 90%;
@@ -214,6 +222,7 @@
         .js_b4 {
             margin-left: 25px;
             margin-top: 20px;
+            margin-right: 0px;
             font-size: 15px;
             color: rgb(223, 212, 212);
             opacity: 90%;
@@ -223,6 +232,7 @@
         .js_b5 {
             margin-left: 22px;
             margin-top: 20px;
+            margin-right: 0px;
             font-size: 15px;
             color: rgb(223, 212, 212);
             opacity: 90%;
@@ -251,8 +261,6 @@
             display: none;
             }
         .yj_section1{
-            justify-content: center;
-            display: flex;
             width: 2560px;
             height: 850px;
             position: relative;
@@ -263,13 +271,17 @@
             margin: 0 auto;
         }
         .yj_slide{
+            width: 2560px;
             display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
         }
         .yj_slide-item{
             list-style: none;
             float: left;
             transition: 5s;
+            width: 100%;
         }
         .yj_slide-item img{
             height: 850px;
@@ -462,8 +474,8 @@
                     font-weight: 700;
                     margin-bottom: 50px;
                 }
-                .tm_fran_li{
-                    margin-bottom: 50px;
+                .tm_fran_li>li{
+                    padding-bottom: 40px;
                 }
                 .tm_sec2_span1{
                     display: table-cell;
@@ -476,7 +488,6 @@
                 }
                 .tm_sec2_span2{
                     display: table-cell;
-                    width: auto;
                     font-size: 14px;
                     line-height: 25px;
                     color: #666;
@@ -525,35 +536,35 @@
                 }
         /* 이원규 */
         .kmenu1{
-        height: 40px;
-        width: 80px;
-        padding-top: 10px;
-        box-sizing: border-box;
-        COLOR: #993B42;
-        text-decoration: none;
-        font-size: 15px;
-        font-family: 'Nanum Gothic';
-        border-bottom: 4px solid #993B42;
+            height: 40px;
+            width: 80px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            color: #993B42;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Nanum Gothic';
+            border-bottom: 4px solid #993B42;
         }
         .kmenu2{
-        height: 40px;
-        width: 80px;
-        padding-top: 10px;
-        box-sizing: border-box;
-        COLOR: #9B8777;
-        text-decoration: none;
-        font-size: 15px;
-        font-family: 'Nanum Gothic';
+            height: 40px;
+            width: 80px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            color: #9B8777;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Nanum Gothic';
         }
         .kmenu3{
-        height: 40px;
-        width: 80px;
-        padding-top: 10px;
-        box-sizing: border-box;
-        COLOR:  #9B8777;
-        text-decoration: none;
-        font-size: 15px;
-        font-family: 'Nanum Gothic';
+            height: 40px;
+            width: 80px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            color: #9B8777;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Nanum Gothic';
         }
         .kmenu4{
             width: 20px;
@@ -690,9 +701,34 @@
             position: relative;
         }
         .footer{
-            width: 1200px;
+            width: 100%;
             height: 166px;
+            position: relative;
+        }
+        .footer_inner::before{
+            display: block;
+            content: " ";
+            width: 50%;
+            height: 100%;
+            background-color: #575757;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .footer_inner{
+            width: 1200px;
+            height: 100%;
             display: flex;
+        }
+        .footer_inner::after{
+            display: block;
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: -600px;
+            bottom: 0;
+            background: #f1f2f2;
         }
         .footer_left{
             width: 300px;
@@ -880,12 +916,12 @@
             let liimgs = ["https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg","https://www.gong-cha.co.kr/uploads/board/20230707/Aj4wYuB0gPZvEaGQ_20230707.jpg","https://www.gong-cha.co.kr/uploads/board/20230502/0nGiMx8vBpUXFkJh_20230502.jpg","https://www.gong-cha.co.kr/uploads/board/20230112/pqL7s1dwA0QYTRgM_20230112.jpg"];
             let as = ["https://www.gong-cha.co.kr/brand/menu/new.php","https://gong-cha-event.co.kr/?fromurl=owned_hompage&utm_source=gongcha&utm_medium=DA&utm_campaign=owned_hompage","http://www.gong-cha.co.kr/brand/menu/product.php?c=001002","#"];
             let i = 0;
-            
+
             function yj_btn_next(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
                 i++;
                 if(i>=liimgs.length){
                     i=0;
-                let detailSpan  =  document.querySelector('.btn_brandstory');
+                let detailSpan = document.querySelector('.btn_brandstory');
                     detailSpan.classList.remove("hide");
                 }
                 
@@ -898,7 +934,18 @@
              
                 img.src = nextImg;
                 link.href = nextlink;
-    
+                console.log(img.src);
+                console.log(link.href);
+                let slide2 = document.querySelector(".yj_slide");
+                    slide2.animate( {
+                        transform: [                          /* transform   translate 위치 이동 */
+                        'translateX(100%)',    //시작
+                        'translateX(0px)'      //도착
+                        ]
+                    }, 
+                    {
+                        duration : 800 // 위의효과가 x초간 지속되도록
+                    });
              if( i == 3 ){
                 let detailSpan = document.querySelector('.btn_brandstory');
                     detailSpan.classList.add("hide");
@@ -915,41 +962,32 @@
                     let detailSpan = document.querySelector('.btn_brandstory');
                         detailSpan.classList.add("hide");
                 }else{
-                let detailSpan  =  document.querySelector('.btn_brandstory');
+                let detailSpan = document.querySelector('.btn_brandstory');
                     detailSpan.classList.remove("hide");
                 }
 
                 let slide = document.querySelector('.yj_slide-item');
                 let img = slide.querySelector("img");
+                let link = document.querySelector(".btn_brandstory");
+
                 let prevImg = liimgs[i] ;
+                let prevlink = as[i];
                 
                 img.src = prevImg;
+                link.href = prevlink;
+
+                let slide2 = document.querySelector(".yj_slide");
+                    slide2.animate( {
+                        transform: [                          /* transform   translate 위치 이동 */
+                        'translateX(100%)',    //시작
+                        'translateX(0px)'      //도착
+                        ]
+                    },
+                    {
+                        duration : 800 // 위의효과가 x초간 지속되도록
+                    });
             }
-            setInterval(yj_btn_prev, 4500); // 정해진 시간에 버튼이 기능하는 도구
         </script>
-
-            
-        <!-- <script>
-            // 태민 함수
-            let j = 0;
-            function nxt(){ // 버튼을 누르면 다음 사진으로 넘어가는 기능
-                j++;
-                let baemin = ["이미지 주소", "이미지 주소"]; // 넘어가는 사진의 배열
-                let slide = document.querySelector(".tm_slide"); // 넘어가는 영역
-                
-                if(j>=baemin.length){ // 배열의 길이보다 커지면 처음으로 돌아가도록 순환하는 구조
-                        j = 0;
-                }
-
-                slide.style.backgroundImage="url('"+baemin[j]+"')";
-                slide.style.backgroundSize="cover";
-                slide.style.backgroundPosition="center";
-                }
-                
-            setInterval(nxt, 6000); // 정해진 시간에 버튼이 기능하는 도구
-        </script> -->
-
-        
 <!-- 원규 함수 -->
 <!-- 퀵메뉴 함수 -->
         <script>
@@ -965,32 +1003,33 @@
 <body>
     <!-- 유정석 -->
     <div class="js_ball">
-                <div class="js_header">
-                    <div class="js_logo"></div>
-                    <ul class="js_menu">
-                        <span class="js_ one"  onmouseover="show1(this)" onmouseout="hide1(this)">Brand</span>
-                        <span class="js_ two" onmouseover="show2(this)" onmouseout="hide2(this)">Menu</span>
-                        <span class="js_ three" onmouseover="show3(this)" onmouseout="hide3(this)">Store</span>
-                        <span class="js_ four" onmouseover="show4(this)" onmouseout="hide4(this)">Membership</span>
-                        <span class="js_ five" onmouseover="show5(this)" onmouseout="hide5(this)">Benefit</span>
-                        <span class="js_ six" onmouseover="show6(this)" onmouseout="hide6(this)">Event&News</span>
-                    </ul>
+        <div class="js_header">
+            <div class="js_logo"></div>
+            <ul class="js_menu">
+                <span class="js_ one"  onmouseover="show1(this)" onmouseout="hide1(this)">Brand</span>
+                <span class="js_ two" onmouseover="show2(this)" onmouseout="hide2(this)">Menu</span>
+                <span class="js_ three" onmouseover="show3(this)" onmouseout="hide3(this)">Store</span>
+                <span class="js_ four" onmouseover="show4(this)" onmouseout="hide4(this)">Membership</span>
+                <span class="js_ five" onmouseover="show5(this)" onmouseout="hide5(this)">Benefit</span>
+                <span class="js_ six" onmouseover="show6(this)" onmouseout="hide6(this)">Event&News</span>
+            </ul>
 
-                    <!-- 메뉴 호버시 상세 메뉴를 띄우기 위한 부분 -->
+            <!-- 메뉴 호버시 상세 메뉴를 띄우기 위한 부분 -->
 
-                    <div class="js_notice"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공지사항</a></div>
-                    <div>
-                        <a class="js_sns1" href="https://www.facebook.com/GongCha.Korea"></a>
-                        <a class="js_sns2" href="https://www.instagram.com/gongcha.official/?hl=ko"></a>
-                        <a class="js_sns3" href="https://pf.kakao.com/_Cywfxb"></a>
-                    </div>
-                </div>
-                <div class="js_btn">
-                    <div class="js_hi"></div>
-                    <a href="https://www.gong-cha.co.kr/franchise/">
-                        <span class="js_ga">가맹점<br>개설문의</span></a>
-                </div>
-            <div class="js_sub-item">
+            <div class="js_notice"><a href="https://www.gong-cha.co.kr/brand/board/notice.php">공지사항</a></div>
+            <div>
+                <a class="js_sns1" href="https://www.facebook.com/GongCha.Korea"></a>
+                <a class="js_sns2" href="https://www.instagram.com/gongcha.official/?hl=ko"></a>
+                <a class="js_sns3" href="https://pf.kakao.com/_Cywfxb"></a>
+            </div>
+        </div>
+        <div class="js_btn">
+            <div class="js_hi"></div>
+            <a href="https://www.gong-cha.co.kr/franchise/">
+                <span class="js_ga">가맹점<br>개설문의</span></a>
+        </div>
+        <div class="js_sub-item">
+            <div class="js_sub-menu">
                 <ul class="js_b1">
                     <li>브랜드 소개</li>
                     <li>공차의 약속</li>
@@ -1052,19 +1091,19 @@
                     <li></li>
                 </ul>
             </div>
+        </div>
     </div>
-    <div class="brand_main">
     <!-- 서예진 -->
     <div class="yj_section1">
         <div class="yj_slide-wrap">
             <ul class="yj_slide">
                 <li class="yj_slide-item"><img src="https://www.gong-cha.co.kr/uploads/board/20230626/3G6ceq2zDpyhkNdJ_20230626.jpg">
                     <a href="https://www.gong-cha.co.kr/brand/menu/new.php" class="btn_brandstory"><span class="brandstory2">자세히 보기<span class="btn2_brandstory"></span></span></a>
-                </li>                    
+                </li>
             </ul>
         </div>
-        <a href="javascript:yj_btn_prev()" class="yj_btn_prev" ></a>
-        <a href="javascript:yj_btn_next()" class="yj_btn_next" ></a>
+        <a href="javascript:yj_btn_prev()" class="yj_btn_prev"></a>
+        <a href="javascript:yj_btn_next()" class="yj_btn_next"></a>
     </div>
     <!-- 박태민 -->
     <div class="tm_section2">
@@ -1101,7 +1140,7 @@
                         <span class="tm_sec2_span1">개설안내</span>
                         <span class="tm_sec2_span2">공차만의 프랜차이즈 운영<br>노하우로 안정된 창업을 이루세요.</span>
                     </a>
-                        </li>
+                    </li>
                     <li>
                         <a href="https://www.gong-cha.co.kr/franchise/open/guide.php">
                             <span class="tm_sec2_span1">FAQ</span>
@@ -1114,7 +1153,7 @@
             <div class="tm_mbsnopen">
                 <a href="http://www.gong-cha.co.kr/brand/member/membership.php"><img src="https://www.gong-cha.co.kr/uploads/banner/20210705/J9UHaWkvSgQ2PpGi_20210705.jpg" alt="공차 멤버십 앱 안내"></a>
                 <div class="tm_maininfo">
-                    <div class="tm_info">NEW 공차 멤버십 안내</div>
+                    <div class="tm_info">NEW 공차 멤버십 앱 안내</div>
                     <a class="tm_spec" href="http://www.gong-cha.co.kr/brand/member/membership.php">자세히 보기 ></a>
                 </div>
             </div>
@@ -1160,31 +1199,32 @@
     </div>
     <!-- 이윤 -->
     <div class="footer">
-        <div class="footer_left">
-            <img class="y_logo" src="https://www.gong-cha.co.kr/view/gongcha/images/common/ft_logo.png" alt="공차 로고">
-            
-        <p class="copyright">(C)GONGCHA KOREA CO.,LTD<br>
-            ALL RIGHTS RESERVED.</p>
-        </div>
-        <div class="footer_right">
-            <ul class="y_menu">
-                <li class="y_"><a href="https://www.gong-cha.co.kr/franchise/company/history.php">회사소개</a></li>
-                <li class="y_ menuli"><a href="https://www.gong-cha.co.kr/brand/benefit/contact.php">제휴/제안</a></li>
-                <li class="y_ menuli"><a href="https://www.gong-cha.co.kr/brand/board/customer.php">고객센터</a></li>
-                <li class="y_ menuli">개인정보처리방침</li>
-                <li class="y_ menuli">이메일무단수집거부</li>
-                <li class="y_ menuli">윤리규범 실천지침</li>
-                <li class="y_ menuli">HOT-LINE</li>
-            </ul>
-            <div class="y_cscenter">
-                <div class="y_cs">고객센터<span class="y_number">02-779-7758</span></div>
-                <span class="y_time">운영시간 : 월요일~목요일 ( 오전 9시 ~ 오후 6시), 금요일 (오전 9시 ~ 오후 1시)<br>점심시간 : 낮 12시~오후 1시 / 주말 및 공휴일 휴무</span>
+        <div class="footer_inner">
+            <div class="footer_left">
+                <img class="y_logo" src="https://www.gong-cha.co.kr/view/gongcha/images/common/ft_logo.png" alt="공차 로고">
+            <p class="copyright">(C)GONGCHA KOREA CO.,LTD<br>
+                ALL RIGHTS RESERVED.</p>
             </div>
-            <div class="y_address">
-                <span class="y_">서울 종로구 종로 47(공평동, 7층)</span>
-                <span class="y_ addressli">㈜공차코리아 대표이사 박재홍</span>
-                <span class="y_ addressli">사업자등록번호 214-88-84534</span>
-                <span class="y_ addressli">통신판매번호: 2020-서울종로-0966</span>
+            <div class="footer_right">
+                <ul class="y_menu">
+                    <li class="y_"><a href="https://www.gong-cha.co.kr/franchise/company/history.php">회사소개</a></li>
+                    <li class="y_ menuli"><a href="https://www.gong-cha.co.kr/brand/benefit/contact.php">제휴/제안</a></li>
+                    <li class="y_ menuli"><a href="https://www.gong-cha.co.kr/brand/board/customer.php">고객센터</a></li>
+                    <li class="y_ menuli">개인정보처리방침</li>
+                    <li class="y_ menuli">이메일무단수집거부</li>
+                    <li class="y_ menuli">윤리규범 실천지침</li>
+                    <li class="y_ menuli">HOT-LINE</li>
+                </ul>
+                <div class="y_cscenter">
+                    <div class="y_cs">고객센터<span class="y_number">02-779-7758</span></div>
+                    <span class="y_time">운영시간 : 월요일~목요일 ( 오전 9시 ~ 오후 6시), 금요일 (오전 9시 ~ 오후 1시)<br>점심시간 : 낮 12시~오후 1시 / 주말 및 공휴일 휴무</span>
+                </div>
+                <div class="y_address">
+                    <span class="y_">서울 종로구 종로 47(공평동, 7층)</span>
+                    <span class="y_ addressli">㈜공차코리아 대표이사 박재홍</span>
+                    <span class="y_ addressli">사업자등록번호 214-88-84534</span>
+                    <span class="y_ addressli">통신판매번호: 2020-서울종로-0966</span>
+                </div>
             </div>
         </div>
     </div>
@@ -1197,6 +1237,6 @@
             src="https://www.gong-cha.co.kr/view/gongcha/images/brand/quick_img_off.png"
             alt="색변화"/>
         </a>
-</div>
+    </div>
 </body>
 </html>
