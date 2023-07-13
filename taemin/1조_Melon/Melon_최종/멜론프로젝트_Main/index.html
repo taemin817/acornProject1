@@ -1,0 +1,3104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        outline: 1px solid gray;
+      } */
+      header {
+        border-bottom: 1px solid gray;
+        height: 192px;
+      }
+      .bj_a {
+        text-decoration: none;
+      }
+      
+      .bj_a:hover{
+        text-decoration: none;
+      }
+
+      .div1_wrap {
+        width: 1008px;
+        height: 930px;
+        margin: 0px auto;
+        padding: 20px;
+        padding-top: 30px;
+      }
+      .div1 {
+        height: 330px;
+        display: flex;
+      }
+      .div1_album_box {
+        width: 476px;
+        height: 340px;
+        position: relative;
+      }
+
+      /* ㅡㅡㅡ앨범 쪽 메뉴 구성ㅡㅡㅡ */
+      .div1_album_chart_menu {
+        height: 22px;
+        display: flex;
+      }
+      .bj_album_news {
+        height: 22px;
+        width: 90px;
+        font-size: 15px;
+        font-weight: 900;
+        display: flex;
+        letter-spacing: -1px;
+      }
+      .bj_album_button_box {
+        width: 183px;
+        height: 22px;
+        display: flex;
+        position: relative;
+        color: rgb(136, 136, 136);
+        font-size: 12px;
+        line-height: 12px;
+      }
+      .bj_album_contry {
+        width: 35px;
+        height: 12px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+        color: rgb(136, 136, 136);
+      }
+      .bj_album_contry:hover {
+        color: black;
+      }
+      .bj_album_Button_Box {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        display: flex;
+      }
+      .bj_album_Button {
+        height: 16px;
+        width: 19px;
+        outline: 1.5px solid rgb(205, 205, 205);
+      }
+      .bj_album_Button:hover {
+        outline: 1.5px solid rgb(167, 167, 167);
+      }
+      .bj_album_page {
+        margin-left: 9px;
+        margin-top: 0px;
+      }
+      .bj_button_image {
+        width: 15px;
+        height: 17px;
+        background-image: url("https://github.com/kevinbj0/front/blob/main/image_/%EB%8B%A4%EC%9D%8C_%ED%81%B4%EB%A6%AD.png?raw=true");
+        background-size: cover;
+        margin: 3px auto;
+        margin-top: 0px;
+      }
+      /* ㅡㅡㅡㅡㅡㅡ엘범메뉴 ENDㅡㅡㅡㅡㅡㅡㅡㅡ */
+      /* 앨범 이미지 box */
+      .div1_album_image {
+        height: 316px;
+        /* width:/ 476px;  */
+        transition: 0.5s;
+      }
+      .bj_ul {
+        list-style: none;
+        display: flex;
+        margin: 2px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+      }
+      .bj_li {
+        height: 156px;
+        width: 156px;
+        border: 1px solid black;
+        border: 1px solid rgb(224, 224, 224);
+        position: relative;
+        margin: 0px 0px 0px 0px;
+        padding-left: 0px;
+      }
+      .bj_li_center {
+        margin: 0px 2px;
+      }
+      .bj_li_name {
+        position: absolute;
+        bottom: 0px;
+        height: 22px;
+        width: 100%;
+        padding-top: 8px;
+        line-height: 14px;
+        background-color: rgb(0, 0, 0, 0.7);
+        text-align: center;
+        font-size: 12px;
+        overflow: hidden;
+      }
+      .bj_li_a {
+        color: white;
+        text-decoration: none;
+      }
+      .bj_li_a:hover {
+        text-decoration-line: underline;
+        text-decoration-color: white;
+      }
+      .bj_li_cover {
+        height: 126px;
+        transition: background-color 0.3s;
+        position: relative;
+      }
+      .bj_li_cover_text {
+        height: 35px;
+        line-height: 10px;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 63px;
+        display: none;
+      }
+      .bj_li_cover_play {
+        height: 42px;
+        width: 42px;
+        position: absolute;
+        right: 7px;
+        bottom: 7px;
+        background-image: url("https://github.com/kevinbj0/front/blob/main/image_/%EC%9E%AC%EC%83%9D_%ED%9A%8C%EC%83%89.png?raw=true");
+        background-size: cover;
+        display: none;
+      }
+      .bj_li_cover_play:hover {
+        background-image: url("https://github.com/kevinbj0/front/blob/main/image_/%EC%9E%AC%EC%83%9D_%EA%B7%B8%EB%A6%B0.png?raw=true");
+      }
+      .bj_li_cover:hover {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .bj_li_cover:hover .bj_li_cover_text {
+        display: block;
+      }
+      /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ이벤트 블록 */
+      .div1_event_box {
+        width: 236px;
+        height: 340px;
+        margin: 0px 8px;
+        position: relative;
+      }
+      /* 이벤트 슬라이더 */
+      .div1_container {
+        margin-top: 24px;
+        overflow: hidden;
+        display: flex;
+      }
+      /* 이벤트 슬라이드 아이템 */
+      .bj_event_slide {
+        height: 15px;
+        width: 113px;
+        display: flex;
+        position: absolute;
+        right: 2px;
+        top: 1px;
+      }
+      .bj_event_slide_button {
+        height: 10px;
+        width: 10px;
+        margin-right: 3px;
+        background-image: url("https://github.com/kevinbj0/front/blob/main/image_/%EC%9B%90_%EC%9D%BC%EB%B0%98.png?raw=true");
+        background-size: cover;
+      }
+      .bj_event_slide_button:hover {
+        background-image: url("https://github.com/kevinbj0/front/blob/main/image_/%EC%9B%90_%EC%84%A0%ED%83%9D.png?raw=true");
+      }
+      .bj_event_slide_stop {
+        width: 13px;
+        height: 13px;
+        margin-left: 8px;
+        margin-top: 1px;
+        border-radius: 50%;
+        outline: 1px solid rgb(218, 218, 218);
+      }
+      .bj_event_slide_stop:hover {
+        outline: 1px solid rgb(171, 171, 171);
+      }
+      /* 자동 슬라이드 동작, 정지 */
+      .bj_stop_image {
+        height: 8px;
+        width: 8px;
+        margin: 2.5px auto;
+        /* background-image: url("https://github.com/kevinbj0/front/blob/main/image_/Play.png?raw=true"); 정지 버튼*/
+        background-image: url("https://github.com/kevinbj0/front/blob/main/image_/STOP.png?raw=true");
+        background-size: cover;
+        outline: none;
+      }
+      .div1_event_image {
+        height: 316px;
+        width: 236px;
+        background-size: cover;
+        transition: 0.7s;
+        /* transform: translateX(-100px); */
+      }
+      /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡ로그인 블록 */
+      .div1_login_box {
+        width: 280px;
+        height: 340px;
+      }
+      .div1_login {
+        width: 246px;
+        height: 117px;
+        margin-top: 24px;
+        padding: 0px 17px;
+        background-color: rgb(251, 251, 251);
+        outline: 1px solid rgb(224, 224, 224);
+      }
+      .div1_login_top {
+        height: 49px;
+        position: relative;
+      }
+      .div1_login_text {
+        height: 18px;
+        width: 246px;
+        position: absolute;
+        bottom: 5px;
+        line-height: 18px;
+        font-size: 11px;
+        color: gray;
+      }
+      .div1_login_add {
+        position: absolute;
+        right: 0px;
+        text-decoration: none;
+        color: gray;
+      }
+      .div1_login_add:hover {
+        text-decoration-line: underline;
+        text-decoration-color: gray;
+      }
+
+      .div1_login_button {
+        height: 42px;
+        color: white;
+        background-color: rgb(0, 211, 68);
+        text-align: center;
+        line-height: 42px;
+        font-size: 14px;
+      }
+      .div1_login_button:hover {
+        background-color: rgb(1, 185, 37);
+      }
+      .div1_event_mini {
+        width: 280px;
+        height: 188px;
+        margin-top: 11px;
+        background-image: url("https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230619042826.png/melon/quality/80");
+        background-size: cover;
+      }
+      /* 작업중 */
+      .bj_album_container {
+        width: 476px;
+        overflow: hidden;
+        display: flex;
+      }
+
+    </style>
+    <style>
+      /*-------------- 헤더 시작---------------*/
+      .dy_hr1 {
+    
+      }
+
+      .dy_header_main {
+        width: 1048px;
+        height: 10px;
+        margin: 0 auto;
+        padding: 5px;
+      }
+      .dy_header_main_2 {
+        width: 1048px;
+        height: 150px;
+        margin: 0 auto;
+        padding: 5px;
+      }
+      .dy_header_1 {
+        width: 1008px;
+        height: 38px;
+        display: flex;
+        margin: 0 auto;
+        padding: 0px;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.5px;
+      }
+      .dy_menu {
+        width: 1008px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: block;
+        position: relative;
+        z-index: 14;
+      }
+      .dy_menu > ul {
+        margin-top: -25px;
+        display: block;
+        list-style: none;
+      }
+      .dy_li_0 {
+        margin-left: 0px;
+        float: left;
+      }
+      .dy_li_1_1 {
+        margin-top: 4px;
+        margin-left: 590px;
+        float: left;
+      }
+      .dy_li_1 {
+        margin-left: -35px;
+        float: left;
+      }
+      .dy_li_2 {
+        margin-left: -25px;
+        float: left;
+      }
+      .dy_li_3 {
+        margin-left: -30px;
+        float: left;
+      }
+      .dy_li_4 {
+        margin-left: -30px;
+        float: left;
+      }
+      ul > li {
+        margin: 0 7px 0 0;
+        padding-left: 0px;
+      }
+      .dy_header_2 {
+        width: 1008px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .dy_search_bar {
+        display: inline;
+        position: relative;
+        float: left;
+        width: 322px !important;
+        height: 40px;
+        margin: 36px 0 0 11px;
+        background: url(//cdnimg.melon.co.kr/resource/image/web/common/bg_cmn_search322.png)
+          no-repeat;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        justify-content: center;
+      }
+      .dy_text1 {
+        float: left;
+        border: 0;
+        padding-top: 3px;
+        margin: 0px 0 0 -0px;
+        padding-left: 0;
+        height: 20px;
+        box-shadow: none;
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 1px;
+      }
+      .dy_dotbogi1 {
+        margin-left: 10px;
+        margin-top: 5px;
+        overflow: clip;
+        width: 28px;
+      }
+      .dy_sudden_up_img {
+        width: 42px;
+        height: 16px;
+        float: left;
+        margin: 3px 0 0 3px;
+        background: url(//cdnimg.melon.co.kr/resource/image/web/main/bg_loce_151207.png)
+          no-repeat left top;
+        margin-top: 46.5px;
+        margin-left: 14px;
+      }
+      .slide {
+        position: relative;
+        left: 40px;
+        width: 190px;
+        height: 12px;
+        margin-top: 43px;
+        margin-left: -90px;
+      }
+      .dy_header_3 {
+        width: 1008px;
+        margin: 0 auto;
+        position: relative;
+        height: 55px;
+        z-index: 14;
+      }
+      .dy_header_3 > ul {
+        margin-left: -43.5px;
+        display: block;
+        list-style: none;
+      }
+      .dy_li1 {
+        margin-left: 30px;
+        float: left;
+      }
+      .dy_li2 {
+        margin-left: -20px;
+        float: left;
+      }
+      .dy_li3 {
+        margin-left: -20px;
+        float: left;
+      }
+      .dy_li4 {
+        margin-right: 20px;
+        margin-left: -20px;
+        float: left;
+      }
+      .dy_li5 {
+        margin-left: -30px;
+        float: left;
+      }
+      .dy_li6 {
+        margin-left: -20px;
+        float: left;
+      }
+      .dy_li7 {
+        margin-left:-15px;
+        float: left;
+      }
+      .dy_li8 {
+        margin-left: -10px;
+        float: left;
+      }
+      .dy_li9 {
+        margin-left: -18px;
+        float: left;
+      }
+      .dy_li10 {
+        float: left;
+        margin-left: 250px;
+        float: left;
+      }
+      /*--------------실시간순위 애니메이트 부분---------------*/
+      .dy_rank_menu {
+        list-style: none;
+        display: flex;
+      }
+      .dy_rank_menu_item {
+        width: 100px;
+        height: 10px;
+        margin-left: -60px;
+        text-align: center;
+        line-height: 26px;
+        margin-top: 15.5px;
+      }
+      .dy_rank_menu_item > ul {
+        display: none;
+      }
+      .dy_rank_sub_menu {
+        display: none;
+        position: absolute;
+        left: 40px;
+      
+        
+        list-style: none;
+        margin-left: 0px;
+      }
+      .dy_rank_sub_menu > li {
+        float: left;
+        margin-left: -25px;
+        position: absolute;
+        left: 40px;
+      }
+      .dy_rank_menu_item:hover .dy_rank_sub_menu {
+        display: block;
+        width: 160px;
+        height: 270px;
+        background-color: #fff;
+        position: relative;
+        z-index: 9999;
+        border: 1px solid black;
+        margin-top: -40px;
+        padding-top: 10px;
+      }
+
+      .dy_footer_wrap1 {
+        width: 1048px;
+        height: 52px;
+        margin: 0 auto;
+      }
+
+      .dy_footer_1st {
+        width: 1008px;
+        height: 52px;
+        margin: 0 auto;       
+      }
+
+      .dy_footer_1st_menu {
+        list-style: none;
+        display: flex;
+        margin-left: 535px;       
+      }
+
+      .dy_footer_1st_menu > li {
+        color: #7d7d7d;
+      }
+
+      .dy_footer_wrap2 {
+        width: 1048px;
+        height: 145px;
+        margin: 0 auto;
+      }
+
+      .dy_footer_2nd {
+        width: 1008px;
+        height: 65px;
+        margin: 0 auto;
+      }
+
+      .dy_footer_2nd_menu {
+        height: 20px;
+        width: 820px;
+        list-style: none;
+        display: flex;
+        margin-left: -5px;
+        justify-content: space-between;
+      }
+
+      .dy_footer_2nd_menu_list {
+        font-size: 12px;
+        margin-left: 0px;
+        color: #505050;
+      }
+
+      .dy_footer_2nd_menu_list:hover {
+        text-decoration-line: underline;
+      }
+
+      .dy_footer_2nd_menu > img {
+        margin-top: 2px;
+      }
+
+      .dy_footer_3rd {
+        width: 1008px;
+        height: 80px;
+        margin: 0 auto;
+        list-style: none;        
+      }
+
+      .mg_hot1{
+        font-size: 20px;
+        
+      }
+      .hot_issue {
+      width: 704px;
+      height: 472px;
+      
+      position: relative;
+      float: left;
+      margin-top: 32px;
+      margin-bottom: 49px;
+
+
+    }
+
+    /*가수 이미지 /정보 내용 */
+    .mg_ulA {
+      width: 726px;
+      height: 300px;
+      border-top: 1px solid #dddddd;
+      ;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      position: absolute;
+      left: -2px;
+      top: 30px;
+    }
+
+    .mg_ulA .mg_liB {
+
+      width: 223px;
+      margin: 4px;
+     
+
+    }
+
+    /*이미지 크기 */
+    .hot_img {
+      width: 223px;
+      height: 148px;
+    }
+
+    /* 이미지 글씨폰트 크기/색상 조절 */
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #666;
+    }
+
+    .a1:hover {
+
+      text-decoration: underline;
+      text-decoration-color: #7cb710;
+
+    }
+
+    .hot_1 {
+      height: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 6px;
+      margin-bottom: 2px;
+
+
+    }
+
+    .hot_2 {
+      letter-spacing: 0;
+      font-size: 12px;
+      color: #666;
+      line-height: 18px;
+      outline: none;
+
+    }
+
+    .hot_3 {
+      padding-right: 6px;
+      font-size: 12px;
+      color: #7cb710;
+      outline: none;
+
+    }
+
+    .hot_text {
+
+      display: inline-block;
+      width: 300px;
+      margin-top: 11px;
+      padding-left: 12px;
+      font-weight: normal;
+      font-size: 12px;
+      color: #888;
+
+
+    }
+
+    #mg_chartwrap {
+        overflow-y: hidden;
+        max-height: 430px;
+        height: 430px;
+        width: 276px;
+        border: 1px solid rgb(212, 211, 211);
+        position: relative;
+        top: 40px;
+        left: 25px;
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .mg_time{
+        margin-left: 80px;
+        font-size: 12px;
+        color: gray;
+    }
+
+    /* 버튼영역 */
+
+    .mg_btn {
+        display: flex
+    }
+
+    .mg_chart_btn {
+    
+        width: 94px;
+        height: 34px;
+        background-color: white;
+        border: 0px;
+        border-right: 0.5px solid rgb(199, 199, 199);
+        font-weight: bolder;
+        color: rgb(117, 117, 117);
+        border-top: 0.5px solid rgb(177, 177, 177);
+    }
+
+    .mg_btn .mg_chart_btn:hover {
+        border-top-color: #8ac121;
+        /* 테두리 윗쪽 색깔 변경 */
+        color: #8ac121;
+        /* 글씨체 색깔 변경 */
+        border-top: 3px solid #8ac121;
+        /* 테두리 윗쪽 굵기 변경 */
+    }
+
+    .chart {
+
+        width: 270px;
+    }
+
+    .mg_chart_1st {
+        color: #8ac121;
+        font-size: 21px;
+    }
+
+    .mg_chart_2st {
+        font-size: 17px;
+        color: gray;
+
+
+    }
+
+    .mg_a0 {
+        width: 20%;
+        height: 30px;
+        margin: 0 auto;
+        font-size: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .mg_li_1 {
+        border-top: 0.5px solid rgb(177, 177, 177);
+        display: flex;
+        position: relative;
+
+
+    }
+
+    /* 차트텍스트영역 */
+    .mg_a1 {
+        display: flex;
+
+        width: 80%;
+
+        text-decoration: none;
+        color: black;
+        text-align: left;
+
+
+    }
+
+    .mg_a1:hover .mg_a1_text {
+        /*차트영역 숨기기 */
+        display: none;
+    }
+
+    .mg_a1_text {
+
+        white-space: nowrap;
+        /*텍스트 줄바꿈 하지 않음 */
+        overflow: hidden;
+        /*텍스트넘어가면 숨김 */
+        text-overflow: ellipsis;
+        /* ... */
+        width: 63%;
+        text-align: center;
+        font-size: 13px;
+        margin: 0 auto;
+
+    }
+
+    .mg_star {
+        width: 21px;
+        height: 21px;
+        margin-top: 6px;
+        position: relative;
+        right: 30px;
+        border: 0px;
+        background-image: url("star.png");
+        background-size: cover;
+
+
+
+    }
+    
+
+    .mgk {
+        color: gray;
+        font-weight: lighter;
+    }
+
+
+    /*마우스 호버시 보일 영역*/
+    .mg_a2 {
+        display: flex;
+        width: 207px;
+        height: 59px;
+        display: none;
+        text-align: justify;
+
+    }
+
+    .mg_a2_img {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        margin-top: 5px;
+
+    }
+
+    .mg_a2_text {
+        margin-left: 10px;
+        width: 200px;
+        font-size: 14px;
+
+
+    }
+
+    /* 아티스트 / 곡 영역 */
+    .mg_a3 {
+        display: flex;
+
+
+
+
+    }
+
+    .mg_a4 {
+
+        margin-left: 10px;
+        padding-left: 20px;
+        float: right;
+    }
+
+    .mg_song {
+        text-decoration-line: none;
+        color: black;
+        font-weight: bolder;
+
+    }
+
+    .mg_artist {
+        text-decoration-line: none;
+        color: gray;
+
+
+    }
+
+
+    /* 셔플듣기 더보기 영역*/
+    .mg_chart_fot {
+        position: absolute;
+        bottom: 2px;
+        display: flex;
+        width: 100%;
+        height: 39px;
+    }
+
+    .mg_chart_for1 {
+        width: 50%;
+    }
+
+    .mg_chart_for2 {
+        width: 50%;
+        text-align: right;
+       
+    }
+    .mg_chart_for_text{
+        text-decoration-line: none;
+        color: black;
+        font-size: 14px;
+    }
+    .mg_2color{
+        background-color: rgb(248, 247, 246);
+    }
+    </style>
+
+    <style>
+      /* .몸통 {
+        height: 600px;
+        width: 1008px;
+        border: 1px solid black;
+        margin: 0 auto;
+      } */
+    </style>
+  </head>
+  <body>
+    <!--------------------------헤더 바디 시작---------------------------->
+
+    <hr width="100%;" class="dy_hr1" color="#04c944" size="4px" />
+    <div class="dy_header_main">
+      <!--------------------------헤더 첫번째---------------------------->
+
+      <div class="dy_header_1">
+        <div class="dy_menu">
+          <ul>
+            <li class="dy_li_0">
+              <a href="https://ticket.melon.com/main/index.htm">
+                <img
+                  src="./멜론티켓_off.jpg"
+                  onmouseover="this.src='./멜론티켓_on.jpg'"
+                  onmouseout="this.src='./멜론티켓_off.jpg'"
+                  style="width: 77%; height: 77%"
+              /></a>
+            </li>
+            <li class="dy_li_1_1">
+              <a
+                href="https://www.melon.com/commerce/pamphlet/web/sale_listMainView.htm"
+              >
+                <img src="./이용권이미지.PNG" style="width: 55%; height: 55%; margin-right: 2px;"
+              /></a>
+            </li>
+            <li class="dy_li_1">
+              <a
+                href="https://www.melon.com/commerce/pamphlet/web/sale_listMainView.htm"
+              >
+                <img
+                  src="./이용권구매_off.jpg"
+                  onmouseover="this.src='./이용권구매_on.jpg'"
+                  onmouseout="this.src='./이용권구매_off.jpg'"
+                  style="width: 75%; height: 75%"
+              /></a>
+            </li>
+            <li class="dy_li_2">
+              <a href="https://www.melon.com/event/vip/index.htm">
+                <img
+                  src="./멜론라운지_off.jpg"
+                  onmouseover="this.src='./멜론라운지_on.jpg'"
+                  onmouseout="this.src='./멜론라운지_off.jpg'"
+                  style="width: 75%; height: 75%"
+              /></a>
+            </li>
+            <li class="dy_li_3">
+              <a href="https://www.melon.com/event/index.htm">
+                <img
+                  src="./이벤트_off.jpg"
+                  onmouseover="this.src='./이벤트_on.jpg'"
+                  onmouseout="this.src='./이벤트_off.jpg'"
+                  style="width: 75%; height: 75%"
+              /></a>
+            </li>
+            <li class="dy_li_4">
+              <a href="https://www.melon.com/customer/announce/index.htm">
+                <img
+                  src="./공지사항_off.jpg"
+                  onmouseover="this.src='./공지사항_on.jpg'"
+                  onmouseout="this.src='./공지사항_off.jpg'"
+                  style="width: 75%; height: 75%"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr width="100%;" color="#f4f4f4" size="1px" />
+    <!--------------------------헤더 두번째---------------------------->
+
+    <div class="dy_header_main_2">
+      <div class="dy_header_2">
+        <div class="dy_melonimg">
+          <a
+            href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_Main/index.html"
+          >
+            <img
+              src="https://cdnimg.melon.co.kr/resource/image/web/common/logo_melon142x99.png"
+          /></a>
+        </div>
+
+        <div class="dy_search_bar">
+          <input
+            class="dy_text1"
+            type="search"
+            placeholder="볼빨간사춘기 '여름날' Official Live Clip 현장"
+            onfocus="this.placeholder=''"
+            name="search"
+            style="width: 249px; display: block"
+          />
+
+          <div class="dy_dotbogi">
+            <img class="dy_dotbogi1" src="./멜론돋보기.PNG" />
+          </div>
+        </div>
+
+        <div class="dy_sudden_up_img"></div>
+        <!---------------- 순위 리스트 시작 ----------------->
+        <div class="dy_auto_awards_div">
+          <div
+            class="dy_auto_awards"
+            style="margin-top: 25.5px; margin-left: 15px"
+          >
+            <ul class="dy_rank_menu">
+              <li class="dy_rank_menu_item" style="font-size: 13px">
+                &nbsp;&nbsp;
+                <ul class="dy_rank_sub_menu">
+                  <li style="margin-left: -41px">&nbsp;&nbsp;1 IVE (아이브)</li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;2 (여자)아이들</li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;3 방탄소년단</li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;4 정승환</li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;5 10CM</li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;6 멜로망스</li>
+                  <br />
+                  <li style="margin-left: -41px">
+                    &nbsp;&nbsp;7 Red Velvet (레드벨벳)
+                  </li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;8 IDOL</li>
+                  <br />
+                  <li style="margin-left: -41px">&nbsp;&nbsp;9 틴탑</li>
+                  <br />
+                  <li style="margin-left: -41px">10 LUCY</li>
+                  <br />
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!----------------- 순위 리스트 끝 ----------------->
+
+        <div class="gallery-wrap">
+          <div class="slide">1. IVE (아이브)</div>
+        </div>
+      </div>
+      <!--------------------------헤더 세번째---------------------------->
+      <div class="dy_header_3">
+        <ul>
+          <li class="dy_li1">
+            <a href="https://www.melon.com/chart/index.htm"
+              ><img
+                src="./멜론차트_off.jpg"
+                onmouseover="this.src='./멜론차트_on.jpg'"
+                onmouseout="this.src='./멜론차트_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li2">
+            <a href="https://www.melon.com/new/index.htm"
+              ><img
+                src="./최신음악_off.jpg"
+                onmouseover="this.src='./최신음악_on.jpg'"
+                onmouseout="this.src='./최신음악_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li3">
+            <a href="https://www.melon.com/genre/song_list.htm"
+              ><img
+                src="./장르음악_off.jpg"
+                onmouseover="this.src='./장르음악_on.jpg'"
+                onmouseout="this.src='./장르음악_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li4">
+            <a href="https://www.melon.com/dj/today/djtoday_list.htm"
+              ><img
+                src="./멜론DJ_off.jpg"
+                onmouseover="this.src='./멜론DJ_on.jpg'"
+                onmouseout="this.src='./멜론DJ_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li5">
+            <a href="https://www.melon.com/tv/index.htm"
+              ><img
+                src="./멜론TV_off.jpg"
+                onmouseover="this.src='./멜론TV_on.jpg'"
+                onmouseout="this.src='./멜론TV_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li6">
+            <a href="https://www.melon.com/artistplus/todayupdate/index.htm"
+              ><img
+                src="./스타포스트_off.jpg"
+                onmouseover="this.src='./스타포스트_on.jpg'"
+                onmouseout="this.src='./스타포스트_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li7">
+            <a href="https://www.melon.com/musicstory/today/index.htm"
+              ><img
+                src="./매거진_off.jpg"
+                onmouseover="this.src='./매거진_on.jpg'"
+                onmouseout="this.src='./매거진_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li8">
+            <a href="https://www.melon.com/melonaward/weekAward.htm"
+              ><img
+                src="./뮤직어워드_off.jpg"
+                onmouseover="this.src='./뮤직어워드_on.jpg'"
+                onmouseout="this.src='./뮤직어워드_off.jpg'"
+            /></a>
+          </li>
+          <li class="dy_li9">
+            <a href="https://www.melon.com/edu/index.htm"
+              ><img
+                src="./어학_off.jpg"
+                onmouseover="this.src='./어학_on.jpg'"
+                onmouseout="this.src='./어학_off.jpg'"
+            /></a>
+          </li>
+        </ul>
+        <ul>
+          <li class="dy_li10">
+            <a href="로그인페이지"
+              ><img
+                src="./마이뮤직_off.jpg"
+                onmouseover="this.src='./마이뮤직_on.jpg'"
+                onmouseout="this.src='./마이뮤직_off.jpg'"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr width="100%;" color="#c3c3c3" />
+  </body>
+
+  <body>
+    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡdiv1 STARTㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+    <div class="div1_wrap">
+      <!-- div1 -->
+      <div class="div1">
+        <!-- 앨범 버튼 SECTION -->
+        <div class="div1_album_box">
+          <div class="div1_album_chart_menu">
+            <div style="width: 293px">
+              <a href="" style="text-decoration: none; color: black">
+                <div class="bj_album_news">
+                  최신 앨범
+                  <img
+                    src="https://github.com/kevinbj0/front/blob/main/image_/%EB%8B%A4%EC%9D%8C_%ED%81%B4%EB%A6%AD.png?raw=true"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="bj_album_button_box">
+              <div class="bj_album_contry" onclick="album_contry(0)">
+                <strong>전체</strong>
+              </div>
+              <div
+                class="bj_album_contry"
+                style="
+                  border-right: 1px solid rgb(136, 136, 136);
+                  border-left: 1px solid rgb(136, 136, 136);
+                "
+                onclick="album_contry(1)"
+              >
+                <strong>국내</strong>
+              </div>
+              <div class="bj_album_contry" onclick="album_contry(2)">
+                <strong>해외</strong>
+              </div>
+              <div class="bj_album_page">
+                <strong><h style="color: black">1</h>/9</strong>
+              </div>
+              <div class="bj_album_Button_Box">
+                <!-- 이전버튼 -->
+                <div
+                  class="bj_album_Button"
+                  style="border-radius: 50% 0 0 50%; margin-right: 0px"
+                >
+                  <div
+                    class="bj_button_image"
+                    style="transform: rotate(180deg)"
+                    onclick="album_slide(-1)"
+                  ></div>
+                </div>
+                <!-- 다음버튼 -->
+                <div
+                  class="bj_album_Button"
+                  style="border-radius: 0 50% 50% 0; margin-left: 0px"
+                  onclick="album_slide(1)"
+                >
+                  <div class="bj_button_image"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- div1 메인 앨범 SECTION -->
+          <!-- 슬라이드 컨테이너 -->
+          <div class="bj_album_container">
+            <!-- 앨범 슬라이드 1 -->
+            <div class="div1_album_image">
+              <ul class="bj_ul">
+                <!-- 앨범 Image 1 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/78/026/11278026_20230703165432_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">틴탑</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(0)"
+                    onmouseout="bj_cover_out(0)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a"><strong>4SHO</strong></a
+                      ><br /><br />
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">틴탑</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 2 -->
+                <li
+                  class="bj_li_center bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/77/698/11277698_20230703131244_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">NMIXX</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(1)"
+                    onmouseout="bj_cover_out(1)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a"
+                        ><strong>Roller Coaster</strong></a
+                      ><br /><br />
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">NMIXX</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 3 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/78/316/11278316_20230704103646_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">허준</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(2)"
+                    onmouseout="bj_cover_out(2)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a"
+                        ><strong>세번째 남는 시간</strong></a
+                      ><br /><br />
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">허준</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="bj_ul">
+                <!-- 앨범 Image 4 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/76/570/11276570_20230629163647_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">#안녕</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(3)"
+                    onmouseout="bj_cover_out(3)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a"
+                        ><strong>여긴 하루종일 비</strong></a
+                      ><br /><br />
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">#안녕</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 5 -->
+                <li
+                  class="bj_li_center bj_li"
+                  style="
+                      background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/104/28/038/10428038_20200508161504_500.jpg?649155371b3049eb7a23f8b03e054387/melon/resize/282/quality/80/optimize');
+                      background-size: cover;
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">루시</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(4)"
+                    onmouseout="bj_cover_out(4)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a"
+                        ><strong>개화</strong></a
+                      ><br /><br />
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">루시</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 6 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/76/855/11276855_20230630114456_500.jpg?8e2028839479c5453ea79ad42b431f5e/melon/resize/282/quality/80/optimize');
+                    background-size: cover;
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">유자</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(5)"
+                    onmouseout="bj_cover_out(5)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a"><strong>;;</strong></a
+                      ><br /><br />
+                      <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html" class="bj_li_a">유자</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 앨범 슬라이드1 END -->
+            <!-- 앨범 슬라이드 2 -->
+            <div class="div1_album_image">
+              <ul class="bj_ul">
+                <!-- 앨범 Image 1 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/104/28/038/10428038_20200508161504_500.jpg?649155371b3049eb7a23f8b03e054387/melon/resize/282/quality/80/optimize');
+                    background-size: cover;
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">루시</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(6)"
+                    onmouseout="bj_cover_out(6)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"><strong>개화</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">루시</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 2 -->
+                <li
+                  class="bj_li_center bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/106/61/149/10661149_20210723152034_500.jpg?961684a9b904ad87b162d04c5052fd53/melon/resize/282/quality/80/optimize');
+                    background-size: cover;
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">PATEKO</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(7)"
+                    onmouseout="bj_cover_out(7)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>널 떠올리는 중이야</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">PATEKO</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 3 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/78/316/11278316_20230704103646_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">허준</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(8)"
+                    onmouseout="bj_cover_out(8)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>세번째 남는 시간</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">허준</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="bj_ul">
+                <!-- 앨범 Image 4 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/76/570/11276570_20230629163647_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">#안녕</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(9)"
+                    onmouseout="bj_cover_out(9)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>여긴 하루종일 비</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">#안녕</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 5 -->
+                <li
+                  class="bj_li_center bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/77/602/11277602_20230703105200_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">허회경</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(10)"
+                    onmouseout="bj_cover_out(10)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>나와 내 이웃에게</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">허회경</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 6 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/77/167/11277167_20230630173046_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">배다해</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(11)"
+                    onmouseout="bj_cover_out(11)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"><strong>기묘한 밤</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">배다해</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 앨범 슬라이드2 END -->
+            <!-- 앨범 슬라이드 3 -->
+            <div class="div1_album_image">
+              <ul class="bj_ul">
+                <!-- 앨범 Image 1 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/79/354/11279354_20230704175636_500.jpg?47ff55f3f680fc32e81d5e8a3e948a37/melon/resize/282/quality/80/optimize');
+                    background-size: cover;
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">볼빨간사춘기</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(12)"
+                    onmouseout="bj_cover_out(12)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"><strong>여름날 (feat.하현상)</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">볼빨간사춘기</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 2 -->
+                <li
+                  class="bj_li_center bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/77/698/11277698_20230703131244_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">NMIXX</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(13)"
+                    onmouseout="bj_cover_out(13)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>Roller Coaster</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">NMIXX</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 3 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/78/316/11278316_20230704103646_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">허준</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(14)"
+                    onmouseout="bj_cover_out(14)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>세번째 남는 시간</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">허준</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="bj_ul">
+                <!-- 앨범 Image 4 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/76/570/11276570_20230629163647_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">#안녕</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(15)"
+                    onmouseout="bj_cover_out(15)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>여긴 하루종일 비</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">#안녕</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 5 -->
+                <li
+                  class="bj_li_center bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/77/602/11277602_20230703105200_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">허회경</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(16)"
+                    onmouseout="bj_cover_out(16)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"
+                        ><strong>나와 내 이웃에게</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">허회경</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+                <!-- 앨범 Image 6 -->
+                <li
+                  class="bj_li"
+                  style="
+                    background-image: url('https://cdnimg.melon.co.kr/cm2/album/images/112/77/167/11277167_20230630173046_500.jpg/melon/quality/80/resize/156/optimize');
+                  "
+                >
+                  <div class="bj_li_name">
+                    <a href="" class="bj_li_a">배다해</a>
+                  </div>
+                  <div
+                    class="bj_li_cover"
+                    tabindex="0"
+                    onmouseover="bj_cover_in(17)"
+                    onmouseout="bj_cover_out(17)"
+                  >
+                    <div class="bj_li_cover_text">
+                      <a href="" class="bj_li_a"><strong>기묘한 밤</strong></a
+                      ><br /><br />
+                      <a href="" class="bj_li_a">배다해</a>
+                    </div>
+                    <div class="bj_li_cover_play"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 앨범 슬라이드3 END -->
+          </div>
+          <!-- 앨범 슬라이드 컨테이너 END -->
+        </div>
+        <!-- div1 앨범 SECTION END -->
+        <!-- div1 이벤트 슬라이드 SECTION -->
+        <div class="div1_event_box">
+          <div class="bj_event_slide">
+            <div class="bj_event_slide_button" onclick="click_event(0)"></div>
+            <div class="bj_event_slide_button" onclick="click_event(1)"></div>
+            <div class="bj_event_slide_button" onclick="click_event(2)"></div>
+            <div class="bj_event_slide_button" onclick="click_event(3)"></div>
+            <div class="bj_event_slide_button" onclick="click_event(4)"></div>
+            <div class="bj_event_slide_button" onclick="click_event(5)"></div>
+            <div class="bj_event_slide_button" onclick="click_event(6)"></div>
+            <div class="bj_event_slide_stop">
+              <div class="bj_stop_image"></div>
+            </div>
+          </div>
+          <div class="div1_container">
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230628043101.png/melon/quality/80://cdnimg.melon.co.kr/svc/images/main/imgUrl20230629053044.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230704031938.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230703032524.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230705040158.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230705040303.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230705040325.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+            <a href="">
+              <div
+                class="div1_event_image"
+                style="
+                  background-image: url('https://cdnimg.melon.co.kr/svc/images/main/imgUrl20230704032041.jpg/melon/quality/80');
+                "
+              ></div>
+            </a>
+          </div>
+        </div>
+        <!-- 이벤트 부분 SECTION -->
+        <!-- div1 로그인 SECTION -->
+        <div class="div1_login_box">
+          <div class="div1_login">
+            <div class="div1_login_top">
+              <div class="div1_login_text">
+                멜론을 더 안전하게 이용하세요.
+                <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_Main/%EB%A9%9C%EB%A1%A0%EB%A1%9C%EA%B7%B8%EC%9D%B8.html" class="div1_login_add">회원가입</a>
+              </div>
+            </div>
+            <a href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_Main/%EB%A9%9C%EB%A1%A0%EB%A1%9C%EA%B7%B8%EC%9D%B8.html" class="bj_a"
+              ><div class="div1_login_button">로그인</div></a
+            >
+          </div>
+          <!-- 로그인 하단 이벤트 -->
+          <a href=""><div class="div1_event_mini"></div></a>
+        </div>
+      </div>
+      <!-- 로그인 SECTION END-->
+      <!-- div1 END-->
+      
+      <!-- div1 END-->
+      <div class="hot_issue">
+        <h2 class="mg_hot1" >
+          <span> 인기있어요</span>
+          <span class="hot_text">지금 이슈가 되는 아티스트의 인기 컨텐츠입니다.</span>
+          <div class="h21"></div>
+        </h2>
+        <ul class="mg_ulA">
+          <li class="mg_liB">
+            <!--아티스트별 링크-->
+            <a href="https://www.melon.com/video/detail2.htm?mvId=50262530&menuId=10010101">
+              <img class="hot_img"
+                src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/530/50262530_20230623105709_640.jpg/melon/resize/480/quality/80/optimize">
+              <span class="hot_1">19</span><br>
+              <span class="hot_2">다이나믹듀오</span><br>
+            </a>
+            <!--멜론tv링크-->
+            <a href="https://www.melon.com/tv/index.htm">
+              <span class="hot_3">멜론TV</span>
+            </a>
+  
+          </li>
+          <li class="mg_liB">
+            <!--아티스트별 링크-->
+            <a href="https://www.melon.com/video/detail2.htm?mvId=50262519&menuId=10010101">
+              <img class="hot_img"
+                src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/519/50262519_20230622172851_640.jpg/melon/resize/480/quality/80/optimize">
+  
+              <span class="hot_1">사랑이늦어서 미안해</span><br>
+              <span class="hot_2">길구봉구</span><br>
+            </a>
+            <!--멜론tv링크-->
+            <a class="a1" href="https://www.melon.com/tv/index.htm">
+              <span class="hot_3">멜론TV</span>
+            </a>
+  
+          </li>
+          <li class="mg_liB">
+            <!--아티스트별 링크-->
+            <a href="https://www.melon.com/video/detail2.htm?mvId=50262398&menuId=28010101">
+              <img class="hot_img"
+                src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/398/50262398_20230619164035_640.jpg/melon/resize/480/quality/80/optimize">
+  
+              <span class="hot_1">Broken Melodies</span><br>
+              <span class="hot_2">NCT DREAM</span><br>
+            </a>
+            <!--멜론tv링크-->
+            <a class="a1" href="https://www.melon.com/tv/index.htm">
+              <span class="hot_3">멜론TV</span>
+            </a>
+  
+          </li>
+          <li class="mg_liB">
+            <!--아티스트별 링크-->
+            <a href="https://www.melon.com/video/detail2.htm?mvId=50262476&menuId=10010101">
+              <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/476/50262476_20230621152452_640.jpg/melon/resize/480/quality/80/optimize
+                  ">
+  
+              <span class="hot_1">사랑하지 않아서 그랬니</span><br>
+              <span class="hot_2">지아</span><br>
+            </a>
+            <!--멜론tv링크-->
+            <a class="a1" href="https://www.melon.com/tv/index.htm">
+              <span class="hot_3">멜론TV</span>
+            </a>
+  
+          </li>
+          <li class="mg_liB">
+            <!--아티스트별 링크-->
+            <!-- *** -->
+           <a href="https://www.melon.com/video/detail2.htm?mvId=50262599&menuId=28010101">
+              <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/599/50262599_20230626174710_640.jpg/melon/resize/480/quality/80/optimize
+                  ">
+  
+              <span class="hot_1">HARD</span><br>
+              <span class="hot_2">SHINee (샤이니)</span><br>
+            </a>
+            <!--멜론tv링크-->
+            <a class="a1" href="https://www.melon.com/tv/index.htm">
+              <span class="hot_3">멜론TV</span>
+            </a>
+  
+          </li>
+          <li class="mg_liB">
+            <!--아티스트별 링크-->
+            <a href="https://www.melon.com/video/detail2.htm?mvId=50262405&menuId=27120101">
+              <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/405/50262405_20230623135725_640.jpg/melon/resize/480/quality/80/optimize
+                  ">
+  
+              <span class="hot_1">WE GO HIGH</span><br>
+              <span class="hot_2">로이킴</span><br>
+            </a>
+            <!--멜론tv링크-->
+            <a class="a1" href="https://www.melon.com/tv/index.htm">
+              <span class="hot_3">멜론TV</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <div id="mg_chartwrap"> <!--차트 시작부분-->
+        멜론차트 > <a class="mg_time">2023.07.05 기준</a><br>
+        <div class="mg_btn"><!--showChart : 버튼 누르면 다음 차트로 넘어갑니다-->
+            <button class="mg_chart_btn" onclick="showChart(1)">TOP100</button>
+            <button class="mg_chart_btn" onclick="showChart(2)">POP</button>
+            <button class="mg_chart_btn" onclick="showChart(3)">☆ 아티스트</button>
+        </div>
+  
+        <ul id="chart1" class="chart" style="list-style: none;">
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>1</i></a> - 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text mgk1 ">퀸카(Qunncard)</div>
+                    <div class="mg_a1_text mgk">(여자)아이들</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                  <!-- *** -->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/40/232/11240232_20230509151820_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=11240232">
+                                    <div style="width: 100px;"></div>퀸카(Queen...
+                                </a>
+                                <a class="mg_artist"
+                                    href="https://www.melon.com/artist/timeline.htm?artistId=2137482">(여자)아이들</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>2</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">;; </div>
+                    <div class="mg_a1_text mgk">유자</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/76/855/11276855_20230630114456_1000.jpg?8e2028839479c5453ea79ad42b431f5e/melon/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">;;</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">유자</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>3</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">이브, 프시케 그리고 푸른 수염의 아내 </div>
+                    <div class="mg_a1_text mgk">LE SSERAFIM</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/34/678/11234678_20230502162327_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">이브, 프시케 그리...</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">LE SSERAFIM</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>4</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">Spicy </div>
+                    <div class="mg_a1_text mgk">aespa</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/36/264/11236264_20230508184331_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">Spicy</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">aespa</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>5</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">헤어지자 말해요 </div>
+                    <div class="mg_a1_text mgk">박재정</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/27/533/11227533_20230419162238_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">헤어지자 말...</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">박재정</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>6</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">Kitsch </div>
+                    <div class="mg_a1_text mgk">IVE(아이브)</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/11/297/11211297_20230410151046_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">Kitsch</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">IVE (아이브)</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>7</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">사랑은 늘 도망가 </div>
+                    <div class="mg_a1_text mgk">임영웅</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/107/35/654/10735654_20211008114339_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">사랑은 늘 도...</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">임영웅</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>8</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">Hype boy </div>
+                    <div class="mg_a1_text mgk">NewJeans</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/110/11/565/11011565_20220801102637_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">Hype boy</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">NewJeans</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>9</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">모래알갱이 </div>
+                    <div class="mg_a1_text mgk">임영웅</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/58/233/11258233_20230605094802_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">모래알갱이</div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">임영웅</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>10</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">UNFOGIVEN </div>
+                    <div class="mg_a1_text mgk">LE SSERAFIM</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/34/678/11234678_20230502162327_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">UNFOGIVEN </div>
+                                </a>
+                                <a class="mg_artist" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">LE SSERAFIM</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+  
+        </ul>
+        <!-- pop 차트의 내용 -->
+        <ul id="chart2" class="chart" style="display: none;">
+  
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>1</i></a> - 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">I Don't Think That I Like Her</div>
+                    <div class="mg_a1_text mgk">Charlie Puth</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/44/485/10844485_20221006154824_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=10844485">
+                                    <div style="width: 100px;">I Don't Thin...</div>
+  
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=838654">
+                                    Charlie Puth
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>2</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">Dangerously </div>
+                    <div class="mg_a1_text mgk">Charlie Puth</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm/album/images/023/36/926/2336926_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/page2_%EA%B9%80%EB%AF%BC%EC%A7%80.html">
+                                    <div style="width: 100px;">
+                                        Dangerously
+                                    </div>
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=838654">
+                                    Charlie Puth
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>3</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">Steal The Show (From “엘리멘탈) </div>
+                    <div class="mg_a1_text mgk">Lauv</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/54/858/11254858_20230531233847_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=11254858">
+                                    <div style="width: 100px;">
+                                        Steal The Sho...
+                                    </div>
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=1956543">
+                                    Lauv
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>4</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">NIGHT DANCER </div>
+                    <div class="mg_a1_text mgk">imase</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/110/31/616/11031616_20220817122214_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=11031616">
+                                    <div style="width: 100px;">
+                                        NIGHT DAN...
+                                    </div>
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=3060228">
+                                    imase
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>5</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">That's Hilarious </div>
+                    <div class="mg_a1_text mgk">Charlie Puth</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/108/44/485/10844485_20221006154824_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=10844485">
+                                    <div style="width: 100px;">
+  
+                                        That's Hilarious
+  
+                                    </div>
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=838654">
+  
+                                    Charlie Puth
+  
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>6</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">STAY </div>
+                    <div class="mg_a1_text mgk">The Kid LAROI, Justin Bieber</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/106/46/395/10646395_20210707141710_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=10646395">
+                                    <div style="width: 100px;">
+  
+                                        STAY
+                                    </div>
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=2743730">
+  
+                                    The Kid LAROI, Justin Bieber
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>7</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">Off My Face </div>
+                    <div class="mg_a1_text mgk"> Justin Bieber</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/105/80/103/10580103_20211008114642_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=10580103">
+                                    <div style="width: 100px;">
+                                        Off My Face
+                                    </div>
+                                </a>
+                                <a class="mg_artist" href="https://www.melon.com/artist/timeline.htm?artistId=420621">
+                                    Justin Bieber
+                                </a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>8</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">アイドル </div>
+                    <div class="mg_a1_text mgk">YOASOBI</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/album/images/112/20/338/11220338_20230407224115_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=11220338">
+                                    <div style="width: 100px;">アイドル</div>
+                                </a>
+                                <a class="mg_artist"
+                                    href="https://www.melon.com/artist/timeline.htm?artistId=2871809">YOASOBI</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>9</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">愛を伝えたいだとか / Ai Wo </div>
+                    <div class="mg_a1_text mgk">aimyon</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm/album/images/100/96/397/10096397_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=10096397">
+                                    <div style="width: 100px;">愛を伝えたい... </div>
+                                </a>
+                                <a class="mg_artist"
+                                    href="https://www.melon.com/artist/timeline.htm?artistId=1625441">aimyon</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>10</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">12:45 (Stripped) </div>
+                    <div class="mg_a1_text mgk">Etham</div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm/album/images/102/35/362/10235362_500.jpg/melon/resize/120/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <a class="mg_song" href="https://www.melon.com/album/detail.htm?albumId=10235362">
+                                    <div style="width: 100px;">12:45 (Str... </div>
+                                </a>
+                                <a class="mg_artist"
+                                    href="https://www.melon.com/artist/timeline.htm?artistId=1907334">Etham</a>
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+            </li>
+  
+            </li>
+        </ul>
+        <!-- 차트 3의 내용 -->
+        <ul id="chart3" class="chart" style="display: none;">
+  
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>1</i></a> - 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">방탄소년단</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/006/72/375/672375_20230615142615_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=672375">
+                                    <div style="width: 100px;">방탄소년단</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>2</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">IVE (아이브)</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/030/55/146/3055146_20230410142647_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=3055146">
+                                    <div style="width: 100px;">IVE (아이브)</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_1st"><i>3</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">LE SSERAFIM </div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/030/92/950/3092950_20230428172731_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=3092950">
+                                    <div style="width: 100px;">LE SSERAFIM</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+  
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>4</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">임영웅</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/009/94/944/994944_20230605114643_500.jpg?b6bf522bb7e1a2b2b4d516c7b6e9287d/melon/resize/416/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=994944">
+                                    <div style="width: 100px;">임영웅</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>5</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">NewJeans</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/031/14/174/3114174_20230102131651_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=3114174">
+                                    <div style="width: 100px;">NewJeans</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>6</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">빈지노</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/005/32/029/532029_20230620101729_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=532029">
+                                    <div style="width: 100px;">빈지노</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>7</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">볼빨간사춘기</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/007/92/022/792022_20230414141834_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=792022">
+                                    <div style="width: 100px;">볼빨간사춘기</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+  
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>8</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">투모로우바이투게더</div>
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/026/32/253/2632253_20230127105406_500.jpg?4648368665e39c2ae2dadeb385b8b9c4/melon/resize/416/quality/80/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=2632253">
+                                    <div style="width: 100px;">투모로우바...</div>
+                                </a>
+  
+                            </div>
+                        </div>
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>9</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">세븐틴 (SEVENTEEN)</div>
+                    <div class="mg_a1_text mgk"></div>
+  
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/008/61/436/861436_20230424120015_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=861436">
+                                    <div style="width: 100px;">세븐틴 (SEVE...</div>
+                                </a>
+  
+                            </div>
+  
+                        </div>
+  
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+            <li class="mg_li_1 mg_2color">
+                <!--순위영역 -->
+                <div class="mg_a0"><a class="mg_chart_2st"><i>10</i></a>- 0</div>
+                <!--마우스 호버시 이미지랑 링크 불러오는 함수 : showList , hideList -->
+                <div class="mg_a1" onmouseover="showList(event)" onmouseout="hideList(event)">
+                    <!--마우스 호버 전 보이는 곡이름/아티스트-->
+                    <div class="mg_a1_text ">(여자)아이들</div>
+  
+                    <div class="mg_a1_text mgk"></div>
+                    <!--마우스 호버 하면 보이는 이미지랑 곡/아티스트 링크-->
+                    <div class="mg_a2">
+  
+                        <div class="mg_a2_img"><img
+                                src="https://cdnimg.melon.co.kr/cm2/artistcrop/images/021/37/482/2137482_20230502151359_500.jpg/melon/quality/80/resize/48/optimize">
+                            <div class="mg_a2_text">
+                                <!--div 크기 건드리면 함수 고장납니다 -->
+                                <br>
+                                <a class="mg_song" href="https://www.melon.com/artist/timeline.htm?artistId=2137482">
+                                    <div style="width: 100px;">여자아이들</div>
+                                </a>
+  
+                            </div>
+                        </div>
+  
+                        <!--이거 빼면 함수 작동 안합니다-->
+                        <div class="mg_a3"></div>
+                    </div>
+                </div>
+                <button class="mg_star"></button>
+            </li>
+  
+  
+        </ul>
+        <div class="mg_chart_fot">
+            <div class="mg_chart_for1"><button>      <img
+              src="./셔플듣기.png"
+              style="height: 26px; width: 72px; "
+            /></button>
+            </div>
+            <div class="mg_chart_for2"><a class="mg_chart_for_text" href="">더보기></a></div>
+        </div>
+    </div>
+  
+  
+  
+  
+  
+    </div>
+    <!-- div1_wrap END-->
+    <!--------------------------풋터 바디 시작---------------------------->
+
+    <hr width="100%;" />
+    <!--------------------------풋터 바디 첫번째---------------------------->
+
+    <div class="dy_footer_wrap">
+      <!--------------------------풋터 첫번째---------------------------->
+
+      <div class="dy_footer_1st">
+        <ul class="dy_footer_1st_menu">
+          <li class="dy_li1_footer">
+            <a href="https://www.melon.com/m6/campaign.htm"
+              ><img
+                style="height: 19px; width: 99px"
+                src="./멜론_off_1.jpg"
+                onmouseover="this.src='./멜론_on.jpg'"
+                onmouseout="this.src='./멜론_off_1.jpg'"
+            /></a>
+          </li>
+
+          <li class="dy_li2_footer">
+            <a href="https://studio.melon.com/"
+              ><img
+                style="height: 19px; width: 76px"
+                src="./멜론스튜디오_off.jpg"
+                onmouseover="this.src='./멜론스튜디오_on.jpg'"
+                onmouseout="this.src='./멜론스튜디오_off.jpg'"
+            /></a>
+          </li>
+
+          <li class="dy_li3_footer">
+            <a href="https://www.melon.com/customer/serviceintro/index.htm"
+              ><img
+                style="height: 19px; width: 107px"
+                src="./윈도우즈플레이어_off.jpg"
+                onmouseover="this.src='./윈도우즈플레이어_on.jpg'"
+                onmouseout="this.src='./윈도우즈플레이어_off.jpg'"
+            /></a>
+          </li>
+
+          <li class="dy_li4_footer">
+            <a
+              href="https://www.melon.com/customer/serviceintro/multi_pc_web.htm"
+              ><img
+                style="height: 19px; width: 76px"
+                src="./맥플레이어_off.jpg"
+                onmouseover="this.src='./맥플레이어_on.jpg'"
+                onmouseout="this.src='./맥플레이어_off.jpg'"
+            /></a>
+          </li>
+
+          <li class="dy_li5_footer">
+            <a href="https://www.melon.com/customer/serviceintro/ipad.htm"
+              ><img
+                style="height: 19px; width: 27px"
+                src="./ipad_off.jpg"
+                onmouseover="this.src='./ipad_on.jpg'"
+                onmouseout="this.src='./ipad_off.jpg'"
+            /></a>
+          </li>
+
+          <li class="dy_li6_footer">
+            <a href="https://faqs2.melon.com/customer/index.htm"
+              ><img
+                style="height: 19px; width: 49px"
+                src="./고객센터_off.jpg"
+                onmouseover="this.src='./고객센터_on.jpg'"
+                onmouseout="this.src='./고객센터_off.jpg'"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr width="100%;" color="#efefef" />
+    <!--------------------------풋터 바디 두번째---------------------------->
+
+    <div class="dy_footer_wrap">
+      <!--------------------------풋터 두번째---------------------------->
+
+      <div class="dy_footer_2nd">
+        <ul class="dy_footer_2nd_menu">
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://info.melon.com/terms/web/terms1_1.html"
+              >이용약관</a
+            >
+          </li>
+          <img
+            src="./글자사이막대기.png"
+            style="height: 14px; text-decoration-line: none"
+          />
+
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://info.melon.com/terms/web/terms1_3.html"
+              ><strong>위치기반서비스 이용약관</strong></a
+            >
+          </li>
+          <img
+            src="./글자사이막대기.png"
+            style="height: 14px; text-decoration-line: none"
+          />
+
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://info.melon.com/terms/web/terms3.html"
+              ><strong>개인정보처리방침</strong></a
+            >
+          </li>
+          <img
+            src="./글자사이막대기.png"
+            style="height: 14px; text-decoration-line: none"
+          />
+
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://info.melon.com/terms/web/terms5_1.html"
+              >청소년보호정책</a
+            >
+          </li>
+          <img
+            src="./글자사이막대기.png"
+            style="height: 14px; text-decoration-line: none"
+          />
+
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://faqs2.melon.com/customer/faq/informFaq.htm?no=1&faqId=QUES20140616000001&SEARCH_KEY=&SEARCH_PAR_CATEGORY=CATE20130909000006&SEARCH_CATEGORY=CATE20130909000021"
+              >제휴/프로모션문의</a
+            >
+          </li>
+          <img
+            src="./글자사이막대기.png"
+            style="height: 14px; text-decoration-line: none"
+          />
+
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://www.melon.com/emailCollectionReject.html"
+              >이메일주소무단수집거부</a
+            >
+          </li>
+          <img
+            src="./글자사이막대기.png"
+            style="height: 14px; text-decoration-line: none"
+          />
+
+          <li class="dy_footer_2nd_menu_list">
+            <a
+              style="text-decoration: none; color: inherit"
+              href="https://partner.melon.com/partrct/login/web/login_loginProcess.htm?t=s"
+              >파트너센터</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!--------------------------풋터 세번째---------------------------->
+      <div class="dy_footer_3rd">
+        <li style="font-size: 11px; color: #909090">
+          <strong>(주)카카오엔터테인먼트</strong> 경기도 성남시 분당구 판교역로
+          221 &nbsp;|&nbsp; 대표이사 : 이진수, 김성수 &nbsp;|&nbsp;
+          사업자등록번호 : 220-88-02594 &nbsp;|&nbsp; 통신판매업신고번호 :
+          2018-성남분당B-0004 사업자정보확인><br />
+          문의전화 : 1566-7727 (평일 09:00-18:00, 유료) &nbsp;|&nbsp; 이메일 :
+          melon_info@kakaoent.com &nbsp;|&nbsp; 호스팅서비스사업자 :
+          (주)카카오엔터테인먼트 &nbsp;|&nbsp; © Kakao Entertainment Corp.
+        </li>
+      </div>
+    </div>
+    <!-------------------------- 순위 애니메이트 시작---------------------------->
+    <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡdiv1 ENDㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+    <script>
+      //ㅡㅡㅡㅡㅡㅡㅡㅡㅡ병진 scriptㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+      //마우스 올릴 때 사라지는 부분
+      let bj_name = document.querySelectorAll(".bj_li_name");
+      let bj_cover_play = document.querySelectorAll(".bj_li_cover_play");
+      function bj_cover_in(index) {
+        bj_name[index].style.display = "none"; //이름 하단바 안보이게
+        bj_cover_play[index].style.display = "block"; //커버가 보이도록
+      }
+      function bj_cover_out(index) {
+        bj_name[index].style.display = "block"; //이름 하단바 보이게
+        bj_cover_play[index].style.display = "none"; //커버가 안보이도록
+      }
+
+      //ㅡㅡㅡㅡㅡㅡㅡ이벤트 슬라이드 부분
+      let bj_event_container = document.querySelectorAll(".div1_event_image");
+      let bj_event_button = document.querySelectorAll(".bj_event_slide_button");
+      // 슬라이드 개수(최대 인덱스)
+      let bj_event_Max = 6;
+      // 슬라이드 위치값 증가
+      let bj_event_position = 0;
+      // 현재 슬라이드 위치
+      let bj_event_play = 0;
+
+      function changeEvent() {
+        bj_event_position++; 
+        bj_event_play = 236 * bj_event_position;
+        if (bj_event_position > bj_event_Max) {
+          bj_event_position = 0;
+          bj_event_play = 0;
+        }
+        for (let i = 0; i <= bj_event_Max; i++) {
+          bj_event_container[i].style.transform =
+            "translateX(-" + bj_event_play + "px)";
+          bj_event_button[i].style.backgroundImage =
+            "url('https://github.com/kevinbj0/front/blob/main/image_/%EC%9B%90_%EC%9D%BC%EB%B0%98.png?raw=true')";
+        }
+        bj_event_button[bj_event_position].style.backgroundImage =
+          "url('https://github.com/kevinbj0/front/blob/main/image_/%EC%9B%90_%EC%84%A0%ED%83%9D.png?raw=true')";
+      }
+
+      // 버튼 클릭시
+      function click_event(index) {
+        bj_event_position = index; //버튼의 인덱스를 받아옴
+        bj_event_play = 236 * bj_event_position; //클릭한 버튼의 인덱스 -> 위치값으로 변환
+        for (let i = 0; i <= bj_event_Max; i++) {
+          //슬라이드 이동
+          bj_event_container[i].style.transform =
+            "translateX(-" + bj_event_play + "px)";
+          // 모든 버튼 클릭상태 off
+          bj_event_button[i].style.backgroundImage =
+            "url('https://github.com/kevinbj0/front/blob/main/image_/%EC%9B%90_%EC%9D%BC%EB%B0%98.png?raw=true')";
+        }
+        // 클릭한 버튼 클릭상태 on
+        bj_event_button[bj_event_position].style.backgroundImage =
+          "url('https://github.com/kevinbj0/front/blob/main/image_/%EC%9B%90_%EC%84%A0%ED%83%9D.png?raw=true')";
+      }
+
+      setInterval(changeEvent, 4000);
+
+
+      //앨범 슬라이드
+      let bj_album_container = document.querySelectorAll(".div1_album_image");
+      let bj_album_button = document.querySelectorAll(".bj_album_contry");
+      let bj_album_page = document.querySelector(".bj_album_page");
+      // <strong><h style="color: black">1</h>/9</strong>
+      // 슬라이드 개수(최대 인덱스)
+      let bj_album_Page = 2;
+      let bj_album_position = 0;
+      bj_album_button[0].style.color = "black";
+      // 현재 슬라이드 위치
+      let bj_album_view = 0;
+
+      //클릭시 앞뒤로 이동
+      function album_slide(index) {
+        bj_album_position = bj_album_position + index; //인덱스 +1 또는 -1 받아서 증감
+        if (bj_album_position > bj_album_Page || bj_album_position < 0) {
+          //위치 초기화
+          bj_album_position = 0;
+        }
+        bj_album_view = 476.8 * bj_album_position;
+        for (let i = 0; i <= bj_album_Page; i++) {
+          // 슬라이드 이동
+          bj_album_container[i].style.transform =
+            "translateX(-" + bj_album_view + "px)";
+          bj_album_button[i].style.color = "rgb(136, 136, 136)";
+        }
+        //전체, 국내, 해외 파트중 현재 위치에 맞게 활성화
+        bj_album_button[bj_album_position].style.color = "black";
+        //쪽수 표시
+        bj_album_page.innerHTML =
+          '<strong><h style="color: black">' +
+          (1 + 3 * bj_album_position) +
+          "</h>/9</strong>";
+      }
+      //국내, 해외 등 항목 선택
+      function album_contry(position) {
+        bj_album_position = position;
+        //위치값을 받아와서 px단위로 변환
+        bj_album_view = 476.8 * bj_album_position;
+        for (let i = 0; i <= bj_album_Page; i++) {
+          //선택된 위치로 이동
+          bj_album_container[i].style.transform =
+            "translateX(-" + bj_album_view + "px)";
+          bj_album_button[i].style.color = "rgb(136, 136, 136)";
+        }
+        // 전체, 국내, 해외 등 활성화 + 쪽수 표시
+        bj_album_button[bj_album_position].style.color = "black";
+        bj_album_page.innerHTML =
+          '<strong><h style="color: black">' +
+          (1 + 3 * bj_album_position) +
+          "</h>/9</strong>";
+      }
+    </script>
+    <script>
+      let message = [
+        "1. IVE (아이브)",
+        "2. (여자)아이들",
+        "3. 방탄소년단",
+        "4. 정승환",
+        "5. 10CM",
+        "6. 멜로망스",
+        "7. Red Velvet (레드벨벳)",
+        "8. IDOL",
+        "9. 틴탑",
+        "10. LUCY",
+      ];
+      let index = 0;
+
+      function nextGallery() {
+        let slide = document.querySelector(".slide");
+        index++;
+        if (index >= message.length) {
+          //  0  1  2   3
+          index = 0;
+        }
+        slide.innerHTML = message[index];
+
+        slide.animate(
+          {
+            transform: [
+              /* transform   translate 위치 이동 */
+              "translateY(100%)", //시작
+              "translateY()", //도착
+            ],
+          },
+          {
+            duration: 700, // 위의효과가 1초간 지속되도록
+          }
+        );
+      }
+
+      setInterval(nextGallery, 3000);
+      let currentChart = 1;
+    let totalCharts = 3; // 전체 차트 개수
+
+    function showChart(chartNumber) {
+      let chartWrapper = document.getElementById('mg_chartwrap');
+
+      // 모든 차트 숨기기
+      let charts = chartWrapper.querySelectorAll('.chart');
+      charts.forEach(chart => {
+        chart.style.display = 'none';
+      });
+
+      // 선택한 차트 보여주기
+      let targetChart = document.getElementById("chart" + chartNumber);
+      targetChart.style.display = 'block';
+
+      currentChart = chartNumber;
+    }
+
+    // 마우스로 생략된 내용 표시
+    let mg_select = 0;
+
+
+    function showList(event, index) {
+
+      mg_select = index;
+
+
+      let mg_li = event.target.closest('.mg_li_1');
+      let mg_image = mg_li.querySelector('.mg_a2');
+      let mg_text = mg_li.querySelector('.mg_a3');
+      let mg_song = mg_li.querySelector('.mg_song');
+
+
+      mg_text.style.display = "none";
+      mg_image.style.display = "block";
+
+      mg_song.style.overflow = "ellipsis";
+
+
+
+
+    }
+    // 마우스 숨기기
+    function hideList(event) {
+      let mg_li = event.target.closest('.mg_li_1'); //target 속성은 링크된 문서를 클릭했을 때 문서가 열릴 위치 .closest 속성은 가장 가까운 걸 찾음
+      let mg_image = mg_li.querySelector('.mg_a2');
+      let mg_text = mg_li.querySelector('.mg_a3');
+      mg_text.style.display = "block";
+      mg_image.style.display = "none";
+      mg_text.style.whiteSpace = "nowrap";
+
+    }
+    // 초기에는 차트 1 보여주기
+
+
+    showChart(1);
+    </script>
+    <!--------------------------순위 애니메이트 끝---------------------------->
+  </body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melon_Copy 프로젝트</title>
+
+    <style>
+      .dy_hr_login1 {
+        margin-top: -8px;
+      }
+
+      .dy_login_wrap {
+        width: 550px;
+        height: 648px;
+        padding: 19px;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+      }
+
+      .dy_login_img_wrap {
+        width: 206px;
+        height: 56px;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+        padding: 68px 0px 42px;
+        margin-top: -30px;
+      }
+
+      .dy_login_info_wrap {
+        width: 390px;
+        padding: 20px;
+        margin: 0 auto;
+        display: flex;
+        /* border: 1px solid black; */
+        margin-top: 30px;
+        position: relative;
+      }
+
+      .dy_kakaoqr {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        margin-left: 200px;
+        margin-bottom: -20px;
+        margin-top: 3px;
+      }
+
+      .dy_kakaoqr_text {
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 220px;
+      }
+
+      .dy_kakaoqr2 {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        margin-left: 385px;
+      }
+
+      .dy_kakao_button {
+        margin-top: 20px;
+        background-color: #fae100;
+        margin-left: 95px;
+        padding: 10px;
+        border: none;
+        outline: none;
+      }
+
+      .dy_kakao_login {
+        position: absolute;
+        margin-left: 100px;
+        width: 16px;
+        border: none;
+        outline: none;
+      }
+
+      .dy_kakao_text {
+        display: block;
+        size: 16px;
+      }
+
+      .dy_melon_button {
+        margin-left: 95px;
+        background-color: #fff;
+        margin-top: 20px;
+        border: 1px solid #d9d9d9;
+      }
+
+      .dy_melon_login {
+        position: absolute;
+        margin-left: -85px;
+        width: 20px;
+      }
+
+      .dy_melon_text {
+        display: block;
+        size: 16px;
+      }
+
+      button {
+        width: 390px;
+        height: 60px;
+        border: 0px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin: 0 auto;
+      }
+
+      .dy_kakao_login {
+        background-color: #fae100;
+        border: 1px solid #fae100;
+        display: flex;
+        border: none;
+      }
+
+      .dy_signin {
+        margin: 0 auto;
+        margin-left: 250px;
+        margin-top: 60px;
+      }
+
+      .dy_login_footer {
+        width: 550px;
+        height: 148px;
+        margin: 0 auto;
+      }
+
+      .dy_login_footer_1st {
+        margin-left: 70px;
+        text-decoration-line: none;
+      }
+
+      .dy_login_footer_2nd {
+        margin-left: 110px;
+      }
+
+      .dy_login_footer_3rd {
+        margin-left: 170px;
+      }
+      .bj_login_a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <hr class="dy_hr_login1" color="#04c944" size="4px" />
+
+    <!--로그인전체영역-->
+    <div class="dy_login_wrap">
+      <!--로그인 이미지영역-->
+      <a
+        href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_Main/index.html"
+        ><div class="dy_login_img_wrap">
+          <img
+            src="https://cdnimg.melon.co.kr/resource/image/web/member/img_logo206x56.png"
+          />
+        </div>
+      </a>
+      <!--로그인 정보입력 영역-->
+      <div class="dy_login_info_wrap">
+        <img class="dy_kakaoqr" src="./카카오qr코드로그인.png" />
+        <span class="dy_kakaoqr_text" style="size: 16px"
+          >카카오 QR코드 로그인</span
+        ><img class="dy_kakaoqr2" src="./카카오qr코드로그인2.png" />
+      </div>
+
+      <button class="dy_kakao_button">
+        <a
+          href="https://kevinbj0.github.io/MelonCopy_Project_A/Melon_%EC%B5%9C%EC%A2%85/%EB%A9%9C%EB%A1%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_2Page/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EA%B9%80%EB%AF%BC%EC%A7%80.html"
+          class="bj_login_a"
+          ><img class="dy_kakao_login" src="./카카오로그인이미지.png" /><span
+            class="dy_kakao_text"
+            >카카오계정 로그인</span
+          >
+        </a>
+      </button>
+      <button class="dy_melon_button">
+        <img class="dy_melon_login" src="./멜론로그인이미지.png" /><span
+          class="dy_melon_text"
+          style="size: 16px"
+          >멜론아이디 로그인</span
+        >
+      </button>
+      <div class="dy_signin">
+        <a
+          href="https://accounts.melon.com/join/choice?cpId=WP10"
+          style="color: #606060"
+          >회원가입</a
+        >
+      </div>
+    </div>
+
+    <div class="dy_login_footer">
+      <span class="dy_login_footer_1st" style="color: #76768c">
+        <a
+          href="https://info.melon.com/terms/web/terms1_1.html"
+          style="text-decoration-line: none; color: inherit; font-size: 16px"
+          >이용약관</a
+        >&nbsp;
+        <img
+          src="./글자사이막대기.png"
+          style="height: 14px; text-decoration-line: none; color: #76768c"
+        />
+        &nbsp;<strong>
+          <a
+            href="https://info.melon.com/terms/web/terms1_3.html"
+            style="text-decoration-line: none; color: #76768c"
+            >위치기반서비스 이용약관</a
+          ></strong
+        >&nbsp;
+        <img
+          src="./글자사이막대기.png"
+          style="height: 14px; text-decoration-line: none; color: #76768c"
+        />
+        <a
+          href="https://info.melon.com/terms/web/terms3.html"
+          style="text-decoration-line: none; color: #76768c"
+          >&nbsp;<strong>개인정보처리방침</strong></a
+        ></span
+      ><br /><br />
+      <span class="dy_login_footer_2nd" style="color: #76768c"
+        >문의전화 : 1566-7727 (평일 09:00-18:00, 유료)</span
+      ><br /><br />
+      <span class="dy_login_footer_3rd" style="color: #969696"
+        >© Kakao Entertainment Corp.</span
+      >
+    </div>
+  </body>
+</html>

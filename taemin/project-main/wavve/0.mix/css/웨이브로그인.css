@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+header {
+        width: 100%;
+        background-color: #1b1b1b;
+    }
+
+    
+
+
+
+.yj_section{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*이동시키고 싶은 item 위에 있는 부모에 display, justify-content, align-items 전부 주기*/
+
+    background-color: #1b1b1b;
+    height: 1000px;
+}
+
+
+.yj_loginbox{
+    display: flex;
+    justify-content: center;
+    text-align: center;  
+    width: 550px;
+    height: 600px;
+    align-items: center;
+    background-color: #252525;
+    
+}
+
+
+.yj_login_member_layout{
+    width: 550px;
+    height: 680px;
+    background-color: #252525;
+    margin-top: 200px;
+}
+
+
+
+
+footer{
+    background-color: #1b1b1b;
+    height: 250px;
+}
+
+
+
+.yj_p{
+    text-align: center;
+    color: #a5a5a5;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.yj_h1{
+    margin: 0 0 40px;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+}
+
+
+.yj_h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: #a5a5a5;
+    margin-bottom: 28px;
+}
+
+
+.yj_ul{
+    list-style-type: none;
+}
+
+
+
+.yj_label{
+    border: 1px solid #d9d9d9;
+    width: 15px;
+    height: 15px;
+    background-color: #a5a5a5;
+    color: #a5a5a5;
+    font-size: 13px;
+}
+
+
+.yj_input_style{
+    padding-left: 20px;
+    border: none;
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 15px;
+    height: 53px;
+    color: white;
+    background-color: #2f2f2f;
+    border-radius: 5px;
+}
+
+
+.yj_ul_checkbox_wrap{
+    padding: 0 20px 0 15px;
+    text-align: left;
+    background-color: #252525;
+    height: 35px;
+}
+
+input#check_btn, input#check_btn1{
+    display:none;
+    }
+
+
+input#check_btn + label > span, input#check_btn1 + label > span{
+    font-size: 13px;
+    color: #a5a5a5;
+    vertical-align: middle;
+    padding-left: 5px;
+    }  
+
+        /* label:before에 체크하기 전 상태 CSS */
+input#check_btn + label:before, input#check_btn1 + label:before{
+    content:"";
+    display:inline-block;
+    width:21px;
+    height:21px;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    vertical-align:middle;
+    }
+
+        
+        /* label:before에 체크 된 상태 CSS */  
+input#check_btn:checked + label:before, input#check_btn1:checked + label:before{
+    border: 1px solid #a5a5a5;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAO9JREFUSA1jFA78+Z+BRoCJRuaCjR01HGvoDv5gYWTE6nAGil3ekcLMcGYaK1bTKTK8J52ZIcWLmWHlgX/UNRxkcII7M0Pfmr8MXSv/Us9wZIPblmE3GGQb1mBZUMbCMLOQmYGFGdNBxBqM0/B95/8xBNsyM8wtZkGxgBSDcRq+aPc/hvLZfxi8LZjgFpBqMMhwRnylYrInE0NnKgvDw5f/GeTFGcGRhy+MQQYiAxZkDjp77vZ/DDycfxhqopkZFu36y0CKwSCz8LocZpm4AAPDyw8wHvE01tSCrp0cg0FmEGU4umXE8kcNxxpSNA0WAAXETbeav2oDAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    }
+
+
+                /* label:before에 체크 된 상태 CSS */  
+input#check_btn1 + label:before, input#check_btn1:checked + label:before{
+    content:"";
+    display:inline-block;
+    width:21px;
+    height:21px;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    vertical-align:middle;
+    }
+
+
+.btn_purple{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
+
+    background-color: #1351F9;
+    height: 60px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+#a_tag{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    background-color: #1351F9;
+    font-size: 18px;
+}
+
+
+
+.yj_join_find{
+
+    width: 430px;
+    height: 30px;
+    margin: 20px auto 50px;
+    background-color: #252525;
+    justify-content: center;
+}
+
+
+
+.yj_login_txt{
+    color: #a5a5a5;
+    text-decoration: none;
+    background-color: #252525;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.yj_li{
+    background-color: #252525;
+    display: inline-block;
+    text-align: center;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+
+.yj_sns_div{
+    width: 550px;
+    height: 200px;
+}
+
+
+.yj_hr_p_box{
+    position: relative;
+    width: 550px;
+    height: 35px;
+}
+
+.yj_hr{
+    position: absolute;
+    margin: 20px 20px 0px 20px;
+    width: 500px;
+    border: 1px solid #2f2f2f;
+}
+
+.yj_p{
+    top: 8px;
+    left: 125px;
+    background-color: #252525;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+    color: #a5a5a5;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.yj_login_sns{
+    background-color: #252525;
+    /* width: 364px; */
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    text-align: center;
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+
+.yj_ul_center{
+    justify-content: center;
+    
+    
+}
+
+.yj_ul_center a{
+    text-decoration: none;
+}
+
+.yj_li{
+    background-color: #252525;
+    display: inline-block;
+    text-align: center;
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+
+
+.yj_login_each_kakao{
+    display: inline-block;
+
+
+    background-color: #ffec00;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+
+    margin-left: 5px;
+}
+
+.yj_login_t_id{
+    display: inline-block;
+
+    background-color: rgb(54, 23, 206);
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+
+    margin-left: 5px;
+}
+
+.yj_login_naver_id{
+    display: inline-block;
+
+    background-color: rgb(35, 185, 9);
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+
+    margin-left: 5px;
+}
+
+.yj_login_fb_id{
+    display: inline-block;
+
+    background-color: rgb(59, 89, 152);
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+
+    margin-left: 5px;
+}
+
+.yj_login_apple_id{
+    display: inline-block;
+
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+
+
+    margin-left: 5px;
+}
+
+.yj_img{
+    width: 32px;
+    height: 32px;
+    margin-top: 14px;
+    background-color: transparent;
+}
+
+
+
+.yj_span{
+    display: flex;
+    border: 1px solid #252525;
+    background-color: #252525;
+    color: #a5a5a5;
+    font-size: 14px;
+}

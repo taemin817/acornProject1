@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hr1{
+            margin-top: -8px;
+        }
+        .header_main {
+            width: 1048px;
+            height: 10px;
+            /*             border: 1px solid black;
+ */
+            margin: 0 auto;
+            padding: 5px;
+
+        }
+
+        .header_main_2 {
+            width: 1048px;
+            height: 150px;
+            /*             border: 1px solid black;
+ */
+            margin: 0 auto;
+            padding: 5px;
+
+        }
+
+        .header_1 {
+            width: 1008px;
+            height: 38px;
+            display: flex;
+            /*             border: 1px solid black;
+ */
+            margin: 0 auto;
+            padding: 0px;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+
+        .menu {
+            width: 1008px;
+
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;  
+            display: block;
+            position: relative;
+            z-index: 14;
+            
+        }
+        .menu > ul{
+            margin-top : -25px;
+            display: block;
+            
+        }
+        /* .menu>ul{
+            display: block;
+        } */
+
+        .li_0 {
+            margin-left: -50px;
+        }
+        .li_1_1{
+            margin-top: 4px;
+            margin-left: 548px;
+        }
+
+        .li_1 {
+           margin-left: -36px;
+      
+        }
+        .li_2 {
+            margin-left: -25px;
+        }
+        .li_3 {
+            margin-left: -30px;
+        }
+        .li_4 {
+           margin-left: -30px;
+           
+            
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            margin: 0 7px 0 0;
+            padding-left: 9px;
+
+        }
+
+        .header_2 {
+            /*             border: 1px solid black;
+ */
+            width: 1008px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .search_bar {
+
+            display: inline;
+            position: relative;
+            float: left;
+            width: 322px !important;
+            height: 40px;
+            margin: 36px 0 0 11px;
+            background: url(//cdnimg.melon.co.kr/resource/image/web/common/bg_cmn_search322.png) no-repeat;
+            z-index: 15;
+            display: flex;
+
+            align-items: center;
+            border-radius: 50px;
+
+            justify-content: center;
+
+        }
+
+        .text1 {
+            float: left;
+            border: 0;
+            padding-top: 3px;
+            margin: 0px 0 0 -0px;
+            padding-left: 0;
+            height: 20px;
+            box-shadow: none;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .dotbogi1 {
+            margin-left: 10px;
+            margin-top: 5px;
+            overflow: clip;
+            width: 28px;
+
+        }
+
+
+        .sudden_up_img {
+            width: 42px;
+            height: 16px;
+            float: left;
+            margin: 3px 0 0 3px;
+            background: url(//cdnimg.melon.co.kr/resource/image/web/main/bg_loce_151207.png) no-repeat left top;
+            margin-top: 46.5px;
+            margin-left: 14px;
+        }
+
+        .header_3 {
+            width: 1008px;
+            /*             border: 1px solid black;
+ */
+            margin: 0 auto;
+            position: relative;
+            height: 55px;
+            z-index: 14;
+        }
+        
+        .header_3>ul {
+            margin-left: -43.5px;
+            display: block;
+        }
+
+        .li1 {
+            margin-left: -10px;
+        }
+        
+
+        .li2 {
+            margin-left: -20px;
+        }
+
+        .li3 {
+            margin-left: -20px;
+        }
+
+        .li4 {
+            margin-left: -25px;
+        }
+
+        .li5 {
+            margin-left: -30px;
+        }
+
+        .li6 {
+            margin-left: -25px;
+        }
+
+        .li7 {
+            margin-left: -25px;
+        }
+
+        .li8 {
+            margin-left: -25px;
+        }
+
+        .li9 {
+            margin-left: -25px;
+        }
+
+        .li10 {
+            float: left;
+            margin-left: 210px;
+        }
+
+            /*나중에 뺴도됩니다*/
+    .main {
+        width: 1652px;
+
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    /*작업한 크게 감싼 영역*/
+    .wrap {
+        width: 1048px;
+        margin: 0 auto;
+        padding: 0px, 20px;
+        border: 1px solid black;
+    }
+    
+    .gyu {
+        height: 1008px;
+        margin: 0 auto;
+        border: 1px solid rgb(156, 36, 36);
+    }
+
+    h2{
+        border: 1px solid black;
+        display: flex;
+    }
+    /* 차트 위 설명 내용 */
+    .hot_text{
+
+    display: inline-block;
+    width: 300px;
+    margin-top: 11px;
+    padding-left: 12px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #888;
+        
+
+    }
+    .h21{
+        border: 1px solid black;
+
+    }
+    /* 이미지/가수 내용 */
+    .hot_issue {
+        width: 704px;
+        height: 472px;
+        position: relative;
+        float: left;
+        margin-top: 32px;
+        margin-bottom: 49px;
+
+
+    }
+    /*가수 이미지 /정보 내용 */
+    ul {
+        width: 704px;
+        border-top: 1px solid #666;;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    ul li {
+
+        width: 223px;
+        margin: 4px;
+        border: 1px solid black;
+
+    }
+    /*이미지 크기 */
+    .hot_img {
+        width: 223px;
+        height: 148px;
+    }
+    /* 이미지 글씨폰트 크기/색상 조절 */
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+        text-decoration-color: #666;
+    }
+
+    .a1:hover{
+        
+        text-decoration: underline;
+        text-decoration-color: #7cb710
+    ;
+        
+    }
+        
+    .hot_1{
+    height: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    
+
+    }
+    .hot_2{
+    letter-spacing: 0;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    outline: none;
+        
+    }
+    .hot_3{
+    padding-right: 6px;
+    color: #7cb710;
+    outline: none;
+        
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+    <hr class="hr1" color="#04c944" size="4px">
+    <div class="header_main">
+
+        <div class="header_1">
+            <div class="menu">
+
+                <ul>
+                    <li class="li_0"><a href="https://ticket.melon.com/main/index.htm">
+                        <img src="./멜론티켓_off.jpg" onmouseover="this.src='./멜론티켓_on.jpg'" onmouseout="this.src='./멜론티켓_off.jpg'" style="width:77%; height:77%;"></a></li>
+                    <li class="li_1_1"><a href="https://www.melon.com/commerce/pamphlet/web/sale_listMainView.htm">
+                        <img src="./이용권이미지.PNG" style="width:55%; height:55%;"></a></li>
+                    <li class="li_1"><a href="https://www.melon.com/commerce/pamphlet/web/sale_listMainView.htm">
+                        <img src="./이용권구매_off.jpg" onmouseover="this.src='./이용권구매_on.jpg'" onmouseout="this.src='./이용권구매_off.jpg'" style="width:75%; height:75%;"></a></li>
+                    <li class="li_2"><a href="https://www.melon.com/event/vip/index.htm">
+                        <img src="./멜론라운지_off.jpg" onmouseover="this.src='./멜론라운지_on.jpg'" onmouseout="this.src='./멜론라운지_off.jpg'" style="width:75%; height:75%;"></a></li>
+                    <li class="li_3"><a href="https://www.melon.com/event/index.htm">
+                        <img src="./이벤트_off.jpg" onmouseover="this.src='./이벤트_on.jpg'" onmouseout="this.src='./이벤트_off.jpg'" style="width:75%; height:75%;"></a></li>
+                    <li class="li_4"><a href="https://www.melon.com/customer/announce/index.htm">
+                        <img src="./공지사항_off.jpg" onmouseover="this.src='./공지사항_on.jpg'" onmouseout="this.src='./공지사항_off.jpg'" style="width:75%; height:75%;"></a></li>
+                </ul>
+            </div>
+        </div>    
+    </div>
+    <hr color="#f4f4f4" size="1px">
+    <div class="header_main_2">
+        <div class="header_2">
+            <div class="melonimg">
+                <img src="https://cdnimg.melon.co.kr/resource/image/web/common/logo_melon142x99.png">
+            </div>
+
+            <div class="search_bar">
+                <input class=text1 type="text" placeholder="어디든 떠나버릴게! 위아이 (WEi) '질주' MV"
+                    style="width: 249px; display:block;">
+
+                <div class="dotbogi">
+                    <img class=dotbogi1 src="./멜론돋보기.PNG">
+                </div>
+
+            </div>
+
+
+            <div class="sudden_up_img">
+            </div>
+
+            <div class="auto_awards">
+
+            </div>
+        </div>
+
+        <div class="header_3">
+            <ul>
+
+                <li class="li1"><a href="https://www.melon.com/chart/index.htm"><img src="./멜론차트_off.jpg" onmouseover="this.src='./멜론차트_on.jpg'" onmouseout="this.src='./멜론차트_off.jpg'"></a></li>
+                <li class="li2"><a href="https://www.melon.com/new/index.htm"><img src="./최신음악_off.jpg" onmouseover="this.src='./최신음악_on.jpg'" onmouseout="this.src='./최신음악_off.jpg'"></a></li>
+                <li class="li3"><a href="https://www.melon.com/genre/song_list.htm"><img src="./장르음악_off.jpg" onmouseover="this.src='./장르음악_on.jpg'" onmouseout="this.src='./장르음악_off.jpg'"></a></li>
+                
+                <li class="li4"><a href="https://www.melon.com/dj/today/djtoday_list.htm"><img src="./멜론DJ_off.jpg" onmouseover="this.src='./멜론DJ_on.jpg'" onmouseout="this.src='./멜론DJ_off.jpg'"></a></li>
+                <li class="li5"><a href="https://www.melon.com/tv/index.htm"><img src="./멜론TV_off.jpg" onmouseover="this.src='./멜론TV_on.jpg'" onmouseout="this.src='./멜론TV_off.jpg'"></a></li>
+                <li class="li6"><a href="https://www.melon.com/artistplus/todayupdate/index.htm"><img src="./스타포스트_off.jpg"onmouseover="this.src='./스타포스트_on.jpg'" onmouseout="this.src='./스타포스트_off.jpg'"></a></li>
+                <li class="li7"><a href="https://www.melon.com/musicstory/today/index.htm"><img src="./매거진_off.jpg"onmouseover="this.src='./매거진_on.jpg'" onmouseout="this.src='./매거진_off.jpg'"></a></li>
+                <li class="li8"><a href="https://www.melon.com/melonaward/weekAward.htm"><img src="./뮤직어워드_off.jpg"onmouseover="this.src='./뮤직어워드_on.jpg'" onmouseout="this.src='./뮤직어워드_off.jpg'"></a></li>
+                <li class="li9"><a href="https://www.melon.com/edu/index.htm"><img src="./어학_off.jpg" onmouseover="this.src='./어학_on.jpg'" onmouseout="this.src='./어학_off.jpg'"></a></li>
+
+            </ul>
+            <ul>
+                <li class="li10"><a href="로그인페이지"><img src="./마이뮤직_off.jpg" onmouseover="this.src='./마이뮤직_on.jpg'" onmouseout="this.src='./마이뮤직_off.jpg'"></a></li>
+            </ul>
+
+        </div>
+
+        
+    <div class="main">
+
+        <div class="wrap">
+            <div class="gyu">
+                <div class="hot_issue">
+                    <h2>
+                        <span class="hot"> 인기있어요</span>
+                        <span class="hot_text">지금 이슈가 되는 아티스트의 인기 컨텐츠입니다.</span>
+                        <div class="h21">23</div>
+                    </h2>
+                    <ul>
+                        <li>
+                            <!--아티스트별 링크-->
+                            <a href="https://www.melon.com/video/detail2.htm?mvId=50262530&menuId=10010101">
+                            <img class="hot_img"
+                                src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/530/50262530_20230623105709_640.jpg/melon/resize/480/quality/80/optimize">
+                               <span class="hot_1">19</span><br>
+                               <span class="hot_2">다이나믹듀오</span><br> 
+                            </a>
+                              <!--멜론tv링크-->
+                               <a href="https://www.melon.com/tv/index.htm">
+                                <span class="hot_3">멜론TV</span>
+                               </a>
+                            
+                        </li>
+                        <li>
+                            <!--아티스트별 링크-->
+                            <a href="https://www.melon.com/video/detail2.htm?mvId=50262519&menuId=10010101">
+                            <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/519/50262519_20230622172851_640.jpg/melon/resize/480/quality/80/optimize">
+                           
+                                <span class="hot_1">사랑이늦어서 미안해</span><br>
+                                <span class="hot_2">길구봉구</span><br>
+                            </a>
+                                <!--멜론tv링크-->
+                                <a class="a1" href="https://www.melon.com/tv/index.htm">
+                                    <span class="hot_3">멜론TV</span>
+                                </a>
+                            
+                        </li>
+                        <li>
+                            <!--아티스트별 링크-->
+                            <a href="https://www.melon.com/video/detail2.htm?mvId=50262398&menuId=28010101">
+                            <img class="hot_img"
+                                src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/398/50262398_20230619164035_640.jpg/melon/resize/480/quality/80/optimize">
+                                
+                                <span class="hot_1">Broken Melodies</span><br>
+                                <span class="hot_2">NCT DREAM</span><br>
+                            </a>
+                                <!--멜론tv링크-->
+                                <a class="a1" href="https://www.melon.com/tv/index.htm">
+                                    <span class="hot_3">멜론TV</span>
+                                </a>
+                           
+                        </li>
+                        <li>
+                            <!--아티스트별 링크-->
+                            <a href="https://www.melon.com/video/detail2.htm?mvId=50262476&menuId=10010101">
+                            <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/476/50262476_20230621152452_640.jpg/melon/resize/480/quality/80/optimize
+                            ">
+                           
+                                <span class="hot_1">사랑하지 않아서 그랬니</span><br>
+                                <span class="hot_2">지아</span><br>
+                            </a>
+                                <!--멜론tv링크-->
+                                <a class="a1" href="https://www.melon.com/tv/index.htm">
+                                    <span class="hot_3">멜론TV</span>
+                                </a>
+                           
+                        </li>
+                        <li>
+                            <!--아티스트별 링크-->
+                            <a href="https://www.melon.com/video/detail2.htm?mvId=50262599&menuId=10010101"></a>
+                            <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/599/50262599_20230626174710_640.jpg/melon/resize/480/quality/80/optimize
+                            ">
+                            
+                                <span class="hot_1">HARD</span><br>
+                                <span class="hot_2">SHINee (샤이니)</span><br>
+                            </a>
+                             <!--멜론tv링크-->
+                                <a class="a1" href="https://www.melon.com/tv/index.htm">
+                                    <span class="hot_3">멜론TV</span>
+                                </a>
+                           
+                        </li>
+                        <li>
+                            <!--아티스트별 링크-->
+                            <a href="https://www.melon.com/video/detail2.htm?mvId=50262405&menuId=27120101">
+                            <img class="hot_img" src="https://cdnimg.melon.co.kr/cm2/mv/images/wide/502/62/405/50262405_20230623135725_640.jpg/melon/resize/480/quality/80/optimize
+                            ">
+                           
+                                <span class="hot_1">WE GO HIGH</span><br>
+                                <span class="hot_2">로이킴</span><br>
+                            </a>
+                            <!--멜론tv링크-->
+                               <a class="a1" href="https://www.melon.com/tv/index.htm">
+                                <span class="hot_3">멜론TV</span>
+                               </a>
+                        
+                        </li>
+
+
+
+
+
+                    </ul>
+
+
+                </div>
+                <div class="chart">
+                    <h2> 멜론차트 </h2>
+
+
+                </div>
+                <div class="notice"></div>
+            </div>
+        </div>
+
+    </div>
+        
+
+
+
+
+
+    </div>
+    <hr color="#c3c3c3">
+
+</body>
+
+</html>

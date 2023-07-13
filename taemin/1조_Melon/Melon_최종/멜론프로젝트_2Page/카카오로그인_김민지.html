@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./카카오로그인_김민지.css">
+</head>
+<body>
+    
+    <div class="mj_wrap">
+        <img class="mj_kakao" src="data:image/jpeg;base64,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">
+
+        <div class="mj_wrap_login">
+            <input class="mj_input" type="text" placeholder="카카오메일 아이디, 이메일, 전화번호"><br>
+            <input class="mj_input" type="text" placeholder="비밀번호"><br>
+            <div class="mj_wrap_radio">
+                <input class="mj_radio" type="radio"><span class="mj_radio_span">로그인 상태 유지</span>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCABYAFgDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAUCAwQBBv/EAC8QAAEEAgAEBQEIAwAAAAAAAAEAAgMEESEFEhMxFTRBcXJRFCIjMkNTYYFjkaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9mhCw3boiHKzbigvntRwjZz7JfJxCaQ4iacey5XqSWXc8vb6FM4q8cIwxuECr7PYm2cDP8I8Mn75anSECX7PYh2MHH8KcfEJoziVpx7Juqpa8cww9uUEYLUcw0ce6vSexUkrO54u30C1UrolHK/Th9UG5CEIM9ycQRE536LBSrmxIZZO2exUbjjYtiIHscJrDGI42tA7BBNoDRgLqEIISv6cTn4zyjKV+Nf4v+pnYaXwPa3ZI0kPhtr9tA/if1ImvxjmGVNV12lkDGu0QNqxBxwDhgpTdrmvIJY+2ewTdVzRiSNzSO4QV05xPEDnfqhLqbjXtmInucIQdot6tpzz6FOEq4Rt0mU1QCEIQRe8RsLndgsfi1b6n/S0W/LSfFeYQerY8SMDm9ipKmp5aP4q5AIQhAnvN6Vprx6lCnxfTo8IQR4ceSd7T6lN0llzXv8AOdNJThjg9gcPVBJCEIKbflpPivML09vy0nxXmEHp6nlo/irlTU8tH8VcgEIUXuDGFx9ECriJ552NHoUKEWbF/nG2goQbeI1+rHzAbaquHWv0n6I0ExIyNpXdqOY/qxf2gaoS6pfB+5LpyYBwcMggoIWGl8D2t2SNJD4ba/bXokIK67SyBjXaIG1YhcLg0ZJAQdS3iNr9JmydFdt3wPuRbcq6VRz39WX+kGjh1fpR8xG3IWwDA0hB1cIB7oQgw2eHtkJdHpyyB1qqcDY9kIQXM4mQPxGnPsp+KxY/K7KEIIP4mSPw2nPsqS61aODoeyEINdbh7YyHSbctwAHZCEHUIQg//9k=">
+            </div>
+
+            
+            <br><button class="mj_login_button">로그인</button><br>
+            <span class="mj_or">또는</span><br>
+            <button class="mj_login_qr_button">QR코드 로그인</button>
+
+            <div class="mj_wrap_join">
+                <a class="mj_a_lang" href="https://accounts.kakao.com/weblogin/create_account/?lang=ko&continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fencode_state%3Dtrue%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fmember.melon.com%252Foauth.htm%26state%3DCRYT_lft8lLdwSOqqFTBtolt0iJ960Llidv2dI%252FSYkAcMHLyA1sU8uWzbWTV78%2540K7iYDIXzkLV1VfOCC8y1iwgA16aU8vnT4neJagbDvoRVOz5lHBWVH13ciPD5RBR9SICfPz%26through_account%3Dtrue%26prompt%3Dnull%26client_id%3D6cfb479f221a5adc670fe301e1b6690c#selectVerifyMethod">
+                    <p>회원가입</p>
+                </a>
+                <div class="mj_wrap_find">
+                    <a class="mj_a_lang" href="https://accounts.kakao.com/weblogin/find_account?lang=ko&continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fkauth.kakao.com%252Foauth%252Fauthorize%253Fencode_state%253Dtrue%2526response_type%253Dcode%2526redirect_uri%253Dhttps%25253A%25252F%25252Fmember.melon.com%25252Foauth.htm%2526state%253DCRYT_lft8lLdwSOqqFTBtolt0iJ960Llidv2dI%25252FSYkAcMHLyA1sU8uWzbWTV78%252540K7iYDIXzkLV1VfOCC8y1iwgA16aU8vnT4neJagbDvoRVOz5lHBWVH13ciPD5RBR9SICfPz%2526through_account%253Dtrue%2526prompt%253Dnull%2526client_id%253D6cfb479f221a5adc670fe301e1b6690c">
+                        <p>계정 찾기</p>
+                    </a>
+                    <a class="mj_a_lang" href="https://accounts.kakao.com/weblogin/find_password?lang=ko&continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fkauth.kakao.com%252Foauth%252Fauthorize%253Fencode_state%253Dtrue%2526response_type%253Dcode%2526redirect_uri%253Dhttps%25253A%25252F%25252Fmember.melon.com%25252Foauth.htm%2526state%253DCRYT_lft8lLdwSOqqFTBtolt0iJ960Llidv2dI%25252FSYkAcMHLyA1sU8uWzbWTV78%252540K7iYDIXzkLV1VfOCC8y1iwgA16aU8vnT4neJagbDvoRVOz5lHBWVH13ciPD5RBR9SICfPz%2526through_account%253Dtrue%2526prompt%253Dnull%2526client_id%253D6cfb479f221a5adc670fe301e1b6690c">
+                        <p>비밀번호 찾기</p>
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="mj_wrap_footer">
+                <a class="mj_a_lang" href="https://www.kakao.com/policy/terms?lang=ko">
+                    <p>이용약관</p>
+                </a>
+                <a class="mj_a_lang" href="https://www.kakao.com/policy/privacy?lang=ko">
+                    <span><strong><p>개인정보 처리방침</p></strong></span>
+                </a>
+                <a class="mj_a_lang" href="https://www.kakao.com/policy/oppolicy?lang=ko">
+                    <p>운영정책</p>
+                </a>
+                <a class="mj_a_lang" href="https://cs.kakao.com/">
+                    <p>고객센터</p>
+                </a>
+                <a class="mj_a_lang" href="https://www.kakao.com/notices?lang=ko">
+                    <p>공지사항</p>
+                </a>
+                
+                <button onclick="mj_show()" class="mj_kor">한국어<span class="mj_up_arrow">∧</span></button>
+               
+                
+            </div>
+            <p class="mj_copyright">Copyright <a class="mj_a" href="https://www.kakaocorp.com/page/">© Kakao Corp.</a> All rights reserved.</p>
+        </div>    
+
+        <div class="mj_language">
+            <a href="" class="mj_a_lang"><p>한국어</p></a>
+            <a class="mj_a_lang" href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fencode_state%3Dtrue%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fmember.melon.com%252Foauth.htm%26state%3DCRYT_lft8lLdwSOqqFTBtolt0iJ960Llidv2dI%252FSYkAcMHLyA1sU8uWzbWTV78%2540K7iYDIXzkLV1VfOCC8y1iwgA16aU8vnT4neJagbDvoRVOz5lHBWVH13ciPD5RBR9SICfPz%26through_account%3Dtrue%26prompt%3Dnull%26client_id%3D6cfb479f221a5adc670fe301e1b6690c&lang=en#login"><p>English</p></a>
+            <a class="mj_a_lang" href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fencode_state%3Dtrue%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fmember.melon.com%252Foauth.htm%26state%3DCRYT_lft8lLdwSOqqFTBtolt0iJ960Llidv2dI%252FSYkAcMHLyA1sU8uWzbWTV78%2540K7iYDIXzkLV1VfOCC8y1iwgA16aU8vnT4neJagbDvoRVOz5lHBWVH13ciPD5RBR9SICfPz%26through_account%3Dtrue%26prompt%3Dnull%26client_id%3D6cfb479f221a5adc670fe301e1b6690c&lang=ja#login"><p>日本語</p></a>
+        </div>    
+
+    </div>
+
+    <script>
+
+        let flag=true;
+        function mj_show(){
+            let mj_up_arrow = document.querySelector(".mj_up_arrow");
+            let mj_language = document.querySelector(".mj_language");
+
+            if(flag==true){
+                mj_up_arrow.innerHTML="∧";
+                mj_language.style.display="none"
+                flag=false;
+            }
+            else{
+                mj_up_arrow.innerHTML="v";
+                mj_language.style.display="block"
+                flag=true;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
