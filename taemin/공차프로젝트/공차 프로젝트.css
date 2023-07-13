@@ -520,7 +520,8 @@ a{
     text-align: center;
     line-height: 0%;
     font-weight: bold;
-    background-image: url(https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img1.jpg);
+    animation: slidee 1s;
+    background-image: url('https://www.gong-cha.co.kr/view/gongcha/images/brandmain/brand_main_recipe_img1.jpg');
 }
 @keyframes slidee{
     from{
@@ -554,8 +555,9 @@ a{
     /* border: 1px solid black; */
     width: 700px;
     padding-left: 50px;
+    animation: slide 1s;
 }
-@keyframes slide{
+@keyframes slidee{
     from{
         right: 600px;
     }
@@ -679,7 +681,7 @@ a{
 .y_number{
     padding-left: 18px;
     margin-left: 10px;
-    background: url(https://www.gong-cha.co.kr/view/gongcha/images/common/ico_tell.png)0 center no-repeat;
+    background: url('https://www.gong-cha.co.kr/view/gongcha/images/common/ico_tell.png')0 center no-repeat;
 }
 .y_time{
     font-size: 13px;
